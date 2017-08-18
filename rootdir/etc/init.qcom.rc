@@ -743,8 +743,6 @@ service fm_dl /vendor/bin/init.qti.fm.sh
     disabled
     oneshot
 
-# fingerprint sections
-
 #Set GPU Opengles version
 on property:vendor.opengles.version=*
     setprop ro.opengles.version ${vendor.opengles.version}
@@ -768,3 +766,9 @@ on property:vendor.gpu.available_frequencies=*
     oneshot
     interface android.hardware.audio@4.0::IDevicesFactory default
     interface android.hardware.audio@2.0::IDevicesFactory default
+
+service power_off_alarm /vendor/bin/power_off_alarm
+    class core
+    group system
+    disabled
+    oneshot    
