@@ -6,13 +6,7 @@ allow system_server vendor_file:dir { read open };
 allow system_server vendor_file:file { read getattr };
 allow system_server gx_fpd_exec:file getattr;
 
-#Sysfs
-allow system_server sysfs:file getattr;
-
 allow system_server sysfs_vibrator:file read;
 
 #Smart charger
 allow system_server sysfs_battery_supply:file rw_file_perms;
-
-#Stop_Spamming!
-dontaudit system_server sysfs:file { read };
