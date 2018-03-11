@@ -79,5 +79,12 @@
   <item name="battery.capacity">4000</item>
   <allow-in-power-save package="com.google.android.gms" />
   <allow-in-data-usage-save package="com.google.android.gms" />
+  <array name="wifi.batchedscan">
+        <value>.0092</value>
+        <value>.0744</value>
+        <value>.5883</value>
+        <value>4.699</value>
+        <value>37.59</value>
+    </array>
   
 </device>
