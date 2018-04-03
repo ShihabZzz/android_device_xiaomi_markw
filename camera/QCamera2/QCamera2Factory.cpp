@@ -35,7 +35,8 @@
 #include <cutils/properties.h>
 
 // Camera dependencies
-#include "camera.h"
+#ifdef QCAMERA_HAL1_SUPPORT
+#include "hardware/camera.h"
 #include "HAL/QCamera2HWI.h"
 #include "HAL/QCameraMuxer.h"
 
@@ -604,4 +605,3 @@ bool QCamera2Factory::isDualCamAvailable(int hal3Enabled)
 }
 
 }; // namespace qcamera
-
