@@ -84,7 +84,7 @@ PRODUCT_PACKAGES += \
 # Additional native libraries
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
-		
+
 # ANT+
 PRODUCT_PACKAGES += \
     AntHalService \
@@ -95,17 +95,16 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
     audio.primary.msm8953 \
-    audio_amplifier.msm8953 \
     audio.r_submix.default \
     audio.usb.default \
+    audio_amplifier.msm8953 \
     libaacwrapper \
     libqcompostprocbundle \
     libaudio-resampler \
     libqcomvisualizer \
     libqcomvoiceprocessing \
     libqcomvoiceprocessingdescriptors \
-    libwebrtc_audio_preprocessing \
-    tinymix
+    libwebrtc_audio_preprocessing
 
 PRODUCT_PACKAGES += \
     android.hardware.audio@4.0-impl \
