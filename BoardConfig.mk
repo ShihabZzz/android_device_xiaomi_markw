@@ -215,6 +215,9 @@ BOARD_USES_QCOM_HARDWARE := true
 # Recovery
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
 
+# Shims
+TARGET_LD_SHIM_LIBS := /vendor/lib64/hw/gxfingerprint.default.so|fakelogprint.so:/vendor/lib64/hw/fingerprint.goodix.so|fakelogprint.so:/vendor/bin/gx_fpd|fakelogprint.so
+
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private

@@ -1,5 +1,4 @@
-# Copyright (C) 2013-2016, The CyanogenMod Project
-# Copyright (C) 2018, The LineageOS Project
+# Copyright (C) 2018 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -16,16 +15,38 @@
 LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
+
 LOCAL_SRC_FILES := \
     bionic/bionic_futex.cpp \
     bionic/bionic_time_conversions.cpp \
     bionic/pthread_cond.cpp
+
 LOCAL_SHARED_LIBRARIES := libc
+
 LOCAL_MODULE := libshim_c
+LOCAL_MODULE_TAGS := optional
+
+LOCAL_32_BIT_ONLY := true
 LOCAL_VENDOR_MODULE := true
 LOCAL_CXX_STL := none
 LOCAL_SANITIZE := never
-LOCAL_MODULE_TAGS := optional
-LOCAL_32_BIT_ONLY := true
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+
+include $(BUILD_SHARED_LIBRARY)
+
+# fake print lib for hexedited fingerprint libs
+LOCAL_PATH:= $(call my-dir)
+include $(CLEAR_VARS)
+
+LOCAL_SHARED_LIBRARIES := \
+    liblog
+
+LOCAL_SRC_FILES := fakelogprint/fakelogprint.cpp
+
+LOCAL_MODULE := fakelogprint
+LOCAL_MODULE_TAGS := optional
+
+LOCAL_VENDOR_MODULE := true
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+
 include $(BUILD_SHARED_LIBRARY)
