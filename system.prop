@@ -244,6 +244,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 persist.vendor.qti.inputopts.enable=true \
 persist.vendor.qti.inputopts.movetouchslop=0.6
 
+#Virtual Display
+debug.sdm.support_writeback=0
+
 # Maintainer
 PRODUCT_PROPERTY_OVERRIDES += \
 ro.havoc.maintainer=ShihabZzz
