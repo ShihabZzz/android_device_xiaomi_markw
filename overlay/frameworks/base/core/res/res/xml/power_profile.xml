@@ -48,7 +48,7 @@
   </array>
   <!-- Different CPU speeds as reported in
        /sys/devices/system/cpu/cpu0/cpufreq/stats/time_in_state -->
-  <array name="cpu.speeds">
+  <array name="cpu.core.speeds">
       <value>652800</value> <!-- 625 MHz CPU speed -->
       <value>806400</value> <!-- 806 MHz CPU speed -->
       <value>1036800</value> <!-- 1036 MHz CPU speed -->
@@ -60,7 +60,7 @@
       <value>2208000</value> <!-- 2208 MHz CPU speed -->
   </array>
   <!-- Current at each CPU speed, as per 'cpu.speeds' -->
-  <array name="cpu.active">
+  <array name="cpu.core_power">
       <value>42.6</value>
       <value>45.2</value>
       <value>47.0</value>
@@ -74,7 +74,7 @@
   <!-- Total power drawn by the system when CPUs (and the SoC) are in system suspend state. -->
   <item name="cpu.idle">4.9</item>
   <!-- CPUs are in scheduling idle state (kernel idle loop); system is not in system suspend state. -->
-  <item name="cpu.awake">8.1</item> 
+  <item name="cpu.awake">8.1</item>
   <!-- This is the battery capacity in mAh (measured at nominal voltage) -->
   <item name="battery.capacity">4000</item>
   <allow-in-power-save package="com.google.android.gms" />
@@ -86,5 +86,5 @@
         <value>4.699</value>
         <value>37.59</value>
     </array>
-  
+
 </device>
