@@ -51,9 +51,6 @@ on fs
     mkdir /mnt/vendor/persist/bms 0700 root system
     restorecon_recursive /mnt/vendor/persist
 
-    wait /dev/block/bootdevice/by-name/oem
-    mount ext4 /dev/block/bootdevice/by-name/oem /oem ro nosuid nodev barrier=1
-
 on post-fs
     start vendor.qseecomd
     wait_for_prop vendor.sys.listeners.registered true
