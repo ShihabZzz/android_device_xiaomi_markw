@@ -123,13 +123,6 @@ service thermal-engine /vendor/bin/thermal-engine
 on boot
     start rmt_storage
 
-    write /dev/cpuset/top-app/boost/cpus 4-7
-    write /dev/cpuset/top-app/cpus 0-7
-    write /dev/cpuset/foreground/boost/cpus 0-6
-    write /dev/cpuset/foreground/cpus 0-6
-    write /dev/cpuset/background/cpus 0-1
-    write /dev/cpuset/system-background/cpus 0-3
-
 # Add a cpuset for the camera daemon
 # We want all cores for camera
     mkdir /dev/cpuset/camera-daemon
@@ -267,5 +260,5 @@ on property:sys.shutdown.requested=*
     stop vendor.per_proxy
 
 on boot
-    #Ignore modem crash 
+    #Ignore modem crash
     write /sys/bus/msm_subsys/devices/subsys4/restart_level related
