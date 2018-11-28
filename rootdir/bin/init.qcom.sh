@@ -84,13 +84,22 @@ start_msm_irqbalance_8939()
 {
 	if [ -f /vendor/bin/msm_irqbalance ]; then
 		case "$platformid" in
-		    "239" | "293" | "294" | "295" | "304" | "313" |"353")
+		    "239" | "293" | "294" | "295" | "304" | "338" | "313" |"353")
 			start vendor.msm_irqbalance;;
+		    "349" | "350" )
+			start vendor.msm_irqbal_lb;;
 		esac
 	fi
 }
 
-start_msm_irqbalance()
+start_msm_irqbalance_msmnile()
+{
+         if [ -f /vendor/bin/msm_irqbalance ]; then
+                start vendor.msm_irqbalance
+         fi
+}
+
+start_msm_irqbalance660()
 {
 	if [ -f /vendor/bin/msm_irqbalance ]; then
 		case "$platformid" in
@@ -102,11 +111,12 @@ start_msm_irqbalance()
 	fi
 }
 
-# Remove recovery cache from persist
-rm -rf /mnt/vendor/persist/cache/recovery
-
-# Set shared touchpanel nodes ownership (these are proc_symlinks to the real sysfs nodes)
-chown -LR system.system /proc/touchpanel
+start_msm_irqbalance()
+{
+	if [ -f /vendor/bin/msm_irqbalance ]; then
+		start vendor.msm_irqbalance
+	fi
+}
 
 baseband=`getprop ro.baseband`
 echo 1 > /proc/sys/net/ipv6/conf/default/accept_ra_defrtr
@@ -118,8 +128,176 @@ case "$baseband" in
 esac
 
 case "$target" in
+    "msm7630_surf" | "msm7630_1x" | "msm7630_fusion")
+        if [ -f /sys/devices/soc0/hw_platform ]; then
+            value=`cat /sys/devices/soc0/hw_platform`
+        else
+            value=`cat /sys/devices/system/soc/soc0/hw_platform`
+        fi
+        case "$value" in
+            "Fluid")
+             start profiler_daemon;;
+        esac
+        ;;
+    "msm8660" )
+        if [ -f /sys/devices/soc0/hw_platform ]; then
+            platformvalue=`cat /sys/devices/soc0/hw_platform`
+        else
+            platformvalue=`cat /sys/devices/system/soc/soc0/hw_platform`
+        fi
+        case "$platformvalue" in
+            "Fluid")
+                start profiler_daemon;;
+        esac
+        ;;
+    "msm8960")
+        case "$baseband" in
+            "msm")
+                start_battery_monitor;;
+        esac
 
-    "msm8953")
+        if [ -f /sys/devices/soc0/hw_platform ]; then
+            platformvalue=`cat /sys/devices/soc0/hw_platform`
+        else
+            platformvalue=`cat /sys/devices/system/soc/soc0/hw_platform`
+        fi
+        case "$platformvalue" in
+             "Fluid")
+                 start profiler_daemon;;
+             "Liquid")
+                 start profiler_daemon;;
+        esac
+        ;;
+    "msm8974")
+        platformvalue=`cat /sys/devices/soc0/hw_platform`
+        case "$platformvalue" in
+             "Fluid")
+                 start profiler_daemon;;
+             "Liquid")
+                 start profiler_daemon;;
+        esac
+        case "$baseband" in
+            "msm")
+                start_battery_monitor
+                ;;
+        esac
+        start_charger_monitor
+        ;;
+    "sdm660")
+        if [ -f /sys/devices/soc0/soc_id ]; then
+             soc_id=`cat /sys/devices/soc0/soc_id`
+        else
+             soc_id=`cat /sys/devices/system/soc/soc0/id`
+        fi
+
+        if [ -f /sys/devices/soc0/hw_platform ]; then
+             hw_platform=`cat /sys/devices/soc0/hw_platform`
+        else
+             hw_platform=`cat /sys/devices/system/soc/soc0/hw_platform`
+        fi
+
+        case "$soc_id" in
+             "317" | "324" | "325" | "326" | "318" | "327" | "385" )
+                  case "$hw_platform" in
+                       "Surf")
+                                    setprop qemu.hw.mainkeys 0
+                                    ;;
+                       "MTP")
+                                    setprop qemu.hw.mainkeys 0
+                                    ;;
+                       "RCM")
+                                    setprop qemu.hw.mainkeys 0
+                                    ;;
+                       "QRD")
+                                    setprop qemu.hw.mainkeys 0
+                                    ;;
+                  esac
+                  ;;
+       esac
+        start_msm_irqbalance660
+        ;;
+    "apq8084")
+        platformvalue=`cat /sys/devices/soc0/hw_platform`
+        case "$platformvalue" in
+             "Fluid")
+                 start profiler_daemon;;
+             "Liquid")
+                 start profiler_daemon;;
+        esac
+        ;;
+    "msm8226")
+        start_charger_monitor
+        ;;
+    "msm8610")
+        start_charger_monitor
+        ;;
+    "msm8916")
+        start_vm_bms
+        start_msm_irqbalance_8939
+        if [ -f /sys/devices/soc0/soc_id ]; then
+            soc_id=`cat /sys/devices/soc0/soc_id`
+        else
+            soc_id=`cat /sys/devices/system/soc/soc0/id`
+        fi
+
+        if [ -f /sys/devices/soc0/platform_subtype_id ]; then
+             platform_subtype_id=`cat /sys/devices/soc0/platform_subtype_id`
+        fi
+        if [ -f /sys/devices/soc0/hw_platform ]; then
+             hw_platform=`cat /sys/devices/soc0/hw_platform`
+        fi
+        case "$soc_id" in
+             "239")
+                  case "$hw_platform" in
+                       "Surf")
+                            case "$platform_subtype_id" in
+                                 "1")
+                                      setprop qemu.hw.mainkeys 0
+                                      ;;
+                            esac
+                            ;;
+                       "MTP")
+                          case "$platform_subtype_id" in
+                               "3")
+                                    setprop qemu.hw.mainkeys 0
+                                    ;;
+                          esac
+                          ;;
+                  esac
+                  ;;
+        esac
+        ;;
+    "msm8994" | "msm8992" | "msm8998" | "apq8098_latv" | "sdm845" | "sdm710" | "qcs605" | "talos")
+        start_msm_irqbalance
+        ;;
+    "msm8996")
+        if [ -f /sys/devices/soc0/hw_platform ]; then
+             hw_platform=`cat /sys/devices/soc0/hw_platform`
+        fi
+        case "$hw_platform" in
+                "MTP" | "CDP")
+                #Loop through the sysfs nodes and determine the correct sysfs to change the permission and ownership.
+                        for count in 0 1 2 3 4 5 6 7 8 9 10
+                        do
+                                dir="/sys/devices/soc/75ba000.i2c/i2c-12/12-0020/input/input"$count
+                                if [ -d "$dir" ]; then
+                                     chmod 0660 $dir/secure_touch_enable
+                                     chmod 0440 $dir/secure_touch
+                                     chown system.drmrpc $dir/secure_touch_enable
+                                     chown system.drmrpc $dir/secure_touch
+                                     break
+                                fi
+                        done
+                        ;;
+        esac
+        ;;
+    "msm8909")
+        start_vm_bms
+        ;;
+    "msmnile")
+        start_msm_irqbalance_msmnile
+        ;;
+    "msm8937")
         start_msm_irqbalance_8939
         if [ -f /sys/devices/soc0/soc_id ]; then
             soc_id=`cat /sys/devices/soc0/soc_id`
@@ -132,17 +310,56 @@ case "$target" in
         else
              hw_platform=`cat /sys/devices/system/soc/soc0/hw_platform`
         fi
+	if [ "$low_ram" != "true" ]; then
+             case "$soc_id" in
+                  "294" | "295" | "303" | "307" | "308" | "309" | "313" | "320" | "353" | "354" | "363" | "364")
+                       case "$hw_platform" in
+                            "Surf")
+                                    setprop qemu.hw.mainkeys 0
+                                    ;;
+                            "MTP")
+                                    setprop qemu.hw.mainkeys 0
+                                    ;;
+                            "RCM")
+                                    setprop qemu.hw.mainkeys 0
+                                    ;;
+                            "QRD")
+                                    setprop qemu.hw.mainkeys 0
+                                    ;;
+                       esac
+                       ;;
+             esac
+        fi
+        ;;
+    "msm8953")
+	start_msm_irqbalance_8939
+        ;;
+    "sdm710")
+        if [ -f /sys/devices/soc0/soc_id ]; then
+            soc_id=`cat /sys/devices/soc0/soc_id`
+        else
+            soc_id=`cat /sys/devices/system/soc/soc0/id`
+        fi
+
+        if [ -f /sys/devices/soc0/hw_platform ]; then
+             hw_platform=`cat /sys/devices/soc0/hw_platform`
+        else
+             hw_platform=`cat /sys/devices/system/soc/soc0/hw_platform`
+        fi
         case "$soc_id" in
-             "293" | "304" | "338" | "351" | "349" | "350" )
+             "336" | "337" | "347" | "360" | "393" )
                   case "$hw_platform" in
                        "Surf")
-                                    setprop qemu.hw.mainkeys 1
+                                    setprop qemu.hw.mainkeys 0
                                     ;;
                        "MTP")
-                                    setprop qemu.hw.mainkeys 1
+                                    setprop qemu.hw.mainkeys 0
                                     ;;
                        "RCM")
-                                    setprop qemu.hw.mainkeys 1
+                                    setprop qemu.hw.mainkeys 0
+                                    ;;
+                       "QRD")
+                                    setprop qemu.hw.mainkeys 0
                                     ;;
                   esac
                   ;;
@@ -150,34 +367,35 @@ case "$target" in
         ;;
 esac
 
+# Remove recovery cache from persist
+rm -rf /mnt/vendor/persist/cache/recovery
+
 # Set shared touchpanel nodes ownership (these are proc_symlinks to the real sysfs nodes)
-chown -LR system.system /proc/gesture/onoff
+chown -LR system.system /proc/touchpanel
 
 #
 # Make modem config folder and copy firmware config to that folder for RIL
 #
-if [ -f /data/vendor/radio/ver_info.txt ]; then
-    prev_version_info=`cat /data/vendor/radio/ver_info.txt`
+if [ -f /data/vendor/modem_config/ver_info.txt ]; then
+    prev_version_info=`cat /data/vendor/modem_config/ver_info.txt`
 else
     prev_version_info=""
 fi
 
-cur_version_info=`cat /firmware/verinfo/ver_info.txt`
-if [ ! -f /firmware/verinfo/ver_info.txt -o "$prev_version_info" != "$cur_version_info" ]; then
-  # add W for group recursively before delete
+cur_version_info=`cat /vendor/firmware_mnt/verinfo/ver_info.txt`
+if [ ! -f /vendor/firmware_mnt/verinfo/ver_info.txt -o "$prev_version_info" != "$cur_version_info" ]; then
+    # add W for group recursively before delete
     chmod g+w -R /data/vendor/modem_config/*
     rm -rf /data/vendor/modem_config/*
     # preserve the read only mode for all subdir and files
-    cp --preserve=m -dr /firmware/image/modem_pr/mcfg/configs/* /data/vendor/modem_config
-    cp --preserve=m -d /firmware/verinfo/ver_info.txt /data/vendor/modem_config/
-    cp --preserve=m -d /firmware/image/modem_pr/mbn_ota.txt /data/vendor/modem_config/
-    cp --preserve=m -d /firmware/image/modem_pr/mbn_oin.txt /data/vendor/modem_config/
-    cp --preserve=m -d /firmware/image/modem_pr/mbn_ogl.txt /data/vendor/modem_config/
+    cp --preserve=m -dr /vendor/firmware_mnt/image/modem_pr/mcfg/configs/* /data/vendor/modem_config
+    cp --preserve=m -d /vendor/firmware_mnt/verinfo/ver_info.txt /data/vendor/modem_config/
+    cp --preserve=m -d /vendor/firmware_mnt/image/modem_pr/mbn_ota.txt /data/vendor/modem_config/
     # the group must be root, otherwise this script could not add "W" for group recursively
-    chown -hR radio.radio /data/vendor/modem_config/*
+    chown -hR radio.root /data/vendor/modem_config/*
 fi
 chmod g-w /data/vendor/modem_config
-setprop ro.runtime.mbn_copy_completed 1
+setprop ro.vendor.ril.mbn_copy_completed 1
 
 #check build variant for printk logging
 #current default minimum boot-time-default
