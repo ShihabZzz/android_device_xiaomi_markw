@@ -454,9 +454,6 @@ on post-fs-data
     #Create FTM_AP dir for factory test
     mkdir /data/FTM_AP 0775 system system
 
-on property:vendor.hw.fm.init=*
-    write /sys/module/radio_iris_transport/parameters/fmsmd_set ${vendor.hw.fm.init}
-
 service iop /vendor/bin/iop
     class main
     user root
@@ -867,6 +864,13 @@ on property:ro.vendor.radio.noril=*
 
 service power_off_alarm /vendor/bin/power_off_alarm
     class core
+    group system
+    disabled
+    oneshot
+
+service fm_dl /vendor/bin/init.qti.fm.sh
+    class late_start
+    user system
     group system
     disabled
     oneshot

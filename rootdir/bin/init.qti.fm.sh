@@ -26,35 +26,35 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
-setprop vendor.hw.fm.init 0
+ setprop vendor.hw.fm.init 0
 
-mode=`getprop vendor.hw.fm.mode`
+ mode=`getprop vendor.hw.fm.mode`
 version=199217
 
-LOG_TAG="qti-fm"
+ LOG_TAG="qti-fm"
 LOG_NAME="${0}:"
 
-loge ()
+ loge ()
 {
   /vendor/bin/log -t $LOG_TAG -p e "$LOG_NAME $@"
 }
 
-logi ()
+ logi ()
 {
   /vendor/bin/log -t $LOG_TAG -p i "$LOG_NAME $@"
 }
 
-failed ()
+ failed ()
 {
   loge "$1: exit code $2"
   exit $2
 }
 
-logi "In FM shell Script"
+ logi "In FM shell Script"
 logi "mode: $mode"
 logi "Version : $version"
 
-#$fm_qsoc_patches <fm_chipVersion> <enable/disable WCM>
+ #$fm_qsoc_patches <fm_chipVersion> <enable/disable WCM>
 #
 case $mode in
   "normal")
@@ -74,9 +74,9 @@ case $mode in
     ;;
 esac
 
-exit_code_fm_qsoc_patches=$?
+ exit_code_fm_qsoc_patches=$?
 
-case $exit_code_fm_qsoc_patches in
+ case $exit_code_fm_qsoc_patches in
    0)
     logi "FM QSoC calibration and firmware download succeeded"
    ;;
@@ -85,6 +85,7 @@ case $exit_code_fm_qsoc_patches in
    ;;
 esac
 
-setprop vendor.hw.fm.init 1
+ setprop vendor.hw.fm.init 1
 
-exit 0
+ exit 0
+ 
