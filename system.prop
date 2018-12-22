@@ -108,7 +108,8 @@ bluetooth.hfp.client=1
 persist.fuse_sdcard=true
 
 # Perf
-ro.sys.fw.dex2oat_thread_count=8
+ro.vendor.extension_library=libqti-perfd-client.so \
+ro.vendor.qti.sys.fw.bservice_enable=true
 
 #property to enable user to access Google WFD settings
 persist.debug.wfd.enable=1
