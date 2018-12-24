@@ -98,6 +98,7 @@ PRODUCT_PACKAGES += \
     audio_amplifier.msm8953 \
     audio.r_submix.default \
     audio.usb.default \
+	 libaacwrapper \
     libqcompostprocbundle \
     libaudio-resampler \
     libqcomvisualizer \
@@ -381,7 +382,7 @@ PRODUCT_PACKAGES += \
 # Seccomp policy
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/seccomp_policy/mediacodec-seccomp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediacodec.policy \
-    $(LOCAL_PATH)/seccomp_policy/mediaextractor-seccomp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediaextractor.policy 
+    $(LOCAL_PATH)/seccomp_policy/mediaextractor-seccomp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediaextractor.policy
 
 # Sensors
 PRODUCT_PACKAGES += \
@@ -461,12 +462,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/hostapd/hostapd.deny:system/etc/hostapd/hostapd.deny \
     $(LOCAL_PATH)/configs/hostapd/hostapd_default.conf:system/etc/hostapd/hostapd_default.conf
 
-# Wfd
-PRODUCT_PACKAGES += \
-    libnl
-
+# Wi-Fi Display
 PRODUCT_BOOT_JARS += \
-    WfdCommon
+		WfdCommon
 
 # Inherit proprietary files
 $(call inherit-product-if-exists, vendor/xiaomi/markw/markw-vendor.mk)
