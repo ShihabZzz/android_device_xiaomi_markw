@@ -153,9 +153,6 @@ on boot
     #enable camera read sensors data
     setprop persist.vendor.camera.gyro.disable 0
 
-    #Remove SUID bit for iproute2 ip tool
-    chmod 0755 /system/bin/ip
-
     # Prevents permission denied error for telephony
     chmod 0644 /proc/cmdline
 
