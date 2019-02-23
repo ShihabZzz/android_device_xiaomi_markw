@@ -28,4 +28,6 @@
 
     <!-- Doze: does this device support STATE_DOZE and STATE_DOZE_SUSPEND?  -->
     <bool name="doze_display_state_supported">true</bool>
+    <!-- System icon area layout weight -->
+    <item name="system_icon_area_weight" format="float" type="integer">1.25</item>
 </resources>
