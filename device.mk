@@ -191,7 +191,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.voice.conc.fallbackpath=deep-buffer \
     vendor.audio.hw.aac.encoder=true \
     vendor.audio.flac.sw.decoder.24bit=true \
-    ro.af.client_heap_size_kbyte=7168 \
     persist.vendor.audio.hw.binder.size_kbyte=1024
 
 # Automotive
