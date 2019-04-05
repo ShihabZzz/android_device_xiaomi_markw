@@ -236,3 +236,7 @@ ro.config.alarm_vol_default=3
 
 #add props brightness
 #persist.vendor.max.brightness=530
+
+# UI
+PRODUCT_PROPERTY_OVERRIDES += \
+sys.use_fifo_ui=1
