@@ -94,11 +94,6 @@ ro.qualcomm.cabl=2
 ro.vendor.display.cabl=2
 
 #
-# System props for telephony
-# System prop to turn on CdmaLTEPhone always
-telephony.lteOnCdmaDevice=1
-
-#
 # System props for bluetooh
 # System prop to turn on hfp client
 bluetooth.hfp.client=1
@@ -242,7 +237,7 @@ persist.vendor.radio.apm_sim_not_pwdn=1
 
 # Audio
 ro.config.media_vol_steps=25 \
-ro.config.vc_call_vol_steps=7 
+ro.config.vc_call_vol_steps=7
 
 # Maintainer
 PRODUCT_PROPERTY_OVERRIDES += \
