@@ -223,6 +223,9 @@ TARGET_USE_SDCLANG := true
 # Recovery
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
 
+# Vendor Security patch level
+VENDOR_SECURITY_PATCH := 2019-04-01
+
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
@@ -235,9 +238,6 @@ PRODUCT_VENDOR_MOVE_ENABLED := true
 BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
 PRODUCT_FULL_TREBLE_OVERRIDE := true
 PRODUCT_SHIPPING_API_LEVEL := 23
-
-# Security patch level
-VENDOR_SECURITY_PATCH := 2019-03-05
 
 # Wi-Fi
 BOARD_USES_CAF_WLAN_HAL := true
