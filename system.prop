@@ -66,6 +66,16 @@ ro.vendor.use_data_netmgrd=true
 persist.data.netmgrd.qos.enable=true
 persist.vendor.data.mode=concurrent
 
+#QTI Performance
+PRODUCT_PROPERTY_OVERRIDES += \
+vendor.enable_prefetch=1 \
+vendor.iop.enable_uxe=1 \
+vendor.iop.enable_prefetch_ofr=1 \
+vendor.perf.iop_v3.enable=1 \
+ro.vendor.at_library=libqti-at.so \
+persist.vendor.qti.games.gt.prof=1
+
+
 #persist.vendor.data.profile_update
 persist.vendor.data.profile_update=true
 
@@ -112,7 +122,7 @@ persist.debug.coresight.config=stm-events
 persist.console.silent.config=1
 
 # Shutdown timeout
-sys.vendor.shutdown.waittime=500 
+sys.vendor.shutdown.waittime=500
 ro.build.shutdown_timeout=0
 
 #property for vendor specific library
@@ -159,7 +169,7 @@ ro.memperf.enable=false
 
 # Higher fling velocities
 # for smoother scrolling and better responsiveness
-ro.min.fling_velocity=160 
+ro.min.fling_velocity=160
 ro.max.fling_velocity=20000
 
 #Trim properties
@@ -185,9 +195,9 @@ vendor.camera.hal1.packagelist=com.skype.raider,com.google.android.talk,com.what
 vendor.camera.lowpower.record.enable=1
 
 #Other cam param
-media.camera.ts.monotonic=1 
-persist.vendor.camera.isp.clock.optmz=0 
-persist.vendor.camera.stats.test=5 
+media.camera.ts.monotonic=1
+persist.vendor.camera.isp.clock.optmz=0
+persist.vendor.camera.stats.test=5
 persist.vendor.qti.telephony.vt_cam_interface=1
 
 #HAL3
