@@ -146,12 +146,6 @@ on boot
     chown system system /mnt/vendor/persist/speccfg/submask
     chown system system /mnt/vendor/persist/speccfg/partition
 
-#USB controller configuration
-    setprop vendor.usb.rndis.func.name "rndis"
-    setprop vendor.usb.rmnet.func.name "rmnet_bam"
-    setprop vendor.usb.rmnet.inst.name "rmnet_bam_dmux"
-    setprop vendor.usb.dpl.inst.name "dpl_bam_dmux"
-
 service wcnss-service /vendor/bin/wcnss_service
     class main
     user system
