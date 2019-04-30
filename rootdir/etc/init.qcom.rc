@@ -126,7 +126,7 @@ on boot
     # Vibrator permissions
     chown root system /sys/devices/virtual/timed_output/vibrator/vtg_level
     chmod 0660 /sys/devices/virtual/timed_output/vibrator/vtg_level
-    
+
     #Create QMUX deamon socket area
     mkdir /dev/socket/qmux_radio 0770 radio radio
     chmod 2770 /dev/socket/qmux_radio
@@ -276,7 +276,7 @@ on post-fs-data
     # Create directory used by display clients
     mkdir /data/vendor/display 0770 system graphics
 
-    
+
 
     # Create directory used by media clients
     mkdir /data/vendor/media 0770 mediacodec media
@@ -289,12 +289,12 @@ on post-fs-data
 
 
 
-  
+
 
     # Create directory for TZ Apps
     mkdir /data/misc/qsee 0770 system system
 
-  
+
 
     # Create directory for voiceprint
     mkdir /data/misc/qvop 0771 system system
@@ -336,7 +336,7 @@ on post-fs-data
     mkdir /data/vendor/ipa 0770 radio radio
     chmod 0770 /data/vendor/ipa
 
-    
+
 
     # Create the directories used by CnE subsystem
     mkdir /data/vendor/connectivity 0771 radio radio
@@ -382,7 +382,7 @@ on post-fs-data
     mkdir /dev/socket/location 0770 gps gps
     mkdir /dev/socket/location/mq 0770 gps gps
     mkdir /dev/socket/location/xtra 0770 gps gps
-    
+
     #Create directory from IMS services
     mkdir /data/shared 0755
     chown system system /data/shared
@@ -427,7 +427,7 @@ on post-fs-data
     chown radio radio /data/vendor/radio/db_check_done
     chmod 0660 /data/vendor/radio/db_check_done
 
-    
+
 
     #Create SWAP related dirs
     mkdir /data/vendor/swap 0770 root system
@@ -442,7 +442,7 @@ on post-fs-data
 
 on property:hw.fm.init=*
     write /sys/module/radio_iris_transport/parameters/fmsmd_set ${hw.fm.init}
-    
+
 service iop /vendor/bin/iop
     class main
     user root
@@ -506,7 +506,7 @@ on property:sys.boot_completed=1
     chown system system /sys/devices/soc/qpnp-smbcharger-18/power_supply/battery/subsystem/bms/hi_power
     chmod 0664 /sys/devices/soc/qpnp-smbcharger-18/power_supply/battery/subsystem/bms/hi_power
     write /sys/devices/soc/qpnp-smbcharger-18/power_supply/battery/subsystem/bms/hi_power 1
-    
+
 on property:persist.vendor.radio.atfwd.start=false
     stop vendor.atfwd
 
@@ -548,6 +548,8 @@ service qcom-c_main-sh /vendor/bin/init.class_main.sh
     oneshot
 
 on property:vold.decrypt=trigger_restart_framework
+    restart vendor.camera-provider-2-4
+    restart vendor.audio-hal-2-0
     start qcom-c_main-sh
     start wcnss-service
 
@@ -877,7 +879,7 @@ on property:persist.sys.fp.vendor=switchf
 on property:persist.sys.fp.vendor=goodix
     setprop persist.sys.fp.goodix 1
     setprop ro.boot.fpsensor gdx
-    setprop ro.hardware.fingerprint goodix 
+    setprop ro.hardware.fingerprint goodix
     start vendor.fps_hal
 
 service vendor.goodix_script /vendor/bin/init.goodix.sh
