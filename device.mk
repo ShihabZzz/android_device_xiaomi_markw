@@ -518,6 +518,7 @@ PRODUCT_PACKAGES += \
     hostapd_cli \
     ipacm \
     IPACM_cfg.xml \
+		liboffloadhal \
     libqsap_sdk \
     libwifi-hal-qcom \
     wificond \
