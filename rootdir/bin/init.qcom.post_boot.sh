@@ -3997,6 +3997,9 @@ case "$target" in
         echo 50000 > /sys/devices/system/cpu/cpufreq/interactive/min_sample_time
         echo 50000 > /sys/devices/system/cpu/cpufreq/interactive/sampling_down_factor
 
+        #CPU_BOOST
+        echo 0 > /sys/module/cpu_boost/parameters/input_boost_enabled
+
         # Bring up all cores online
         echo 1 > /sys/devices/system/cpu/cpu1/online
         echo 1 > /sys/devices/system/cpu/cpu2/online
