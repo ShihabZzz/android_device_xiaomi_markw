@@ -29,7 +29,11 @@
     <!-- Max visible notification icons -->
     <integer name="config_maxVisibleNotificationIcons">10</integer>
     <integer name="config_maxVisibleNotificationIconsWhenDark">10</integer>
-    
+
     <!-- System icon area layout weight -->
     <item name="system_icon_area_weight" format="float" type="integer">1.25</item>
+
+    <!-- Should "4G" be shown instead of "LTE" when the network is NETWORK_TYPE_LTE? -->
+    <bool name="config_show4GForLTE">true</bool>
+    
 </resources>
