@@ -32,7 +32,7 @@ public class CustomPreferenceFragment extends PreferenceFragment implements
     Preference mKCALValPref, mKCALContPref;
     ListPreference mKCALPresetListPref;
     SwitchPreference mKCALPresetPref;
-    SwitchPreference mRestorePref, mWakeUpPref;
+    SwitchPreference mRestorePref;
     PreferenceCategory mKCALScrCat, mKCALExtrasCat;
 
     // SharedPreferences
@@ -84,12 +84,6 @@ public class CustomPreferenceFragment extends PreferenceFragment implements
             boolean value = (Boolean) newValue;
             editor.putBoolean(StaticMembers.KEY_KCAL_PRESETS, value);
             setKcalPresetsDependents(value);
-        }
-        // wakeup fix
-        else if (preference == mWakeUpPref) {
-            boolean value = (Boolean) newValue;
-            editor.putBoolean(StaticMembers.KEY_SLOW_WAKEUP_FIX, value);
-            setSlowWakeupFix(value);
         }
         // kcal profile
         else if (preference == mKCALPresetListPref) {
@@ -193,7 +187,6 @@ public class CustomPreferenceFragment extends PreferenceFragment implements
         // switchpreferences
         mKCALPresetPref = (SwitchPreference) findPreference(StaticMembers.KEY_KCAL_PRESETS);
         mRestorePref = (SwitchPreference) findPreference(StaticMembers.KEY_RESTORE_ON_BOOT);
-        mWakeUpPref = (SwitchPreference) findPreference(StaticMembers.KEY_SLOW_WAKEUP_FIX);
 
         // sharedPreferences
         mShouldRestore = PreferenceManager.getDefaultSharedPreferences(getContext()).
@@ -234,8 +227,6 @@ public class CustomPreferenceFragment extends PreferenceFragment implements
         mKCALPresetPref.setEnabled(isKcalSupported);
         mKCALPresetListPref.setEnabled(isKcalSupported);
 
-        // wakeup
-        mWakeUpPref.setEnabled(Utils.fileWritable(StaticMembers.FILE_LEVEL_WAKEUP));
     }
 
     // Set current state
@@ -251,10 +242,6 @@ public class CustomPreferenceFragment extends PreferenceFragment implements
                 mKCALPresetListPref.setValue(mKcalPresetsValue);
         }
 
-        // wakeup fix
-        if (mWakeUpPref.isEnabled()) {
-            mWakeUpPref.setChecked(mShouldFixSlowWakeUp);
-        }
     }
 
     // Set change listeners
@@ -263,7 +250,6 @@ public class CustomPreferenceFragment extends PreferenceFragment implements
         mRestorePref.setOnPreferenceChangeListener(this);
         mKCALPresetPref.setOnPreferenceChangeListener(this);
         mKCALPresetListPref.setOnPreferenceChangeListener(this);
-        mWakeUpPref.setOnPreferenceChangeListener(this);
 
         // preference click listeners
         mVibratorPref.setOnPreferenceClickListener(this);
