@@ -502,7 +502,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.service.adb.enable=1 \
     persist.service.debuggable=1 \
-    persist.vendor.sys.usb.config.extra=none \
+    persist.vendor.usb.config.extra=none \
     persist.sys.usb.config=mtp,adb
 
 # Vibrator
