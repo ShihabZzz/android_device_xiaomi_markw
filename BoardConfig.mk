@@ -55,6 +55,7 @@ TARGET_KERNEL_ARCH := arm64
 #TARGET_KERNEL_SOURCE := kernel/xiaomi/msm8953
 TARGET_KERNEL_CONFIG := markw_defconfig
 TARGET_KERNEL_SOURCE := kernel/xiaomi/markw
+TARGET_KERNEL_VERSION := 3.18
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 
 # ANT+
