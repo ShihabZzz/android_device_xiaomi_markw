@@ -32,7 +32,11 @@ VNDK_SP_LIBRARIES := \
     libunwindstack \
     libutils \
     libutilscallstack \
-    libdexfile 
+    libdexfile \
+	  libz
+
+EXTRA_VENDOR_LIBRARIES := \
+	android.hidl.manager@1.0
 #-------------------------------------------------------------------------------
 # VNDK Modules
 #-------------------------------------------------------------------------------
