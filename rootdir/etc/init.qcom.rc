@@ -743,33 +743,6 @@ service fm_dl /vendor/bin/init.qti.fm.sh
 
 # fingerprint sections
 
-service vendor.gx_fpd /vendor/bin/gx_fpd
-    class core
-    user system
-    group system drmrpc
-
-# fpc fingerprint section - start
-on property:persist.sys.fp.vendor=switchf
-    stop vendor.gx_fpd
-    setprop persist.sys.fp.vendor searchf
-    setprop persist.sys.fp.goodix 0
-    setprop ro.boot.fpsensor fpc
-    setprop ro.hardware.fingerprint fpc
-    start vendor.fps_hal
-
-# goodix fingerprint section - start
-on property:persist.sys.fp.vendor=goodix
-    setprop persist.sys.fp.goodix 1
-    setprop ro.boot.fpsensor gdx
-    setprop ro.hardware.fingerprint goodix
-    start vendor.fps_hal
-
-service vendor.goodix_script /vendor/bin/init.goodix.sh
-    class late_start
-    user system
-    oneshot
-# goodix fingerprint section - end
-
 #Set GPU Opengles version
 on property:vendor.opengles.version=*
     setprop ro.opengles.version ${vendor.opengles.version}
