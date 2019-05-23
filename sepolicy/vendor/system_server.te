@@ -11,5 +11,8 @@ allow system_server sysfs:file getattr;
 
 allow system_server sysfs_vibrator:file read;
 
+#Smart charger
+allow system_server sysfs_battery_supply:file rw_file_perms;
+
 #Stop_Spamming!
 dontaudit system_server sysfs:file { read };
