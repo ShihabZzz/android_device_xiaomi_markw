@@ -4,6 +4,7 @@
     <string name="dirac_settings">Dirac Settings</string>
     <string name="mi_sound_enhancer">Sound Enhancer</string>
     <string name="dirac_preset_title">Sound preset</string>
+    <string name="dirac_headsets_title">Headset type</string>
     <string name="dirac_headset_default">Default</string>
     <string name="dirac_headset_earbuds">Mi Earbuds</string>
     <string name="dirac_headset_in_ear_2013">Mi In-Ear (2013)</string>
