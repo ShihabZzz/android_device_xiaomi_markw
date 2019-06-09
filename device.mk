@@ -319,7 +319,6 @@ PRODUCT_PACKAGES += \
     init.qti.fm.rc \
     init.qcom.rc \
     init.qcom.usb.rc \
-	init.spectrum.rc \
     init.target.rc \
     ueventd.qcom.rc
 
