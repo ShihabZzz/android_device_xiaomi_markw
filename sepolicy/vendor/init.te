@@ -1,1 +1,4 @@
 allow init proc:lnk_file setattr;
+allow vendor_init rootfs:dir { write };
+allow vendor_init rootfs:dir { add_name };
+allow vendor_init rootfs:lnk_file { setattr };
