@@ -4,6 +4,3 @@ allow init adsprpcd_file:filesystem relabelfrom;
 allow init adsprpcd_file:filesystem associate;
 allow init adsprpcd_file:filesystem mount;
 allow init sysfs:file setattr;
-allow vendor_init rootfs:dir { write };
-allow vendor_init rootfs:dir { add_name };
-allow vendor_init rootfs:lnk_file { setattr };
