@@ -10,6 +10,7 @@ allow hal_fingerprint_markw gx_fpd_service:service_manager find;
 allow hal_fingerprint_markw fingerprint_service:service_manager find;
 allow hal_fingerprint_markw fingerprintd_data_file:dir write;
 allow hal_fingerprint_markw fingerprintd_data_file:file getattr;
+allow hal_fingerprint_markw fingerprintd_data_file:dir remove_name;
 allow hal_fingerprint_markw fpc_sysfs:file rw_file_perms;
 allow hal_fingerprint_markw fpc_sysfs:dir rw_dir_perms;
 allow hal_fingerprint_markw tee_device:chr_file rw_file_perms;
