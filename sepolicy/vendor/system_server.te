@@ -2,11 +2,8 @@
 r_dir_file(system_server, idc_file)
 r_dir_file(system_server, keylayout_file)
 
-allow system_server default_prop:property_service set;
 allow system_server vendor_file:dir { read open };
-allow system_server vendor_file:file { read open getattr };
+allow system_server vendor_file:file { read getattr };
 
 #Sysfs
-allow system_server sysfs:file { read };
-allow system_server sysfs:file { open };
-allow system_server sysfs:file { getattr };
+allow system_server sysfs:file getattr;

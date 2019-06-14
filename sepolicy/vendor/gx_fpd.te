@@ -5,12 +5,6 @@ type gx_fpd_exec, exec_type, vendor_file_type, file_type;
 init_daemon_domain(gx_fpd)
 binder_use(gx_fpd)
 
-# allow HAL module to read dir contents
-allow gx_fpd gx_fpd_data_file:file create_file_perms;
-
-# allow HAL module to read/write/unlink contents of this dir
-allow gx_fpd gx_fpd_data_file:dir create_dir_perms;
-
 #Allow access to goodix device
 allow gx_fpd gx_fpd_device:chr_file rw_file_perms;
 allow gx_fpd device:chr_file ioctl;
