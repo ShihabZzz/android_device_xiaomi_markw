@@ -1,1 +1,4 @@
 allow healthd sysfs:file getattr;
+
+#Stop_Spamming!
+dontaudit healthd sysfs:file { open read };
