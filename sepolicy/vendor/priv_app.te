@@ -16,4 +16,4 @@ allow priv_app firmware_file:filesystem getattr;
 allow priv_app adsprpcd_file:filesystem getattr;
 allow priv_app proc_interrupts:file open;
 allow priv_app device:dir open;
-allow priv_app proc:file { getattr open };
+allow priv_app proc:file { getattr };
