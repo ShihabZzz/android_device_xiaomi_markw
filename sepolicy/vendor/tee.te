@@ -2,3 +2,6 @@
 type_transition tee system_data_file:{ dir file } gx_fpd_data_file;
 
 allow tee fingerprintd_data_file:file { read write };
+
+#Stop_Spamming!
+dontaudit tee fingerprintd_data_file:dir { write open read };
