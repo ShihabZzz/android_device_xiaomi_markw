@@ -8,6 +8,6 @@ allow untrusted_app proc_stat:file getattr;
 allow untrusted_app gx_fpd_exec:file getattr;
 allow untrusted_app vendor_file:file getattr;
 allow untrusted_app proc_qtaguid_stat:file { getattr open read };
-allow untrusted_app proc_vmstat:file { getattr open };
+allow untrusted_app proc_vmstat:file { getattr };
 allow untrusted_app rootfs:dir { open read };
 allow untrusted_app proc_zoneinfo:file { getattr open read };
