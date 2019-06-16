@@ -82,7 +82,7 @@ on early-boot
     chown system system /persist/sensors/sensors_settings
     chown system system /persist/sensors/registry/config
     chmod 0664 /persist/sensors/sensors_settings
-    
+
     chown system system /mnt/vendor/persist/sensors
     chown system system /mnt/vendor/persist/sensors/sns.reg
     chown system system /mnt/vendor/persist/sensors/sensors_list.txt
@@ -213,10 +213,10 @@ on boot
     chown wifi wifi /sys/class/net/bond0/bonding/queue_id
 
     # Flashlight
-    chown root system /sys/devices/soc/qpnp-flash-led-24/leds/led:torch_0/max_brightness
-    chmod 0660 /sys/devices/soc/qpnp-flash-led-24/leds/led:torch_0/max_brightness
-    chown root system /sys/devices/soc/qpnp-flash-led-24/leds/led:torch_1/max_brightness
-    chmod 0660 /sys/devices/soc/qpnp-flash-led-24/leds/led:torch_1/max_brightness
+    chown root system /sys/devices/soc/qpnp-flash-led-21/leds/led:torch_0/max_brightness
+    chmod 0660 /sys/devices/soc/qpnp-flash-led-21/leds/led:torch_0/max_brightness
+    chown root system /sys/devices/soc/qpnp-flash-led-21/leds/led:torch_1/max_brightness
+    chmod 0660 /sys/devices/soc/qpnp-flash-led-21/leds/led:torch_1/max_brightness
 
     # Goodix Fingerprint
     chown system system /dev/goodix_fp
