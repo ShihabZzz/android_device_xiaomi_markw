@@ -1,0 +1,2 @@
+allow fsck vendor_file:file getattr;
+allow fsck gx_fpd_exec:file getattr;

@@ -1,0 +1,2 @@
+allow hwservicemanager vendor_file:file getattr;
+allow hwservicemanager gx_fpd_exec:file getattr;

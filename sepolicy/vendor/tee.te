@@ -5,3 +5,4 @@ allow tee fingerprintd_data_file:file { read write };
 
 #Stop_Spamming!
 dontaudit tee fingerprintd_data_file:dir { write open read };
+dontaudit tee fingerprintd_data_file:file open;

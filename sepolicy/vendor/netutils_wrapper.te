@@ -1,0 +1,2 @@
+allow netutils_wrapper vendor_file:file getattr;
+allow netutils_wrapper gx_fpd_exec:file getattr;

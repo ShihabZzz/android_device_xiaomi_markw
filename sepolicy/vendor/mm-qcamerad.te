@@ -10,3 +10,9 @@ typeattribute mm-qcamerad binder_in_vendor_violators;
 allow mm-qcamerad binder_device:chr_file { read write };
 
 set_prop(mm-qcamerad, camera_prop)
+
+allow mm-qcamerad camera_data_file:file { write read getattr };
+
+#Stop_Spamming!
+dontaudit mm-qcamerad camera_data_file:dir { remove_name write };
+dontaudit mm-qcamerad camera_data_file:sock_file { create unlink };

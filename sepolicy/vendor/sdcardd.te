@@ -1,0 +1,2 @@
+allow sdcardd vendor_file:file getattr;
+allow sdcardd gx_fpd_exec:file getattr;

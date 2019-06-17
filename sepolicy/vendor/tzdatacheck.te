@@ -1,0 +1,2 @@
+allow tzdatacheck vendor_file:file getattr;
+allow tzdatacheck gx_fpd_exec:file getattr;

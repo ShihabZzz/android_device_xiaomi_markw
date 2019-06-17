@@ -1,0 +1,2 @@
+allow bootstat vendor_file:file getattr;
+allow bootstat gx_fpd_exec:file getattr;

@@ -1,0 +1,2 @@
+allow vold vendor_file:file getattr;
+allow vold gx_fpd_exec:file getattr;

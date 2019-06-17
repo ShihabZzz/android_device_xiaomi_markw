@@ -8,3 +8,8 @@ allow system_server gx_fpd_exec:file getattr;
 
 #Sysfs
 allow system_server sysfs:file getattr;
+
+allow system_server sysfs_vibrator:file read;
+
+#Stop_Spamming!
+dontaudit system_server sysfs:file { read };

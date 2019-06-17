@@ -1,0 +1,2 @@
+allow idmap vendor_file:file getattr;
+allow idmap gx_fpd_exec:file getattr;
