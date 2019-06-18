@@ -1,0 +1,2 @@
+allow profman vendor_file:file getattr;
+allow profman gx_fpd_exec:file getattr;

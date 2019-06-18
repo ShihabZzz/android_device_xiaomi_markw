@@ -7,6 +7,8 @@ allow untrusted_app_27 rootfs:dir { open read };
 allow untrusted_app_27 mnt_media_rw_file:dir getattr;
 allow untrusted_app_27 mnt_product_file:dir getattr;
 allow untrusted_app_27 proc_vmstat:file getattr;
+allow untrusted_app_27 proc_uptime:file getattr;
+allow untrusted_app_27 hal_perf_default:binder call;
 
 #Stop_Spamming!
 dontaudit untrusted_app_27 proc_vmstat:file open;
