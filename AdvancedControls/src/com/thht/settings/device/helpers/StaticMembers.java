@@ -28,9 +28,6 @@ public class StaticMembers {
     public static final String KEY_KCAL_SCR_CONT = "key_kcal_scr_cont";
     public static final String KEY_KCAL_SCR_VAL = "key_kcal_scr_val";
     public static final String KEY_KCAL_SCR_HUE = "key_kcal_scr_hue";
-    // device parts
-    public static final String KEY_CATEGORY_SOUND = "key_category_sound";
-    public static final String KEY_DIRAC = "key_dirac";
     // misc
     public static final String KEY_CATEGORY_MISC = "key_category_misc";
     public static final String KEY_RESTORE_ON_BOOT = "key_restore_on_boot";

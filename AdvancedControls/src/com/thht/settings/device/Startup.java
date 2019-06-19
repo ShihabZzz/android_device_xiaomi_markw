@@ -24,7 +24,6 @@ import android.os.Handler;
 import android.preference.PreferenceManager;
 import android.util.Log;
 
-import com.thht.settings.device.dirac.AudioEnhancerService;
 import com.thht.settings.device.helpers.StaticMembers;
 
 
@@ -51,8 +50,5 @@ public class Startup extends BroadcastReceiver {
                 }
             }, 0);
         }
-        
-        // Start dirac service
-        context.startService(new Intent(context, AudioEnhancerService.class));
     }
 }

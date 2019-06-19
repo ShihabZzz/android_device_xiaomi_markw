@@ -13,7 +13,7 @@
      limitations under the License.
 -->
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
-    
+
     <!-- Miscellaneous -->
     <PreferenceCategory
         android:title="@string/category_misc"
@@ -22,18 +22,6 @@
             android:key="key_restore_on_boot"
             android:title="@string/restore_on_boot"
             android:defaultValue="false" />
-    </PreferenceCategory>
-
-    <!-- Dirac -->
-    <PreferenceCategory
-        android:title="@string/category_sound"
-        android:key="key_category_sound">
-        <Preference
-            android:key="key_dirac"
-            android:persistent="false"
-            android:title="@string/dirac_title"
-            android:summary="@string/dirac_summary">
-        </Preference>
     </PreferenceCategory>
 
     <!-- Vibrator -->
