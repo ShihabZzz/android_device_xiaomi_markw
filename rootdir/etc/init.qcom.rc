@@ -127,10 +127,6 @@ on boot
     chown root system /sys/devices/virtual/timed_output/vibrator/vtg_level
     chmod 0660 /sys/devices/virtual/timed_output/vibrator/vtg_level
 
-    # Vibrator permissions
-    chown root system /sys/devices/virtual/timed_output/vibrator/vtg_level
-    chmod 0660 /sys/devices/virtual/timed_output/vibrator/vtg_level
-
     # Kcal permissions
     chown root system /sys/devices/platform/kcal_ctrl.0/kcal
     chmod 0660 /sys/devices/platform/kcal_ctrl.0/kcal
@@ -144,7 +140,7 @@ on boot
     chmod 0660 /sys/devices/platform/kcal_ctrl.0/kcal_val
     chown root system /sys/devices/platform/kcal_ctrl.0/kcal_cont
     chmod 0660 /sys/devices/platform/kcal_ctrl.0/kcal_cont
-    
+
     #Create QMUX deamon socket area
     mkdir /dev/socket/qmux_radio 0770 radio radio
     chmod 2770 /dev/socket/qmux_radio

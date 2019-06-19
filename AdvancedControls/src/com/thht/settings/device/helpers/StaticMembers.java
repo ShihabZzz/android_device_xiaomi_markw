@@ -47,8 +47,8 @@ public class StaticMembers {
     public static final String FILE_LEVEL_KCAL_HUE = "/sys/devices/platform/kcal_ctrl.0/kcal_hue";
     public static final String FILE_LEVEL_KCAL_VAL = "/sys/devices/platform/kcal_ctrl.0/kcal_val";
     // torch
-    public static final String FILE_LEVEL_TORCH_WHITE = "/sys/devices/soc/qpnp-flash-led-25/leds/led:torch_0/max_brightness";
-    public static final String FILE_LEVEL_TORCH_YELLOW = "/sys/devices/soc/qpnp-flash-led-25/leds/led:torch_1/max_brightness";
+    public static final String FILE_LEVEL_TORCH_WHITE = "/sys/devices/soc/qpnp-flash-led-21/leds/led:torch_0/max_brightness";
+    public static final String FILE_LEVEL_TORCH_YELLOW = "/sys/devices/soc/qpnp-flash-led-21/leds/led:torch_1/max_brightness";
     // vibrator
     public static final String FILE_LEVEL_VIB_STRENGTH = "/sys/devices/virtual/timed_output/vibrator/vtg_level";
 
