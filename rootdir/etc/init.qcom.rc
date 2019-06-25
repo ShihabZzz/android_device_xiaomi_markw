@@ -149,11 +149,12 @@ on boot
     mkdir /dev/socket/qmux_gps 0770 gps gps
     chmod 2770 /dev/socket/qmux_gps
 
-    mkdir /mnt/vendor/persist/drm 0770 system system
+    mkdir /persist/drm 0770 system system
     mkdir /mnt/vendor/persist/bluetooth 0770 bluetooth bluetooth
-    mkdir /mnt/vendor/persist/misc 0770 system system
+    mkdir /persist/misc 0770 system system
     mkdir /mnt/vendor/persist/alarm 0770 system system
     mkdir /mnt/vendor/persist/time 0770 system system
+    mkdir /mnt/vendor/persist/secnvm 0770 system system
     restorecon_recursive /mnt/vendor/persist
 
     #Create NETMGR daemon socket area
@@ -508,9 +509,6 @@ on property:sys.boot_completed=1
     #WDSP FW boot sysfs node used by STHAL
     chown media audio /sys/kernel/wdsp0/boot
     chown media audio /sys/kernel/wcd_cpe0/fw_name
-    chown system system /sys/devices/soc/qpnp-smbcharger-18/power_supply/battery/subsystem/bms/hi_power
-    chmod 0664 /sys/devices/soc/qpnp-smbcharger-18/power_supply/battery/subsystem/bms/hi_power
-    write /sys/devices/soc/qpnp-smbcharger-18/power_supply/battery/subsystem/bms/hi_power 1
 
 on property:persist.vendor.radio.atfwd.start=false
     stop vendor.atfwd
