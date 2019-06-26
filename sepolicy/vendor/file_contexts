@@ -28,9 +28,6 @@
 /sys/class/leds(/.*)?							u:object_r:sysfs_leds:s0
 /sys/devices/soc/78b6000\.i2c/i2c-2/2-[0-9a-f]+/leds(/.*)?		u:object_r:sysfs_leds:s0
 
-# Shell Script
-/(vendor|system/vendor)/bin/init\.goodix\.sh    u:object_r:init_fingerprint_exec:s0
-
 # Sysfs files
 /sys/audio_amplifier/enable							u:object_r:sysfs:s0
 /proc/gesture/onoff								u:object_r:proc:s0
