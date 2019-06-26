@@ -76,7 +76,7 @@
   <!-- CPUs are in scheduling idle state (kernel idle loop); system is not in system suspend state. -->
   <item name="cpu.awake">8.1</item>
   <!-- This is the battery capacity in mAh (measured at nominal voltage) -->
-  <item name="battery.capacity">4000</item>
+  <item name="battery.capacity">4100</item>
   <allow-in-power-save package="com.google.android.gms" />
   <allow-in-data-usage-save package="com.google.android.gms" />
   <array name="wifi.batchedscan">
