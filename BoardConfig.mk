@@ -222,6 +222,7 @@ TARGET_LD_SHIM_LIBS := /vendor/lib64/hw/gxfingerprint.default.so|fakelogprint.so
 include device/qcom/sepolicy/sepolicy.mk
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+BOARD_SEPOLICY_VERS := 28.0
 #SELINUX_IGNORE_NEVERALLOWS := true
 
 # Treble
