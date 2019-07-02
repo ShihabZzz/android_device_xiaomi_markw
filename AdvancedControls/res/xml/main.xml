@@ -22,6 +22,11 @@
             android:key="key_restore_on_boot"
             android:title="@string/restore_on_boot"
             android:defaultValue="false" />
+        <SwitchPreference
+            android:key="key_slow_wakeup_fix"
+            android:title="@string/slow_wakeup_fix_title"
+            android:summary="@string/slow_wakeup_fix_summary"
+            android:defaultValue="false" />
     </PreferenceCategory>
 
     <!-- Dirac -->
