@@ -5,12 +5,17 @@ import android.service.quicksettings.TileService;
 
 public class DiracTileService extends TileService {
 
+    private AudioEnhancerUtils mUtils;
+
     @Override
     public void onStartListening() {
 
+        mUtils = new AudioEnhancerUtils();
+
+        boolean enhancerEnabled = mUtils.isEnabled(getApplicationContext());
+
         Tile tile = getQsTile();
-        if (AudioEnhancerService.du.hasInitialized() && 
-            AudioEnhancerService.du.isEnabled(getApplicationContext())) {
+        if (enhancerEnabled) {
             tile.setState(Tile.STATE_ACTIVE);
         } else {
             tile.setState(Tile.STATE_INACTIVE);
@@ -23,14 +28,12 @@ public class DiracTileService extends TileService {
 
     @Override
     public void onClick() {
-        if (!AudioEnhancerService.du.hasInitialized())
-            return;
         Tile tile = getQsTile();
-        if (AudioEnhancerService.du.isEnabled(getApplicationContext())) {
-            AudioEnhancerService.du.setEnabled(getApplicationContext(), false);
+        if (mUtils.isEnabled(getApplicationContext())) {
+            mUtils.setEnabled(getApplicationContext(), false);
             tile.setState(Tile.STATE_INACTIVE);
         } else {
-            AudioEnhancerService.du.setEnabled(getApplicationContext(), true);
+            mUtils.setEnabled(getApplicationContext(), true);
             tile.setState(Tile.STATE_ACTIVE);
         }
         tile.updateTile();
