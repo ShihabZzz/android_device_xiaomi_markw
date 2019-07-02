@@ -30,7 +30,7 @@ public class VibratorStrengthDialogFragment extends DialogFragment implements Se
 
     // control values
     private int mOldStrength;
-    private static int mMinValue = 116;
+    private static int mMinValue = 119;
     private static int mMaxValue = 3596;
     private static float mOffset = 3596 / 100f;
     private static String mPreferenceKey;
@@ -161,7 +161,7 @@ public class VibratorStrengthDialogFragment extends DialogFragment implements Se
         Utils.writeValue(mFileLevel, newValue);
     }
 
-    // restore stored value of kernel node
+    // restore stored value of kernel node 
     public static void restore(Context context, String defaultValue) {
         if (!isSupported()) {
             return;
@@ -169,7 +169,7 @@ public class VibratorStrengthDialogFragment extends DialogFragment implements Se
         String storedValue = PreferenceManager.getDefaultSharedPreferences(context).getString(mPreferenceKey, defaultValue);
         Utils.writeValue(mFileLevel, storedValue);
     }
-
+    
     public static void restore(Context context, String preferenceKey, String defaultValue) {
         if (!isSupported()) {
             return;
