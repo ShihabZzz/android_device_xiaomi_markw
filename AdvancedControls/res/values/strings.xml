@@ -46,9 +46,6 @@
     <string name="category_misc">Misc</string>
     <string name="dirac_title">Dirac Settings</string>
     <string name="dirac_summary">Launch dirac configuration options</string>
-    
-    <!-- QS tile title -->
-    <string name="dirac_qs_tile_title">Dirac sound</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
