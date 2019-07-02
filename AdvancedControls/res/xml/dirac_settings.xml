@@ -11,17 +11,14 @@
         android:persistent="false" />
     <ListPreference
         android:key="dirac_headsets"
-        android:title="@string/dirac_headsets_title"
+        android:title="Select Headset Type"
         android:entries="@array/listentries"
-        android:entryValues="@array/listvalues"
-        android:defaultValue="0"
-        android:summary="%s" />
+        android:entryValues="@array/listvalues" />
     <ListPreference
         android:key="dirac_preset"
         android:entries="@array/dirac_preset_pref_entries"
         android:entryValues="@array/dirac_preset_pref_values"
         android:defaultValue="0,0,0,0,0,0,0"
-        android:title="@string/dirac_preset_title"
-        android:summary="%s" />
+        android:title="@string/dirac_preset_title"/>
 </PreferenceScreen>
 
