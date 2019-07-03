@@ -480,10 +480,12 @@ service vendor.rmt_storage /vendor/bin/rmt_storage
     user root
     shutdown critical
     ioprio rt 0
+    writepid /dev/cpuset/system-background/tasks
 
 service vendor.tftp_server /vendor/bin/tftp_server
    class core
    user root
+   writepid /dev/cpuset/system-background/tasks
 
 service ftmd /system/bin/logwrapper /vendor/bin/ftmdaemon
     class late_start
@@ -501,26 +503,25 @@ service vendor.port-bridge /vendor/bin/port-bridge
 
 service vendor.netmgrd /vendor/bin/netmgrd
     class main
-    disabled
+    writepid /dev/cpuset/system-background/tasks
 
 
 service vendor.ipacm /vendor/bin/ipacm
     class main
     user radio
     group radio inet
-    disabled
+    writepid /dev/cpuset/system-background/tasks
 
 service vendor.dataqti /vendor/bin/qti
     class main
     user radio
     group radio oem_2901 diag usb net_admin
-    disabled
-
-
+    
 service vendor.sensors.qti /vendor/bin/sensors.qti
     class core
-    user root
-    group root
+    user system
+    group system
+    writepid /dev/cpuset/system-background/tasks
 
 on property:ro.vendor.use_data_netmgrd=false
     # netmgr not supported on specific target
@@ -612,6 +613,7 @@ service vendor.atfwd /vendor/bin/ATFWD-daemon
     class late_start
     user system
     group system radio
+    writepid /dev/cpuset/system-background/tasks
 
 service hostapd_fst /vendor/bin/hw/hostapd -dd -g /data/vendor/wifi/hostapd/global
     interface android.hardware.wifi.hostapd@1.0::IHostapd default

@@ -118,8 +118,6 @@ service thermal-engine /vendor/bin/thermal-engine
 
 
 on boot
-    start rmt_storage
-
 # Add a cpuset for the camera daemon
 # We want all cores for camera
     mkdir /dev/cpuset/camera-daemon
