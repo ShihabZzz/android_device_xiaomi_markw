@@ -255,7 +255,6 @@ PRODUCT_PACKAGES += \
     init.qcom.wifi.sh \
     init.qti.ims.sh \
     fstab.qcom \
-    init.msm.usb.configfs.rc \
     init.qti.fm.rc \
     init.qcom.rc \
     init.qcom.usb.rc \
