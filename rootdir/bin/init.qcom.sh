@@ -371,7 +371,7 @@ esac
 rm -rf /mnt/vendor/persist/cache/recovery
 
 # Set shared touchpanel nodes ownership (these are proc_symlinks to the real sysfs nodes)
-chown -LR system.system /proc/touchpanel
+chown -LR system.system /proc/gesture/onoff
 
 #
 # Make modem config folder and copy firmware config to that folder for RIL
