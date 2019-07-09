@@ -236,15 +236,14 @@ on post-fs-data
     # Create directory used by display clients
     mkdir /data/vendor/display 0770 system graphics
 
-
-
     # Create directory used by media clients
     mkdir /data/vendor/media 0770 mediacodec media
 
+    # Create directory used for camera
+    mkdir /data/vendor/camera 0770 camera camera
+
     # Create directory for TZ Apps
     mkdir /data/misc/qsee 0770 system system
-
-
 
     # Create directory for voiceprint
     mkdir /data/misc/qvop 0771 system system
@@ -280,8 +279,6 @@ on post-fs-data
     #create ipacm log dir
     mkdir /data/vendor/ipa 0770 radio radio
     chmod 0770 /data/vendor/ipa
-
-
 
     # Create the directories used by CnE subsystem
     mkdir /data/vendor/connectivity 0771 radio radio
