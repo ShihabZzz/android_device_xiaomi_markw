@@ -152,11 +152,6 @@ on boot
     setprop vendor.usb.rmnet.inst.name "rmnet_bam_dmux"
     setprop vendor.usb.dpl.inst.name "dpl_bam_dmux"
 
-    # init.qcom.sensors.sh
-    chmod 0664 /mnt/vendor/persist/sensors/sensors_settings
-    chown system system /mnt/vendor/persist/sensors
-    start vendor.sensors.qti
-
 service wcnss-service /vendor/bin/wcnss_service
     class main
     user system
