@@ -70,16 +70,8 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.midi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.midi.xml \
     frameworks/native/data/etc/android.software.print.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.print.xml
 
-# whitelisted app
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/qti_whitelist.xml:system/etc/sysconfig/qti_whitelist.xml \
-    $(LOCAL_PATH)/configs/privapp-permissions-qti.xml:system/etc/permissions/privapp-permissions-qti.xml
-
 # Device Properties
 -include $(LOCAL_PATH)/prop.mk
-
-# Haters gonna hate..
-PRODUCT_CHARACTERISTICS := nosdcard
 
 # ANT+
 PRODUCT_PACKAGES += \
@@ -123,17 +115,12 @@ PRODUCT_COPY_FILES += \
 
 # XML Audio configuration files
 PRODUCT_COPY_FILES += \
-	$(LOCAL_PATH)/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
-	$(TOPDIR)frameworks/av/services/audiopolicy/config/a2dp_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dp_audio_policy_configuration.xml \
-	$(TOPDIR)frameworks/av/services/audiopolicy/config/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml \
-	$(TOPDIR)frameworks/av/services/audiopolicy/config/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml \
-	$(TOPDIR)frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/r_submix_audio_policy_configuration.xml \
-	$(TOPDIR)frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usb_audio_policy_configuration.xml
-
-# Automotive
-PRODUCT_PACKAGES += \
-    android.hardware.automotive.vehicle@2.0 \
-    android.hardware.automotive.vehicle@2.0-manager-lib
+    $(LOCAL_PATH)/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
+    $(TOPDIR)frameworks/av/services/audiopolicy/config/a2dp_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dp_audio_policy_configuration.xml \
+    $(TOPDIR)frameworks/av/services/audiopolicy/config/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml \
+    $(TOPDIR)frameworks/av/services/audiopolicy/config/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml \
+    $(TOPDIR)frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/r_submix_audio_policy_configuration.xml \
+    $(TOPDIR)frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usb_audio_policy_configuration.xml
 
 # Bluetooth
 PRODUCT_PACKAGES += \
@@ -195,12 +182,11 @@ PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-service \
     android.hardware.drm@1.1-service.clearkey
 
-PRODUCT_PROPERTY_OVERRIDES += \
-    drm.service.enabled=true
-
-# Face detection extension
+# Ebtables
 PRODUCT_PACKAGES += \
-    org.codeaurora.camera
+    ebtables \
+    ethertypes \
+    libebtc
 
 # Fingerprint
 PRODUCT_PACKAGES += \
@@ -242,6 +228,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hidl.base@1.0
 
+# IMS
+PRODUCT_PACKAGES += \
+    ims-ext-common
+
 # Input
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/ft5x06_ts.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/ft5x06_ts.kl \
@@ -267,9 +257,6 @@ PRODUCT_COPY_FILES += \
 # Keymaster
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@3.0-service
-
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.software.device_id_attestation.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.device_id_attestation.xml
 
 # Libshims
 PRODUCT_PACKAGES += \
@@ -318,17 +305,11 @@ PRODUCT_PACKAGES += \
     libhypv_intercept \
     mediametrics
 
-# NET
+# Netutils
 PRODUCT_PACKAGES += \
-    android.system.net.netd@1.0 \
     netutils-wrapper-1.0 \
+    android.system.net.netd@1.0 \
     libandroid_net
-
-# IPv6
-PRODUCT_PACKAGES += \
-    ebtables \
-    ethertypes \
-    libebtc
 
 # Power
 PRODUCT_PACKAGES += \
@@ -362,9 +343,12 @@ PRODUCT_PACKAGES += \
     android.hardware.radio.config@1.0 \
     android.hardware.secure_element@1.0 \
     librmnetctl \
-    libprotobuf-cpp-full \
-    libprotobuf-cpp-full-rtti \
-    libxml2
+    libcnefeatureconfig \
+    libxml2 \
+    telephony-ext
+
+PRODUCT_BOOT_JARS += \
+    telephony-ext
 
 # Seccomp policy
 PRODUCT_COPY_FILES += \
@@ -379,30 +363,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
 
-# Telephony
+# TextClassifier smart selection model files
 PRODUCT_PACKAGES += \
-    ims-ext-common \
-    telephony-ext
-
-PRODUCT_BOOT_JARS += \
-    telephony-ext
-
-# TextClassifier
-PRODUCT_PACKAGES += \
-    textclassifier.bundle1 \
-    textclassifier.ar.model \
-    textclassifier.de.model \
-    textclassifier.en.model \
-    textclassifier.es.model \
-    textclassifier.fr.model \
-    textclassifier.it.model \
-    textclassifier.nl.model \
-    textclassifier.pl.model \
-    textclassifier.pt.model \
-    textclassifier.ru.model \
-    textclassifier.tr.model \
-    textclassifier.zh.model \
-    textclassifier.zh-Hant.model
+    textclassifier.bundle1
 
 # Thermal
 PRODUCT_PACKAGES += \
@@ -425,6 +388,17 @@ PRODUCT_PACKAGES += \
 # VNDK-SP
 PRODUCT_PACKAGES += \
     vndk-sp
+
+# VR
+PRODUCT_PACKAGES += \
+    android.hardware.vr@1.0-impl \
+    android.hardware.vr@1.0-service \
+    vr.msm8953
+
+# Whitelisted apps
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/privapp-permissions-qti.xml:system/etc/permissions/privapp-permissions-qti.xml \
+    $(LOCAL_PATH)/configs/qti_whitelist.xml:system/etc/sysconfig/qti_whitelist.xml
 
 # Wifi
 PRODUCT_PACKAGES += \
