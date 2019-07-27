@@ -291,12 +291,6 @@ on post-fs-data
     # Create directory for modem_config
     mkdir /data/vendor/modem_config 0570 radio root
 
-    # Mounting of persist is moved to 'on emmc-fs' and 'on fs' sections
-    # We chown/chmod /persist again so because mount is run as root + defaults
-    chown root system /mnt/vendor/persist
-    chmod 0771 /mnt/vendor/persist
-    chown system system /mnt/vendor/persist/WCNSS_qcom_wlan_nv.bin
-
     #Create the symlink to qcn wpa_supplicant folder for ar6000 wpa_supplicant
     mkdir /data/system 0775 system system
     #symlink /data/misc/wifi/wpa_supplicant /data/system/wpa_supplicant
