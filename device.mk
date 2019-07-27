@@ -78,10 +78,6 @@ PRODUCT_COPY_FILES += \
 # Device Properties
 -include $(LOCAL_PATH)/prop.mk
 
-# Additional native libraries
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
-
 # Haters gonna hate..
 PRODUCT_CHARACTERISTICS := nosdcard
 
