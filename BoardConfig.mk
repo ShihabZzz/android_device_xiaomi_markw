@@ -250,6 +250,7 @@ TARGET_DISABLE_WCNSS_CONFIG_COPY := true
 WIFI_DRIVER_FW_PATH_AP := "ap"
 WIFI_DRIVER_FW_PATH_STA := "sta"
 WPA_SUPPLICANT_VERSION := VER_0_8_X
+WIFI_HIDL_FEATURE_AWARE := true
 
 # Inherit the proprietary files
 -include vendor/xiaomi/markw/BoardConfigVendor.mk
