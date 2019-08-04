@@ -18,9 +18,6 @@ DEVICE_PATH := device/xiaomi/markw
 
 TARGET_SPECIFIC_HEADER_PATH := $(DEVICE_PATH)/include
 
-# Compile libhwui in performance mode
-HWUI_COMPILE_FOR_PERF := true
-
 # Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
