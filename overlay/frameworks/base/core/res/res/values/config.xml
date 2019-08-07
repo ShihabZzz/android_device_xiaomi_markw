@@ -526,7 +526,6 @@
 
     <!-- Button Backlight -->
     <bool name="config_button_brightness_support">false</bool>
-    <integer name="config_button_brightness_default">0</integer>
 
     <!-- Whether device needs to wait for Qualcomm MPCTL service to start
          before setting power profiles on boot. -->
