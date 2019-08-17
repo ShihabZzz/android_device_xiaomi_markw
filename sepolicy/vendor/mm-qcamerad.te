@@ -1,18 +1,21 @@
-binder_use(mm-qcamerad)
-binder_call(mm-qcamerad, servicemanager)
-typeattribute mm-qcamerad socket_between_core_and_vendor_violators;
-
-allow mm-qcamerad sensorservice_service:service_manager find;
-allow mm-qcamerad { sysfs sysfs_graphics }:file r_file_perms;
-allow mm-qcamerad system_server:unix_stream_socket rw_socket_perms;
-
-typeattribute mm-qcamerad binder_in_vendor_violators;
 allow mm-qcamerad binder_device:chr_file { read write };
-
-set_prop(mm-qcamerad, camera_prop)
 
 allow mm-qcamerad camera_data_file:file { write read getattr };
 
+allow mm-qcamerad sensorservice_service:service_manager find;
+allow mm-qcamerad sysfs:file r_file_perms;
+allow mm-qcamerad sysfs_graphics:file r_file_perms;
+allow mm-qcamerad system_server:unix_stream_socket rw_socket_perms;
+
+binder_use(mm-qcamerad)
+binder_call(mm-qcamerad, servicemanager)
+
+set_prop(mm-qcamerad, camera_prop)
+
+typeattribute mm-qcamerad binder_in_vendor_violators;
+typeattribute mm-qcamerad socket_between_core_and_vendor_violators;
+
 #Stop_Spamming!
 dontaudit mm-qcamerad camera_data_file:dir { remove_name write };
+dontaudit mm-qcamerad camera_socket:dir { add_name search };
 dontaudit mm-qcamerad camera_data_file:sock_file { create unlink };
