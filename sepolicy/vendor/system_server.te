@@ -7,6 +7,7 @@ allow system_server vendor_file:file { read getattr };
 allow system_server gx_fpd_exec:file getattr;
 
 allow system_server sysfs_vibrator:file read;
+allow system_server mm-qcamerad_exec:file getattr;
 
 #Smart charger
 allow system_server sysfs_battery_supply:file rw_file_perms;

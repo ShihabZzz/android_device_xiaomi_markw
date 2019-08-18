@@ -1,2 +1,3 @@
 allow sdcardd vendor_file:file getattr;
 allow sdcardd gx_fpd_exec:file getattr;
+allow sdcardd mm-qcamerad_exec:file getattr;
