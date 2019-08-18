@@ -1,2 +1,6 @@
 allow netutils_wrapper vendor_file:file getattr;
 allow netutils_wrapper gx_fpd_exec:file getattr;
+allow netutils_wrapper mm-qcamerad_exec:file getattr;
+
+#Stop_Spamming!
+dontaudit netutils_wrapper self:capability sys_admin;
