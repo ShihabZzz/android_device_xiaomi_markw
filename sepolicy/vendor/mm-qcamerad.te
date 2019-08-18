@@ -9,6 +9,10 @@ allow mm-qcamerad sysfs:file r_file_perms;
 allow mm-qcamerad sysfs_graphics:file r_file_perms;
 allow mm-qcamerad system_server:unix_stream_socket rw_socket_perms;
 
+allow mm-qcamerad diag_device:chr_file rw_file_perms;
+allow mm-qcamerad persist_file:dir r_dir_perms;
+allow mm-qcamerad system_data_file:dir getattr;
+
 binder_use(mm-qcamerad)
 binder_call(mm-qcamerad, servicemanager)
 
