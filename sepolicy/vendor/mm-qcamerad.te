@@ -18,6 +18,6 @@ typeattribute mm-qcamerad binder_in_vendor_violators;
 typeattribute mm-qcamerad socket_between_core_and_vendor_violators;
 
 #Stop_Spamming!
-dontaudit mm-qcamerad camera_data_file:dir { remove_name write };
+dontaudit mm-qcamerad camera_data_file:dir { remove_name write search };
 dontaudit mm-qcamerad camera_socket:dir { add_name search };
 dontaudit mm-qcamerad camera_data_file:sock_file { create unlink };

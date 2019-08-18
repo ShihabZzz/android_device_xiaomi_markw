@@ -15,5 +15,7 @@ allow untrusted_app hal_perf_default:binder call;
 allow untrusted_app bg_boot_complete_prop:file { open getattr };
 allow untrusted_app bg_daemon_prop:file { open getattr };
 
+allow untrusted_app mm-qcamerad_exec:file getattr;
+
 #Stop_Spamming!
 dontaudit untrusted_app proc_vmstat:file open;

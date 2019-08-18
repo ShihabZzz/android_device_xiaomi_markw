@@ -1,0 +1,3 @@
+allow dex2oat mm-qcamerad_exec:file getattr;
+allow dex2oat vendor_file:file getattr;
+allow dex2oat gx_fpd_exec:file getattr;
