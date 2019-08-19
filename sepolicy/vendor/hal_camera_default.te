@@ -5,5 +5,8 @@ allow hal_camera_default camera_socket:dir search;
 allow hal_camera_default hal_power_hwservice:hwservice_manager find;
 allow hal_camera_default hal_power_default:binder call;
 
+typeattribute hal_camera_default data_between_core_and_vendor_violators;
+allow hal_camera_default camera_data_file:dir rw_dir_perms;
+
 # For interfacing with PowerHAL
 hal_client_domain(hal_camera_default, hal_power)

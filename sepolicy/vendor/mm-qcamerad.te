@@ -1,6 +1,6 @@
 allow mm-qcamerad binder_device:chr_file { read write };
 
-allow mm-qcamerad camera_data_file:file { write read getattr };
+allow mm-qcamerad camera_data_file:file { write read getattr open };
 allow mm-qcamerad camera_socket:dir rw_dir_perms;
 allow mm-qcamerad camera_socket:sock_file { create unlink };
 
@@ -13,6 +13,9 @@ allow mm-qcamerad diag_device:chr_file rw_file_perms;
 allow mm-qcamerad persist_file:dir r_dir_perms;
 allow mm-qcamerad system_data_file:dir getattr;
 
+typeattribute mm-qcamerad data_between_core_and_vendor_violators;
+allow mm-qcamerad camera_data_file:dir rw_dir_perms;
+
 binder_use(mm-qcamerad)
 binder_call(mm-qcamerad, servicemanager)
 
@@ -21,7 +24,5 @@ set_prop(mm-qcamerad, camera_prop)
 typeattribute mm-qcamerad binder_in_vendor_violators;
 typeattribute mm-qcamerad socket_between_core_and_vendor_violators;
 
-#Stop_Spamming!
-dontaudit mm-qcamerad camera_data_file:dir { remove_name write search };
-dontaudit mm-qcamerad camera_socket:dir { add_name search };
-dontaudit mm-qcamerad camera_data_file:sock_file { create unlink };
+allow mm-qcamerad camera_socket:dir { add_name search };
+allow mm-qcamerad camera_data_file:sock_file { create unlink };

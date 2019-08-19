@@ -1,1 +1,4 @@
 allow bootanim system_data_file:dir read;
+allow bootanim mm-qcamerad_exec:file getattr;
+allow bootanim vendor_file:file getattr;
+allow bootanim gx_fpd_exec:file getattr;

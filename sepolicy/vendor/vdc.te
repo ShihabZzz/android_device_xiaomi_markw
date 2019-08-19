@@ -1,2 +1,4 @@
 allow vdc vendor_file:file getattr;
 allow vdc gx_fpd_exec:file getattr;
+allow vdc self:capability sys_admin;
+allow vdc mm-qcamerad_exec:file getattr;

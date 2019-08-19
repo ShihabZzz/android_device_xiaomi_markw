@@ -1,2 +1,3 @@
 allow tzdatacheck vendor_file:file getattr;
 allow tzdatacheck gx_fpd_exec:file getattr;
+allow tzdatacheck mm-qcamerad_exec:file getattr;

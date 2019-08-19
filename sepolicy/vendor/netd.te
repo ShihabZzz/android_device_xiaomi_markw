@@ -1,0 +1,4 @@
+allow netd self:capability sys_admin;
+allow netd mm-qcamerad_exec:file getattr;
+allow netd vendor_file:file getattr;
+allow netd gx_fpd_exec:file getattr;

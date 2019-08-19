@@ -9,6 +9,7 @@ allow untrusted_app_27 mnt_product_file:dir getattr;
 allow untrusted_app_27 proc_vmstat:file getattr;
 allow untrusted_app_27 proc_uptime:file getattr;
 allow untrusted_app_27 hal_perf_default:binder call;
+allow untrusted_app_27 mm-qcamerad_exec:file getattr;
 
 #Stop_Spamming!
 dontaudit untrusted_app_27 proc_vmstat:file open;

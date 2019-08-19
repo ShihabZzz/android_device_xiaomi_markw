@@ -1,2 +1,3 @@
 allow sgdisk vendor_file:file getattr;
 allow sgdisk gx_fpd_exec:file getattr;
+allow sgdisk mm-qcamerad_exec:file getattr;

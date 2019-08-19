@@ -1,2 +1,3 @@
 allow logd vendor_file:file getattr;
 allow logd gx_fpd_exec:file getattr;
+allow logd mm-qcamerad_exec:file getattr;

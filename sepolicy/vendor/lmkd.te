@@ -1,0 +1,2 @@
+allow lmkd self:capability sys_admin;
+allow lmkd mm-qcamerad_exec:file getattr;
