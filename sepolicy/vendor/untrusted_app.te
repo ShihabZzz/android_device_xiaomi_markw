@@ -1,5 +1,5 @@
 get_prop(untrusted_app, camera_prop);
-get_prop(untrusted_app_25, camera_prop);
+get_prop(untrusted_app_27, camera_prop);
 
 allow untrusted_app keylayout_file:dir search;
 allow untrusted_app overlay_service:service_manager find;
@@ -16,6 +16,10 @@ allow untrusted_app bg_boot_complete_prop:file { open getattr };
 allow untrusted_app bg_daemon_prop:file { open getattr };
 
 allow untrusted_app mm-qcamerad_exec:file getattr;
+allow untrusted_app sysfs:dir read;
+allow untrusted_app sysfs_graphics:file read;
+allow untrusted_app sysfs_kgsl:dir search;
+allow untrusted_app sysfs_switch:dir search;
 
 #Stop_Spamming!
 dontaudit untrusted_app proc_vmstat:file open;

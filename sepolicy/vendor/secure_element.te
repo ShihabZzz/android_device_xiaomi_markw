@@ -1,0 +1,1 @@
+allow secure_element system_app_data_file:dir getattr;
