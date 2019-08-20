@@ -1,3 +1,4 @@
 allow lmkd self:capability sys_admin;
 allow lmkd mm-qcamerad_exec:file getattr;
 allow lmkd vendor_file:file getattr;
+allow lmkd gx_fpd_exec:file getattr;

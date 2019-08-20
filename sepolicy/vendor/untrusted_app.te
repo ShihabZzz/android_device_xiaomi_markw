@@ -17,8 +17,10 @@ allow untrusted_app bg_daemon_prop:file { open getattr };
 
 allow untrusted_app mm-qcamerad_exec:file getattr;
 allow untrusted_app sysfs:dir read;
-allow untrusted_app sysfs_graphics:file read;
+allow untrusted_app sysfs_graphics:file { open read getattr };
 allow untrusted_app sysfs_kgsl:dir search;
+allow untrusted_app sysfs_kgsl:file { getattr read open };
+allow untrusted_app sysfs_kgsl:lnk_file read;
 allow untrusted_app sysfs_switch:dir search;
 
 #Stop_Spamming!

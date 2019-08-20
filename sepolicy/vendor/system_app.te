@@ -5,4 +5,5 @@ allow system_app sysfs_torch:dir search;
 allow system_app sysfs_leds:dir search;
 allow system_app sysfs_leds:lnk_file read;
 allow system_app sysfs_zram:dir { read search };
-allow system_app proc_pagetypeinfo:file { open read };
+allow system_app sysfs_zram:file read;
+allow system_app proc_pagetypeinfo:file { open read getattr };
