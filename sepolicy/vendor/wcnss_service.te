@@ -1,0 +1,5 @@
+get_prop(wcnss_service, wifi_prop)
+set_prop(wcnss_service, wifi_prop)
+
+#Stop_Spamming!
+dontaudit wcnss_service serialno_prop:file { getattr open read };

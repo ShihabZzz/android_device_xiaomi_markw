@@ -1,2 +1,6 @@
 #============= isolated_app ==============
 dontaudit isolated_app app_data_file:dir getattr;
+
+allow isolated_app bg_boot_complete_prop:file { read } ;
+allow isolated_app bg_daemon_prop:file { read } ;
+allow isolated_app boottime_prop:file { read } ;

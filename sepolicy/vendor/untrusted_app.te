@@ -12,8 +12,8 @@ allow untrusted_app proc_vmstat:file getattr;
 allow untrusted_app rootfs:dir { open read };
 allow untrusted_app proc_zoneinfo:file { getattr open read };
 allow untrusted_app hal_perf_default:binder call;
-allow untrusted_app bg_boot_complete_prop:file { open getattr };
-allow untrusted_app bg_daemon_prop:file { open getattr };
+allow untrusted_app bg_boot_complete_prop:file { open read getattr };
+allow untrusted_app bg_daemon_prop:file { open read getattr };
 
 allow untrusted_app mm-qcamerad_exec:file getattr;
 allow untrusted_app sysfs:dir read;
@@ -22,6 +22,15 @@ allow untrusted_app sysfs_kgsl:dir search;
 allow untrusted_app sysfs_kgsl:file { getattr read open };
 allow untrusted_app sysfs_kgsl:lnk_file read;
 allow untrusted_app sysfs_switch:dir search;
+
+allow untrusted_app boottime_prop:file { read } ;
+allow untrusted_app cnd_vendor_prop:file { read } ;
+allow untrusted_app console_silent_prop:file { read } ;
+allow untrusted_app ctl_LKCore_prop:file { read } ;
+allow untrusted_app proc_tty_drivers:file { read } ;
+
+allow untrusted_app sysfs:dir { open } ;
+allow untrusted_app sysfs_net:dir { read } ;
 
 #Stop_Spamming!
 dontaudit untrusted_app proc_vmstat:file open;

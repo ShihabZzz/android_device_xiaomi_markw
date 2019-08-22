@@ -11,6 +11,15 @@ allow untrusted_app_27 proc_uptime:file getattr;
 allow untrusted_app_27 hal_perf_default:binder call;
 allow untrusted_app_27 mm-qcamerad_exec:file getattr;
 
+allow untrusted_app_27 bg_boot_complete_prop:file { read } ;
+allow untrusted_app_27 bg_daemon_prop:file { read } ;
+allow untrusted_app_27 boottime_prop:file { read } ;
+allow untrusted_app_27 cnd_vendor_prop:file { read } ;
+allow untrusted_app_27 console_silent_prop:file { read } ;
+allow untrusted_app_27 ctl_LKCore_prop:file { read } ;
+allow untrusted_app_27 sysfs_net:dir { search } ;
+allow untrusted_app_27 untrusted_app_27:udp_socket { ioctl } ;
+
 #Stop_Spamming!
 dontaudit untrusted_app_27 proc_vmstat:file open;
 dontaudit untrusted_app_27 proc_version:file { open read };

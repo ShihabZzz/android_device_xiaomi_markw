@@ -15,6 +15,7 @@ allow mm-qcamerad system_data_file:dir getattr;
 
 typeattribute mm-qcamerad data_between_core_and_vendor_violators;
 allow mm-qcamerad camera_data_file:dir rw_dir_perms;
+allow mm-qcamerad camera_data_file:file { create } ;
 
 binder_use(mm-qcamerad)
 binder_call(mm-qcamerad, servicemanager)

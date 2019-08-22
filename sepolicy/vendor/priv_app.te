@@ -20,6 +20,13 @@ allow priv_app proc:file { getattr };
 allow priv_app sysfs_android_usb:file open;
 allow priv_app hal_memtrack_default:binder call;
 
+allow priv_app mm-qcamerad_exec:file getattr;
+allow priv_app cnd_vendor_prop:file { read } ;
+allow priv_app console_silent_prop:file { read } ;
+allow priv_app ctl_atfwd_prop:file { read } ;
+allow priv_app ctl_LKCore_prop:file { read } ;
+allow priv_app gx_fpd_exec:file { getattr } ;
+
 get_prop(priv_app, camera_prop)
 get_prop(priv_app, boottime_prop)
 get_prop(priv_app, bg_daemon_prop)
