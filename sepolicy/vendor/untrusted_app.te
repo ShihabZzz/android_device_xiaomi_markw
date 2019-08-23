@@ -32,5 +32,7 @@ allow untrusted_app proc_tty_drivers:file { read } ;
 allow untrusted_app sysfs:dir { open } ;
 allow untrusted_app sysfs_net:dir { read } ;
 
+allow untrusted_app app_data_file:dir { search } ;
+
 #Stop_Spamming!
 dontaudit untrusted_app proc_vmstat:file open;
