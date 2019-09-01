@@ -240,8 +240,7 @@ PRODUCT_COPY_FILES += \
 # IPA Manager
 PRODUCT_PACKAGES += \
     ipacm \
-    IPACM_cfg.xml \
-    liboffloadhal
+    IPACM_cfg.xml
 
 # IRQ
 PRODUCT_COPY_FILES += \
