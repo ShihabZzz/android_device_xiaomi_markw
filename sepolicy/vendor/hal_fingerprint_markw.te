@@ -36,6 +36,8 @@ allow hal_fingerprint_markw keystore:keystore_key { add_auth };
 
 allow hal_fingerprint_markw keystore_service:service_manager find;
 
+allow hal_fingerprint_markw sdcardfs:dir { write } ;
+
 # For permissions checking
 binder_call(hal_fingerprint_markw, system_server);
 allow hal_fingerprint_markw permission_service:service_manager find;
