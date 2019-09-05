@@ -3,3 +3,6 @@ genfscon debugfs /rmt_storage	u:object_r:debugfs_rmt:s0
 
 # RTC
 genfscon sysfs /devices/soc/qpnp-rtc-8/rtc                  u:object_r:sysfs_rtc:s0
+
+# Vibrator
+genfscon sysfs /devices/virtual/timed_output/vibrator/vtg_level u:object_r:sysfs_vibrator:s0
