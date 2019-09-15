@@ -27,6 +27,9 @@
 # poweroffalarm
 /(mnt/vendor)/persist/alarm(/.*)?                                     u:object_r:persist_alarm_file:s0
 
+# Legacy root dirs
+/firmware(/.*)?                                 u:object_r:firmware_file:s0
+
 # Rild
 /(vendor|system/vendor)/radio/qcril_database/qcril.db			          u:object_r:rild_file:s0
 
