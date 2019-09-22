@@ -9,7 +9,8 @@ allow system_server gx_fpd_exec:file getattr;
 allow system_server sysfs_vibrator:file read;
 allow system_server mm-qcamerad_exec:file getattr;
 
-allow system_server sysfs:file { open read getattr };
+allow system_server sysfs_keys_atmel:file { open read getattr };
+allow system_server sysfs_keys_ft5346:file { open read getattr };
 
 #Smart charger
 allow system_server sysfs_battery_supply:file rw_file_perms;
