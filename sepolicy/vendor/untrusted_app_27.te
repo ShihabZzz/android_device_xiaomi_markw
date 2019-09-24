@@ -21,7 +21,3 @@ allow untrusted_app_27 sysfs_net:dir { search } ;
 allow untrusted_app_27 self:udp_socket { ioctl } ;
 
 allow untrusted_app_27 system_app_data_file:dir { getattr } ;
-
-#Stop_Spamming!
-dontaudit untrusted_app_27 proc_vmstat:file open;
-dontaudit untrusted_app_27 proc_version:file { open read };

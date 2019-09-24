@@ -23,3 +23,6 @@ type sysfs_torch, fs_type, sysfs_type;
 #HW Key
 type sysfs_keys_atmel, fs_type, sysfs_type;
 type sysfs_keys_ft5346, fs_type, sysfs_type;
+
+# WLAN from QCOM
+type sysfs_wlan_qcom, fs_type, sysfs_type;

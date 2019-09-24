@@ -37,6 +37,3 @@ allow untrusted_app app_data_file:dir { search } ;
 allow untrusted_app system_app_data_file:dir { getattr } ;
 allow untrusted_app rootfs:dir open;
 allow untrusted_app rootfs:file getattr;
-
-#Stop_Spamming!
-dontaudit untrusted_app proc_vmstat:file open;

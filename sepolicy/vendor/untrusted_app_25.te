@@ -5,6 +5,3 @@ allow untrusted_app_27 system_app_data_file:dir { getattr } ;
 
 allow untrusted_app_25 rootfs:dir { open } ;
 allow untrusted_app_25 mm-qcamerad_exec:file getattr;
-
-#Stop_Spamming!
-dontaudit untrusted_app_25 debugfs_wakeup_sources:file { read } ;
