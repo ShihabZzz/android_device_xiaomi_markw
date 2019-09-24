@@ -29,6 +29,7 @@
 /sys/board_properties/virtualkeys.atmel-maxtouch                                          u:object_r:sysfs_keys_atmel:s0
 /sys/board_properties/virtualkeys.ft5346                                                  u:object_r:sysfs_keys_ft5346:s0
 /sys/devices/soc/a000000.qcom,wcnss-wlan/net/p2p0/type                                    u:object_r:sysfs_wlan_qcom:s0
+/sys/devices/soc/a000000.qcom,wcnss-wlan/net/wlan0/type                                   u:object_r:sysfs_wlan:s0
 /sys/devices/soc/qpnp-flash-led-[0-9]+/leds/led:torch_[0-9]+/max_brightness	              u:object_r:sysfs_torch:s0
 /sys/audio_amplifier/enable	                                                              u:object_r:sysfs:s0
 /proc/gesture/onoff	                                                                      u:object_r:proc:s0

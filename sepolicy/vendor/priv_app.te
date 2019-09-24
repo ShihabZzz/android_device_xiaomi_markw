@@ -28,6 +28,7 @@ allow priv_app ctl_LKCore_prop:file { read } ;
 allow priv_app gx_fpd_exec:file { getattr } ;
 
 allow priv_app sysfs_wlan_qcom:file { open read };
+allow priv_app sysfs_wlan:file { open read };
 
 get_prop(priv_app, camera_prop)
 get_prop(priv_app, boottime_prop)
