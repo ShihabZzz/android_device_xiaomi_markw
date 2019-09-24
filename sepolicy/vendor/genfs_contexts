@@ -6,6 +6,7 @@ genfscon sysfs /devices/soc/qpnp-rtc-8/rtc                  u:object_r:sysfs_rtc
 
 # Power
 genfscon sysfs /devices/soc/soc:qcom,bcl/power_supply                u:object_r:sysfs_batteryinfo:s0
+genfscon sysfs /devices/soc/msm-bcl-19/power_supply                  u:object_r:sysfs_batteryinfo:s0
 
 # Vibrator
 genfscon sysfs /devices/virtual/timed_output/vibrator/vtg_level u:object_r:sysfs_vibrator:s0
