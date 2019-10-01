@@ -32,6 +32,8 @@
 #include <hardware/hardware.h>
 #include <audio_hw.h>
 
+#define UNUSED __attribute__((unused))
+
 #define DEVICE_PATH "/sys/audio_amplifier/enable"
 
 static int is_speaker(uint32_t snd_device) {
@@ -82,17 +84,17 @@ static inline int amplifier_disable() {
 }
 
 
-static int amp_set_input_devices(amplifier_device_t *device, uint32_t devices)
+static int amp_set_input_devices(UNUSED amplifier_device_t *device, UNUSED uint32_t devices)
 {
     return 0;
 }
 
-static int amp_set_output_devices(amplifier_device_t *device, uint32_t devices)
+static int amp_set_output_devices(UNUSED amplifier_device_t *device, UNUSED uint32_t devices)
 {
     return 0;
 }
 
-static int amp_enable_output_devices(amplifier_device_t *device,
+static int amp_enable_output_devices(UNUSED amplifier_device_t *device,
         uint32_t devices, bool enable)
 {
     if (is_speaker(devices) && enable) {
@@ -104,43 +106,43 @@ static int amp_enable_output_devices(amplifier_device_t *device,
     return 0;
 }
 
-static int amp_enable_input_devices(amplifier_device_t *device,
-        uint32_t devices, bool enable)
+static int amp_enable_input_devices(UNUSED amplifier_device_t *device,
+        UNUSED uint32_t devices, UNUSED bool enable)
 {
     return 0;
 }
 
-static int amp_set_mode(amplifier_device_t *device, audio_mode_t mode)
+static int amp_set_mode(UNUSED amplifier_device_t *device, UNUSED audio_mode_t mode)
 {
     return 0;
 }
 
-static int amp_output_stream_start(amplifier_device_t *device,
-        struct audio_stream_out *stream, bool offload)
+static int amp_output_stream_start(UNUSED amplifier_device_t *device,
+        UNUSED struct audio_stream_out *stream, UNUSED bool offload)
 {
     return 0;
 }
 
-static int amp_input_stream_start(amplifier_device_t *device,
-        struct audio_stream_in *stream)
+static int amp_input_stream_start(UNUSED amplifier_device_t *device,
+        UNUSED struct audio_stream_in *stream)
 {
     return 0;
 }
 
-static int amp_output_stream_standby(amplifier_device_t *device,
-        struct audio_stream_out *stream)
+static int amp_output_stream_standby(UNUSED amplifier_device_t *device,
+        UNUSED struct audio_stream_out *stream)
 {
     return 0;
 }
 
-static int amp_input_stream_standby(amplifier_device_t *device,
-        struct audio_stream_in *stream)
+static int amp_input_stream_standby(UNUSED amplifier_device_t *device,
+        UNUSED struct audio_stream_in *stream)
 {
     return 0;
 }
 
-static int amp_set_parameters(struct amplifier_device *device,
-        struct str_parms *parms)
+static int amp_set_parameters(UNUSED struct amplifier_device *device,
+        UNUSED struct str_parms *parms)
 {
     return 0;
 }
