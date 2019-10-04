@@ -1,1 +1,3 @@
 allow rfs_access self:capability sys_admin;
+
+allow rfs_access mnt_vendor_file:file { rw_file_perms };
