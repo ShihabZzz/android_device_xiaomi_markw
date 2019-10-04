@@ -3,3 +3,6 @@ allow hal_sensors_default init:unix_stream_socket connectto;
 allow hal_sensors_default radio_prop:property_service set;
 allow hal_sensors_default sysfs:file r_file_perms;
 allow hal_sensors_default sysfs_leds:dir search;
+
+allow hal_sensors_default mnt_vendor_file:dir rw_dir_perms;
+allow hal_sensors_default mnt_vendor_file:file rw_file_perms;
