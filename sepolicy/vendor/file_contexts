@@ -30,6 +30,9 @@
 # tftp_server
 /(mnt/vendor)/persist/rfs(/.*)?                                         u:object_r:persist_tftp_file:s0
 
+# tftp_server
+/(mnt/vendor)/persist/time(/.*)?                                         u:object_r:persist_time_file:s0
+
 # Leds & consumerir
 /sys/class/leds(/.*)?			                                          u:object_r:sysfs_leds:s0
 /sys/devices/soc/78b6000\.i2c/i2c-2/2-[0-9a-f]+/leds(/.*)?			    u:object_r:sysfs_leds:s0

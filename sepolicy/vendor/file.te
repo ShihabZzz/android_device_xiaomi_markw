@@ -33,6 +33,9 @@ type persist_sensors_file, file_type, vendor_persist_type;
 # tftp_server
 type persist_tftp_file, file_type, vendor_persist_type;
 
+# time_daemon
+type persist_time_file, file_type, vendor_persist_type;
+
 # WLAN from QCOM
 type sysfs_wlan_qcom, fs_type, sysfs_type;
 type sysfs_wlan, fs_type, sysfs_type;
