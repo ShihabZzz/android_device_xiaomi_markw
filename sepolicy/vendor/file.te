@@ -6,6 +6,7 @@ type fpc_data_file, file_type, data_file_type, core_data_file_type;
 type fpce_socket, file_type;
 type fpc_sysfs, fs_type, sysfs_type;
 type gx_fpd_data_file, file_type, data_file_type, core_data_file_type;
+type persist_fingerprint_file, file_type, vendor_persist_type;
 
 # HW Key
 type sysfs_keys_atmel, fs_type, sysfs_type;
