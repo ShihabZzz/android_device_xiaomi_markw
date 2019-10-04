@@ -21,6 +21,7 @@
 #include <platform.h>
 #include <dlfcn.h>
 #include <cutils/properties.h>
+#include <unistd.h>
 
 #include <stdlib.h>
 
