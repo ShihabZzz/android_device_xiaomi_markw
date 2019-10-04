@@ -18,6 +18,9 @@
 /(vendor|system/vendor)/bin/hw/android\.hardware\.ir@1\.0-service\.xiaomi_markw	                        u:object_r:hal_ir_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service\.xiaomi_markw		                  u:object_r:hal_light_default_exec:s0
 
+# poweroffalarm
+/(mnt/vendor)/persist/alarm(/.*)?                                     u:object_r:persist_alarm_file:s0
+
 # Rild
 /(vendor|system/vendor)/radio/qcril_database/qcril.db			          u:object_r:rild_file:s0
 
