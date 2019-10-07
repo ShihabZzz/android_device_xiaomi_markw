@@ -40,6 +40,9 @@ on fs
     mkdir /mnt/vendor/persist/bms 0700 root system
     restorecon_recursive /mnt/vendor/persist
 
+    # Remove unlabeled persist_rfs_file
+    rm /mnt/vendor/persist/rfs/msm/mpss/server_check.txt
+
 on init
     write /sys/module/qpnp_rtc/parameters/poweron_alarm 1
 
