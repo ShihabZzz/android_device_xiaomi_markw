@@ -27,6 +27,7 @@ allow priv_app ctl_atfwd_prop:file { read } ;
 allow priv_app ctl_LKCore_prop:file { read } ;
 allow priv_app gx_fpd_exec:file { getattr } ;
 
+allow priv_app sysfs_wlan_address:file { open read };
 allow priv_app sysfs_wlan_qcom:file { open read };
 allow priv_app sysfs_wlan:file { open read };
 
