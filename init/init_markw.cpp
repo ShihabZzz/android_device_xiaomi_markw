@@ -1,6 +1,5 @@
 /*
    Copyright (c) 2016, The CyanogenMod Project
-             (c) 2018, The LineageOS Project
    Redistribution and use in source and binary forms, with or without
    modification, are permitted provided that the following conditions are
    met:
@@ -29,52 +28,19 @@
 #include <fcntl.h>
 #include <stdlib.h>
 #include <sys/sysinfo.h>
-#include <android-base/file.h>
-#include <android-base/properties.h>
-#include <android-base/strings.h>
-#define _REALLY_INCLUDE_SYS__SYSTEM_PROPERTIES_H_
-#include <sys/_system_properties.h>
 
 #include "vendor_init.h"
 #include "property_service.h"
+#include "log.h"
 
-using android::base::GetProperty;
-using android::base::ReadFileToString;
 using android::init::property_set;
-
-void property_override(char const prop[], char const value[])
-{
-    prop_info *pi;
-
-    pi = (prop_info*) __system_property_find(prop);
-    if (pi)
-        __system_property_update(pi, value, strlen(value));
-    else
-        __system_property_add(prop, strlen(prop), value, strlen(value));
-}
-
-void sfn_hack()
-{
-    std::string product;
-
-    product = GetProperty("ro.product.device", "");
-
-    // override specific props for to bypass the SafetyNet check without Magisk (in addition, need to replace selinux into enforcing)
-    if (product == "markw") {
-        // property_set("ro.boot.verifiedbootstate", "green");
-        // property_set("ro.boot.veritymode", "enforcing");
-        property_override("ro.build.type", "user");
-    }
-}
 
 void vendor_load_properties()
 {
-    sfn_hack();
-
-    property_set("dalvik.vm.heapstartsize", "8m");
-    property_set("dalvik.vm.heapgrowthlimit", "256m");
-    property_set("dalvik.vm.heapsize", "512m");
-    property_set("dalvik.vm.heaptargetutilization", "0.75");
-    property_set("dalvik.vm.heapminfree", "512k");
-    property_set("dalvik.vm.heapmaxfree", "8m");
+  property_set("dalvik.vm.heapstartsize", "8m");
+  property_set("dalvik.vm.heapgrowthlimit", "256m");
+  property_set("dalvik.vm.heapsize", "512m");
+  property_set("dalvik.vm.heaptargetutilization", "0.75");
+  property_set("dalvik.vm.heapminfree", "512k");
+  property_set("dalvik.vm.heapmaxfree", "8m");
 }
