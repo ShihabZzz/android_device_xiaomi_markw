@@ -110,12 +110,6 @@ vendor.hw.fm.init=0
 PRODUCT_PROPERTY_OVERRIDES += \
 ro.frp.pst=/dev/block/bootdevice/by-name/config
 
-# Higher fling velocities
-# for smoother scrolling and better responsiveness
-PRODUCT_PROPERTY_OVERRIDES += \
-ro.min.fling_velocity=160 \
-ro.max.fling_velocity=20000
-
 # IMS debug
 PRODUCT_PROPERTY_OVERRIDES += \
 persist.vendor.ims.disableADBLogs=1 \
@@ -191,11 +185,6 @@ persist.vendor.delta_time.enable=true
 PRODUCT_PROPERTY_OVERRIDES += \
 net.tcp.2g_init_rwnd=10
 
-# Touch optimize
-PRODUCT_PROPERTY_OVERRIDES += \
-persist.vendor.qti.inputopts.enable=true \
-persist.vendor.qti.inputopts.movetouchslop=0.6
-
 # UI
 PRODUCT_PROPERTY_OVERRIDES += \
 sys.use_fifo_ui=1
@@ -212,7 +201,3 @@ wifi.interface=wlan0
 PRODUCT_PROPERTY_OVERRIDES += \
 persist.debug.wfd.enable=1 \
 persist.sys.wfd.virtual=0
-
-# Maintainer
-PRODUCT_PROPERTY_OVERRIDES += \
-ro.havoc.maintainer=ShihabZzz

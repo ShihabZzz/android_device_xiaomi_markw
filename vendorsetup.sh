@@ -13,5 +13,5 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-add_lunch_combo havoc_markw-user
-add_lunch_combo havoc_markw-userdebug
+add_lunch_combo lineage_markw-user
+add_lunch_combo lineage_markw-userdebug

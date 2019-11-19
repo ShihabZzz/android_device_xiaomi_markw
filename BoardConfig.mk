@@ -165,9 +165,6 @@ TARGET_RECOVERY_DEVICE_MODULES := libinit_markw
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
 
-# Lockscreen Real Time Charging Current Values
-BOARD_GLOBAL_CFLAGS += -DBATTERY_REAL_INFO
-
 # Media
 TARGET_USES_MEDIA_EXTENSIONS := true
 
