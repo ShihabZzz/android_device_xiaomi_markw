@@ -15,8 +15,7 @@
 #
 
 # Inherit proprietary files
-$(call inherit-product-if-exists, vendor/xiaomi/markw/markw-vendor.mk)
-$(call inherit-product, vendor/xiaomi/msm8953-common/msm8953-common-vendor.mk)
+$(call inherit-product, vendor/xiaomi/markw/markw-vendor.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_m.mk)
 
 # Overlay
