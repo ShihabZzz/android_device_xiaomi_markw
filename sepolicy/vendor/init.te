@@ -7,3 +7,6 @@ allow init sysfs_leds:lnk_file rw_file_perms;
 allow init sysfs_battery_supply:file setattr;
 
 allow init system_file:dir relabelfrom;
+
+# Allow init to mount vendor configs
+allow init vendor_configs_file:file mounton;
