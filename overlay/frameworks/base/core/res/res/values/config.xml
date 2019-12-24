@@ -525,9 +525,6 @@
          before setting power profiles on boot. -->
     <bool name="config_waitForMpctlOnBoot">true</bool>
 
-    <!-- Whether device has a notch -->
-    <bool name="config_haveNotch">false</bool>
-
     <!-- Whether notify fingerprint client of successful cancelled authentication -->
     <bool name="config_notifyClientOnFingerprintCancelSuccess">true</bool>
 
@@ -607,9 +604,6 @@
     <!-- Control whether the always on display mode is enabled by default. This value will be used
          during initialization when the setting is still null. -->
     <bool name="config_dozeAlwaysOnEnabled">false</bool>
-
-    <!-- Alternate ambient display-->
-    <bool name="config_alt_ambient_display">true</bool>
 
     <!-- Allow automatic adjusting of the screen brightness while dozing in low power state. -->
     <bool name="config_allowAutoBrightnessWhileDozing">true</bool>
