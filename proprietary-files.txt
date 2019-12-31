@@ -546,8 +546,8 @@ vendor/lib/libmmcamera_isp_sub_module.so|f9edc292e08776078aba620d4d2033876826306
 vendor/lib/libmmcamera_isp_template.so|7829582e89a425a49857f121503a626b11fc9cc5
 vendor/lib/libmmcamera_isp_wb40.so|473c34fc620efea151203cec987b0f20948006c9
 
-# Charger - from Tissot PKQ1.180917.001.V10.0.16.0.PDHMIXM
-vendor/bin/hvdcp_opti|7ee82dd264c7c349fb498111a61d5009ae9f0da2
+# Charger - from LA.UM.8.6.r1-02600-89xx.0
+vendor/bin/hvdcp_opti|bd0808db92452c5fd7ec272a35924f23fb4ffa01
 
 # CNE - from LA.UM.8.6.r1-02600-89xx.0
 etc/cne/Nexus/ATT/ATT_profiles.xml|a0039cb3a4c5a4ca1adf897904b61c91e32d06f7
