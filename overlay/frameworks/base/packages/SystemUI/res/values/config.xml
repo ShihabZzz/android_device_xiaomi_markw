@@ -21,8 +21,8 @@
      for different hardware and product builds. -->
 <resources>
     <!-- Max visible notification icons -->
-    <integer name="config_maxVisibleNotificationIcons">10</integer>
-    <integer name="config_maxVisibleNotificationIconsWhenDark">10</integer>
+    <integer name="config_maxVisibleNotificationIcons">6</integer>
+    <integer name="config_maxVisibleNotificationIconsWhenDark">7</integer>
 
     <!-- Should "4G" be shown instead of "LTE" when the network is NETWORK_TYPE_LTE? -->
     <bool name="config_show4GForLTE">true</bool>
