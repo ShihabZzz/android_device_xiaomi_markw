@@ -24,6 +24,7 @@ OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 -->
 <manifest version="1.0" type="framework">
+    <!-- atfwd -->
     <hal format="hidl">
         <name>vendor.qti.hardware.radio.atcmdfwd</name>
         <transport>hwbinder</transport>
@@ -32,6 +33,5 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <name>IAtCmdFwd</name>
             <instance>AtCmdFwdService</instance>
         </interface>
-        <fqname>@1.0::IAtCmdFwd/AtCmdFwdService</fqname>
     </hal>
 </manifest>
