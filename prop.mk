@@ -13,10 +13,10 @@ persist.vendor.audio.fluence.speaker=true \
 persist.vendor.audio.fluence.voicecall=true \
 persist.vendor.audio.fluence.voicerec=true \
 persist.vendor.audio.hw.binder.size_kbyte=1024 \
+persist.vendor.btstack.enable.splita2dp=false \
 ro.config.media_vol_steps=25 \
 ro.config.vc_call_vol_steps=7 \
 ro.vendor.audio.sdk.fluencetype=fluence \
-persist.vendor.btstack.enable.splita2dp=false \
 ro.vendor.audio.sdk.ssr=false \
 vendor.audio.flac.sw.decoder.24bit=true \
 vendor.audio.offload.buffer.size.kb=64 \
@@ -44,10 +44,6 @@ bluetooth.hfp.client=1 \
 vendor.qcom.bluetooth.soc=smd \
 ro.bluetooth.hfp.ver=1.7
 
-# Boot
-PRODUCT_PROPERTY_OVERRIDES += \
-sys.vendor.shutdown.waittime=500
-
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
 camera.display.lmax=1280x720 \
@@ -71,12 +67,12 @@ persist.debug.coresight.config=stm-events
 
 # Display
 PRODUCT_PROPERTY_OVERRIDES += \
+debug.cpurend.vsync=false \
 debug.egl.hw=0 \
 debug.enable.sglscale=1 \
 debug.gralloc.enable_fb_ubwc=1 \
 debug.mdpcomp.logs=0 \
 debug.sf.enable_hwc_vds=1 \
-debug.cpurend.vsync=false \
 debug.sf.hw=0 \
 debug.sf.latch_unsignaled=1 \
 debug.sf.recomputecrop=0 \
@@ -110,12 +106,6 @@ vendor.hw.fm.init=0
 PRODUCT_PROPERTY_OVERRIDES += \
 ro.frp.pst=/dev/block/bootdevice/by-name/config
 
-# Higher fling velocities
-# for smoother scrolling and better responsiveness
-PRODUCT_PROPERTY_OVERRIDES += \
-ro.min.fling_velocity=160 \
-ro.max.fling_velocity=20000
-
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
 av.debug.disable.pers.cache=1 \
@@ -124,9 +114,9 @@ debug.stagefright.omx_default_rank.sw-audio=1 \
 debug.stagefright.omx_default_rank=0 \
 media.msm8956hw=0 \
 media.stagefright.audio.sink=280 \
-vendor.mm.enable.qcom_parser=1048575 \
 mmp.enable.3g2=true \
 vendor.audio.hw.aac.encoder=true \
+vendor.mm.enable.qcom_parser=1048575 \
 vendor.vidc.dec.downscalar_height=1088 \
 vendor.vidc.dec.downscalar_width=1920 \
 vendor.vidc.disable.split.mode=1 \
@@ -170,12 +160,12 @@ persist.dbg.vt_avail_ovr=1 \
 persist.dbg.wfc_avail_ovr=1 \
 persist.radio.multisim.config=dsds \
 persist.sys.fflag.override.settings_network_and_internet_v2=true \
+persist.vendor.radio.aosp_usr_pref_sel=true \
 persist.vendor.radio.apm_sim_not_pwdn=1 \
 persist.vendor.radio.custom_ecc=1 \
 persist.vendor.radio.hw_mbn_update=0 \
 persist.vendor.radio.rat_on=combine \
 persist.vendor.radio.sib16_support=1 \
-persist.vendor.radio.aosp_usr_pref_sel=true \
 ril.subscription.types=NV,RUIM \
 rild.libargs=-d/dev/smd0 \
 rild.libpath=/vendor/lib64/libril-qc-qmi-1.so \
@@ -198,18 +188,9 @@ persist.vendor.delta_time.enable=true
 PRODUCT_PROPERTY_OVERRIDES += \
 net.tcp.2g_init_rwnd=10
 
-# Touch optimize
-PRODUCT_PROPERTY_OVERRIDES += \
-persist.vendor.qti.inputopts.enable=true \
-persist.vendor.qti.inputopts.movetouchslop=0.6
-
 # UI
 PRODUCT_PROPERTY_OVERRIDES += \
 sys.use_fifo_ui=1
-
-# Virtual Display
-PRODUCT_PROPERTY_OVERRIDES += \
-debug.sdm.support_writeback=0
 
 # Wifi
 PRODUCT_PROPERTY_OVERRIDES += \
