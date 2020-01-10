@@ -116,13 +116,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 ro.min.fling_velocity=160 \
 ro.max.fling_velocity=20000
 
-# IMS debug
-PRODUCT_PROPERTY_OVERRIDES += \
-persist.vendor.ims.disableADBLogs=1 \
-persist.vendor.ims.disableDebugLogs=1 \
-persist.vendor.ims.disableIMSLogs=1 \
-persist.vendor.ims.disableQXDMLogs=1
-
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
 av.debug.disable.pers.cache=1 \
