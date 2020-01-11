@@ -1,3 +1,1 @@
 allow platform_app system_app_data_file:dir getattr;
-
-r_dir_file(platform_app, sysfs_kgsl)

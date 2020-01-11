@@ -10,5 +10,3 @@ allow hal_camera_default camera_data_file:dir rw_dir_perms;
 
 # For interfacing with PowerHAL
 hal_client_domain(hal_camera_default, hal_power)
-
-r_dir_file(hal_camera_default, sysfs_kgsl)
