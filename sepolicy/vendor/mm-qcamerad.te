@@ -27,3 +27,5 @@ typeattribute mm-qcamerad socket_between_core_and_vendor_violators;
 
 allow mm-qcamerad camera_socket:dir { add_name search };
 allow mm-qcamerad camera_data_file:sock_file { create unlink };
+
+r_dir_file(mm-qcamerad, sysfs_kgsl)

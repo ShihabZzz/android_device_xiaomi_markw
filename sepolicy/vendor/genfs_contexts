@@ -5,8 +5,15 @@ genfscon debugfs /rmt_storage	u:object_r:debugfs_rmt:s0
 genfscon sysfs /devices/soc/qpnp-rtc-8/rtc                  u:object_r:sysfs_rtc:s0
 
 # Power
-genfscon sysfs /devices/soc/soc:qcom,bcl/power_supply                u:object_r:sysfs_batteryinfo:s0
-genfscon sysfs /devices/soc/msm-bcl-19/power_supply                  u:object_r:sysfs_batteryinfo:s0
+genfscon sysfs /devices/soc/soc:qcom,bcl/power_supply       u:object_r:sysfs_batteryinfo:s0
+genfscon sysfs /devices/soc/msm-bcl-19/power_supply         u:object_r:sysfs_batteryinfo:s0
+
+# SSR
+genfscon sysfs /devices/soc/soc:qcom,kgsl-hyp/subsys0/name   u:object_r:sysfs_ssr:s0
+genfscon sysfs /devices/soc/1de0000.qcom,venus/subsys1/name  u:object_r:sysfs_ssr:s0
+genfscon sysfs /devices/soc/c200000.qcom,lpass/subsys2/name  u:object_r:sysfs_ssr:s0
+genfscon sysfs /devices/soc/a21b000.qcom,pronto/subsys3/name u:object_r:sysfs_ssr:s0
+genfscon sysfs /devices/soc/4080000.qcom,mss/subsys4/name    u:object_r:sysfs_ssr:s0
 
 # Vibrator
-genfscon sysfs /devices/virtual/timed_output/vibrator/vtg_level u:object_r:sysfs_vibrator:s0
+genfscon sysfs /devices/virtual/timed_output/vibrator/vtg_level  u:object_r:sysfs_vibrator:s0

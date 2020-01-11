@@ -12,3 +12,9 @@ allow system_app bg_daemon_prop:file { read } ;
 allow system_app boottime_prop:file { read } ;
 allow system_app cnd_vendor_prop:file { read } ;
 allow system_app wificond:binder call;
+
+# FM radio needs to set fm properties
+set_prop(system_app, fm_prop)
+
+# zram
+r_dir_file(system_app sysfs_zram)
