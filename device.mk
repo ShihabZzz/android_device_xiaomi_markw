@@ -35,7 +35,7 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 PRODUCT_AAPT_PREBUILT_DPI := xxhdpi
 
 # Soong namespaces
-PRODUCT_SOONG_NAMESPACES += device/xiaomi/mido
+PRODUCT_SOONG_NAMESPACES += device/xiaomi/markw
 
 # Permissions
 PRODUCT_COPY_FILES += \
