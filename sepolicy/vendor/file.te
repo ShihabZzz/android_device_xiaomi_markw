@@ -16,6 +16,7 @@ type sysfs_keys_ft5346, fs_type, sysfs_type;
 type sysfs_torch, fs_type, sysfs_type;
 
 # Power
+type sysfs_allow_hvdcp3, fs_type, sysfs_type;
 type sysfs_dp_dm, fs_type, sysfs_type;
 
 # Rild
