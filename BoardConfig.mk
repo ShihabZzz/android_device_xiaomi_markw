@@ -201,6 +201,7 @@ VENDOR_SECURITY_PATCH := 2019-09-05
 
 # Shims
 TARGET_LD_SHIM_LIBS += \
+/system/lib64/lib-imsvt.so|imsvideocodec_shim.so \
 /vendor/bin/mm-qcamera-daemon|libshims_qcamera-daemon.so \
 /vendor/lib64/hw/gxfingerprint.default.so|fakelogprint.so:/vendor/lib64/hw/fingerprint.goodix.so|fakelogprint.so:/vendor/bin/gx_fpd|fakelogprint.so
 

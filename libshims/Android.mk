@@ -14,6 +14,8 @@
 
 LOCAL_PATH := $(call my-dir)
 
+# libshims_qcamera-daemon
+
 include $(CLEAR_VARS)
 
 LOCAL_SRC_FILES := \
@@ -35,6 +37,7 @@ LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 include $(BUILD_SHARED_LIBRARY)
 
 # fake print lib for hexedited fingerprint libs
+
 include $(CLEAR_VARS)
 
 LOCAL_SHARED_LIBRARIES := \
@@ -47,5 +50,15 @@ LOCAL_MODULE_TAGS := optional
 
 LOCAL_VENDOR_MODULE := true
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+
+include $(BUILD_SHARED_LIBRARY)
+
+# imsvideocodec_shim
+
+include $(CLEAR_VARS)
+
+LOCAL_MODULE := imsvideocodec_shim
+LOCAL_MODULE_TAGS := optional
+LOCAL_SRC_FILES := ims/imsvideocodec.cpp
 
 include $(BUILD_SHARED_LIBRARY)
