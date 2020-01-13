@@ -1,3 +1,1 @@
-allow vold vendor_file:file getattr;
-allow vold gx_fpd_exec:file getattr;
-allow vold mm-qcamerad_exec:file getattr;
+allow vold cache_block_device:blk_file { getattr };

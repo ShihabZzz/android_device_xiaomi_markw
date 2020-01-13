@@ -13,6 +13,8 @@ allow system_app boottime_prop:file { read } ;
 allow system_app cnd_vendor_prop:file { read } ;
 allow system_app wificond:binder call;
 
+allow system_app sysfs_kgsl:lnk_file { read } ;
+
 # FM radio needs to set fm properties
 set_prop(system_app, fm_prop)
 

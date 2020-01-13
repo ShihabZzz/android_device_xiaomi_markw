@@ -1,4 +1,5 @@
 allow cameraserver mediacodec:binder call;
-allow cameraserver mm-qcamerad_exec:file getattr;
-allow cameraserver vendor_file:file getattr;
-allow cameraserver gx_fpd_exec:file { getattr } ;
+
+dontaudit cameraserver mm-qcamerad_exec:file { read getattr };
+dontaudit cameraserver vendor_file:file { read getattr };
+dontaudit cameraserver gx_fpd_exec:file { read getattr };

@@ -1,0 +1,3 @@
+dontaudit tombstoned mm-qcamerad_exec:file { read getattr };
+dontaudit tombstoned vendor_file:file { read getattr };
+dontaudit tombstoned gx_fpd_exec:file { read getattr };

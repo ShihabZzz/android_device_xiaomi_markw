@@ -2,3 +2,7 @@ allow toolbox system_prop:property_service { set };
 allow toolbox init:fifo_file { write read getattr };
 allow toolbox property_socket:sock_file write;
 allow toolbox init:unix_stream_socket connectto;
+
+dontaudit toolbox mm-qcamerad_exec:file { read getattr };
+dontaudit toolbox vendor_file:file { read getattr };
+dontaudit toolbox gx_fpd_exec:file { read getattr };

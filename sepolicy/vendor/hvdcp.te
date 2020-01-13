@@ -1,1 +1,5 @@
-allow hvdcp hvdcp:capability { sys_admin } ;
+allow hvdcp hvdcp:capability { sys_admin };
+
+allow hvdcp sysfs_batteryinfo:file { open read };
+allow hvdcp sysfs_dp_dm:file { open read write };
+allow hvdcp sysfs_system_temp:file { open read };

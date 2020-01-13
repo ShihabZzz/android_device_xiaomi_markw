@@ -12,8 +12,11 @@ type persist_fingerprint_file, file_type, vendor_persist_type;
 type sysfs_keys_atmel, fs_type, sysfs_type;
 type sysfs_keys_ft5346, fs_type, sysfs_type;
 
-# led:torch_0/max_brightness
+# Led:torch_0/max_brightness
 type sysfs_torch, fs_type, sysfs_type;
+
+# Power
+type sysfs_dp_dm, fs_type, sysfs_type;
 
 # Rild
 type rild_file, file_type, vendor_file_type;
@@ -24,8 +27,11 @@ type debugfs_rmt, debugfs_type, fs_type;
 # Sensor
 type persist_sensors_file, file_type, vendor_persist_type;
 
-# tftp_server
+# TFTP Server
 type persist_tftp_file, file_type, vendor_persist_type;
+
+# Thermal
+type sysfs_system_temp, fs_type, sysfs_type;
 
 # WLAN from QCOM
 type sysfs_wlan_qcom, fs_type, sysfs_type;

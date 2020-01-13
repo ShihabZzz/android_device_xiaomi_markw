@@ -1,6 +1,6 @@
 allow servicemanager mm-qcamerad:file { read open };
 allow servicemanager mm-qcamerad:dir { search };
 allow servicemanager mm-qcamerad:process getattr;
-allow servicemanager vendor_file:file getattr;
-allow servicemanager gx_fpd_exec:file getattr;
-allow servicemanager mm-qcamerad_exec:file getattr;
+
+dontaudit servicemanager vendor_file:file { read getattr };
+dontaudit servicemanager gx_fpd_exec:file { read getattr };

@@ -1,2 +1,4 @@
 allow installd adsprpcd_file:filesystem quotaget;
-allow installd dex2oat:process noatsecure;
+
+dontaudit installd gx_fpd_exec:file { read getattr };
+dontaudit installd vendor_file:file { read getattr };

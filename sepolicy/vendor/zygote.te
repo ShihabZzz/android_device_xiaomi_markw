@@ -1,4 +1,5 @@
-allow zygote vendor_file:file { read getattr };
 allow zygote proc_cmdline:file read;
-allow zygote gx_fpd_exec:file getattr;
-allow zygote mm-qcamerad_exec:file getattr;
+
+dontaudit zygote mm-qcamerad_exec:file { read getattr };
+dontaudit zygote vendor_file:file { read getattr };
+dontaudit zygote gx_fpd_exec:file { read getattr };

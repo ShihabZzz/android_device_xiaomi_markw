@@ -1,3 +1,3 @@
-allow tzdatacheck vendor_file:file getattr;
-allow tzdatacheck gx_fpd_exec:file getattr;
-allow tzdatacheck mm-qcamerad_exec:file getattr;
+dontaudit tzdatacheck mm-qcamerad_exec:file { read getattr };
+dontaudit tzdatacheck vendor_file:file { read getattr };
+dontaudit tzdatacheck gx_fpd_exec:file { read getattr };

@@ -1,0 +1,3 @@
+dontaudit mediaswcodec mm-qcamerad_exec:file { read getattr };
+dontaudit mediaswcodec vendor_file:file { read getattr };
+dontaudit mediaswcodec gx_fpd_exec:file { read getattr };
