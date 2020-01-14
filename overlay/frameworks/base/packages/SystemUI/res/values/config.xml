@@ -20,10 +20,10 @@
 <!-- These resources are around just to allow their values to be customized
      for different hardware and product builds. -->
 <resources>
-    <!-- Doze: does this device support STATE_DOZE and STATE_DOZE_SUSPEND?  -->
+  <!-- Doze: does this device support STATE_DOZE and STATE_DOZE_SUSPEND?  -->
     <bool name="doze_display_state_supported">true</bool>
 
-    <!-- Max visible notification icons -->
+  <!-- Max visible notification icons -->
     <integer name="config_maxVisibleNotificationIcons">6</integer>
     <integer name="config_maxVisibleNotificationIconsWhenDark">7</integer>
 
@@ -34,7 +34,4 @@
 
     <!-- Whether SystemUI ignores notch -->
     <bool name="hide_view_behind_notch">true</bool>
-
-    <!-- Show battery icon in the QS Panel instead of in the header -->
-    <bool name="config_batteryInQSPanel">false</bool>
 </resources>
