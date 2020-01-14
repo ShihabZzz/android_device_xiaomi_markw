@@ -206,7 +206,3 @@ wifi.interface=wlan0
 # Wifi-Display
 PRODUCT_PROPERTY_OVERRIDES += \
 persist.sys.wfd.virtual=0
-
-# Maintainer
-PRODUCT_PROPERTY_OVERRIDES += \
-ro.havoc.maintainer=ShihabZzz
