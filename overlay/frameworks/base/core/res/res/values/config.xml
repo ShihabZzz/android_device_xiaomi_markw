@@ -528,9 +528,6 @@
     <!-- Whether notify fingerprint client of successful cancelled authentication -->
     <bool name="config_notifyClientOnFingerprintCancelSuccess">true</bool>
 
-    <!-- Whether the device has outdated qti-telephony-common.jar -->
-    <bool name="config_oldQtiTelephony">false</bool>
-
     <!-- All the capabilities of the LEDs on this device, stored as a bit field.
        This integer should equal the sum of the corresponding value for each
        of the following capabilities present:
@@ -601,12 +598,6 @@
     <!-- Control whether the always on display mode is enabled by default. This value will be used
          during initialization when the setting is still null. -->
     <bool name="config_dozeAlwaysOnEnabled">false</bool>
-
-    <!-- Allow automatic adjusting of the screen brightness while dozing in low power state. -->
-    <bool name="config_allowAutoBrightnessWhileDozing">true</bool>
-
-    <!-- Specify custom blanking delay of the display -->
-   <integer name="config_screen_off_delay">0</integer>
 
     <!-- The component name, flattened to a string, for the default autofill service
          to  enabled for an user. This service must be trusted, as it can be activated
