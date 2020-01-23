@@ -81,6 +81,10 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth.a2dp@1.0-impl \
     android.hardware.bluetooth.a2dp@1.0-service
 
+# Additional native libraries
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
+		
 # ANT+
 PRODUCT_PACKAGES += \
     AntHalService \
