@@ -1,2 +1,3 @@
+allow mediaserver mm-qcamerad_exec:file getattr;
 allow mediaserver gx_fpd_exec:file { getattr } ;
 allow mediaserver vendor_file:file { getattr } ;

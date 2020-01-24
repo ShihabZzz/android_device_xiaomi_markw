@@ -1,8 +1,8 @@
 # Audio
-/system/etc/audio_policy_configuration.xml               u:object_r:vendor_configs_file:s0
+/system/etc/audio_policy_configuration.xml      u:object_r:vendor_configs_file:s0
 
 # Fingerprint
-/(mnt/vendor)/persist/data(/.*)?                                     u:object_r:persist_fingerprint_file:s0
+/(mnt/vendor)/persist/data(/.*)?                u:object_r:persist_fingerprint_file:s0
 
 # Fpc Fingerprint
 /data/fpc(/.*)?                                 u:object_r:fpc_data_file:s0
@@ -20,36 +20,36 @@
 /(vendor|system/vendor)/usr/keylayout(/.*)?     u:object_r:keylayout_file:s0
 
 # HALs
-/(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service\.xiaomi_markw	  u:object_r:hal_fingerprint_markw_exec:s0
-/(vendor|system/vendor)/bin/hw/android\.hardware\.ir@1\.0-service\.xiaomi_markw	                        u:object_r:hal_ir_default_exec:s0
-/(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service\.xiaomi_markw		                  u:object_r:hal_light_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service\.xiaomi_markw    u:object_r:hal_fingerprint_markw_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.ir@1\.0-service\.xiaomi_markw                         u:object_r:hal_ir_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service\.xiaomi_markw                      u:object_r:hal_light_default_exec:s0
 
 # poweroffalarm
-/(mnt/vendor)/persist/alarm(/.*)?                                     u:object_r:persist_alarm_file:s0
+/(mnt/vendor)/persist/alarm(/.*)?                                   u:object_r:persist_alarm_file:s0
 
 # Rild
-/(vendor|system/vendor)/radio/qcril_database/qcril.db			          u:object_r:rild_file:s0
+/(vendor|system/vendor)/radio/qcril_database/qcril.db               u:object_r:rild_file:s0
 
 # Sensors
-/(mnt/vendor)/persist/sensors(/.*)?                                     u:object_r:persist_sensors_file:s0
+/(mnt/vendor)/persist/sensors(/.*)?                                 u:object_r:persist_sensors_file:s0
 
 # tftp_server
-/(mnt/vendor)/persist/rfs(/.*)?                                         u:object_r:persist_tftp_file:s0
+/(mnt/vendor)/persist/rfs(/.*)?                                     u:object_r:persist_tftp_file:s0
 
 # time
-/(mnt/vendor)/persist/time(/.*)?                                         u:object_r:persist_time_file:s0
+/(mnt/vendor)/persist/time(/.*)?                                    u:object_r:persist_time_file:s0
 
 # Leds & consumerir
-/sys/class/leds(/.*)?			                                          u:object_r:sysfs_leds:s0
-/sys/devices/soc/78b6000\.i2c/i2c-2/2-[0-9a-f]+/leds(/.*)?			    u:object_r:sysfs_leds:s0
+/sys/class/leds(/.*)?                                               u:object_r:sysfs_leds:s0
+/sys/devices/soc/78b6000\.i2c/i2c-2/2-[0-9a-f]+/leds(/.*)?          u:object_r:sysfs_leds:s0
 
 # Sysfs files
+/firmware/verinfo/ver_info.txt                                                            u:object_r:vfat:s0
+/proc/gesture/onoff                                                                       u:object_r:proc:s0
+/sys/audio_amplifier/enable                                                               u:object_r:sysfs:s0
 /sys/board_properties/virtualkeys.atmel-maxtouch                                          u:object_r:sysfs_keys_atmel:s0
 /sys/board_properties/virtualkeys.ft5346                                                  u:object_r:sysfs_keys_ft5346:s0
-/sys/devices/soc/a000000.qcom,wcnss-wlan/net/wlan0/address                                u:object_r:sysfs_wlan_address:s0
 /sys/devices/soc/a000000.qcom,wcnss-wlan/net/p2p0/type                                    u:object_r:sysfs_wlan_qcom:s0
+/sys/devices/soc/a000000.qcom,wcnss-wlan/net/wlan0/address                                u:object_r:sysfs_wlan_address:s0
 /sys/devices/soc/a000000.qcom,wcnss-wlan/net/wlan0/type                                   u:object_r:sysfs_wlan:s0
-/sys/devices/soc/qpnp-flash-led-[0-9]+/leds/led:torch_[0-9]+/max_brightness	              u:object_r:sysfs_torch:s0
-/sys/audio_amplifier/enable	                                                              u:object_r:sysfs:s0
-/proc/gesture/onoff	                                                                      u:object_r:proc:s0
-/firmware/verinfo/ver_info.txt	                                                          u:object_r:vfat:s0
+/sys/devices/soc/qpnp-flash-led-[0-9]+/leds/led:torch_[0-9]+/max_brightness               u:object_r:sysfs_torch:s0
