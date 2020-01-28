@@ -177,10 +177,10 @@ vendor/lib64/libsecureui.so|66befbd91628d464b71e1cd523eb111d517a5b84
 vendor/lib64/libsecureui_svcsock.so|ab9ec06666c6c63e4a30b2fe503e6088aab3629d
 vendor/lib64/libssd.so|0e988e6ef7b1d356f4b92a26a61b96a840de1d20
 
-# DRM - Widevine - from Tissot PKQ1.180917.001.V10.0.16.0.PDHMIXM
+# DRM - Widevine - from Tissot PKQ1.180917.001.V10.0.17.0.PDHMIXM
 vendor/bin/hw/android.hardware.drm@1.1-service.widevine|cc91a2ab5b26bed9c1102c6cae5dd123519706bf
 vendor/etc/init/android.hardware.drm@1.1-service.widevine.rc|458dd241f5f8536eccb57f012b3eba0061736e8e
-vendor/lib/libwvhidl.so|d0c62a5c04fdbb2b7fcc2e077e43713b5b0e5049
+vendor/lib/libwvhidl.so|363c4a6431fdbd5ae0c9add81cde97180fc74138
 
 # FM Radio - from Tissot PKQ1.180917.001.V10.0.16.0.PDHMIXM
 vendor/bin/fm_qsoc_patches|77f31379d6bf68f2f0b3aa8936150b778c4e89ee
@@ -511,15 +511,15 @@ vendor/lib64/vendor.qti.hardware.radio.uim@1.0.so|534046d4af1f1dba04103f52683b0d
 vendor/lib64/vendor.qti.hardware.radio.uim@1.1.so|3a70bf386f26c96b7ed8b94392b015cbcb20de0e
 vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.0.so|bf72b4543af85ba2ad39e075a1f68085cfb75270
 vendor/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0.so|99296dc2831410fed5df4e397845618b40d0a3a1
-vendor/radio/qcril_database/qcril.db|f25a9215fcc2445e73d1aa0b7ef9bdbd97e33f56
+vendor/radio/qcril_database/qcril.db|43b7d5e7ededc9cd5c0b1f7a8941d21d4eb0c9c1
 
-# Radio (IMS) - from Tissot PKQ1.180917.001.V10.0.16.0.PDHMIXM
+# Radio (IMS) - from Tissot PKQ1.180917.001.V10.0.17.0.PDHMIXM
 -priv-app/ims/ims.apk|10d64cbbd275431b5e346296c66d894685f8ff8e
 lib/com.qualcomm.qti.imscmservice@1.0.so|7d7af9bdbe6048ad5842c30929a9be822fbea7f6
 lib/com.qualcomm.qti.imscmservice@2.0.so|075c6068f3e469e795217fac58a82be2d9102c68
 lib/com.qualcomm.qti.imscmservice@2.1.so|cec69294cb4a3033e462cd735c09dd28263e3ffa
 lib/lib-imscamera.so|e58c9f6d3fee1f51607d667f9716c6b8d7688ac1
-lib/lib-imsvideocodec.so|7d745397034d8dee58aa31001df357995ff72a01
+lib/lib-imsvideocodec.so|bd637e4435da665f24d01243d62737e3283d9cb8
 lib/lib-imsvtextutils.so|b0714e4fa4a9ce59ec4578c061c976d5a7d62261
 lib/lib-imsvtutils.so|8cdeb25b66258f6a8d6bd4116717119ade4fb369
 lib/libimscamera_jni.so|7e96600f0ccdf2645e1b4cd77df47f05ecf6bf3b
@@ -530,7 +530,7 @@ lib64/com.qualcomm.qti.imscmservice@1.0.so|e622ddede56d6a9dcb9d3dbcff7c33ab3f4c1
 lib64/com.qualcomm.qti.imscmservice@2.0.so|47732fea882f132beb4f3f515e4fed5ce7162120
 lib64/com.qualcomm.qti.imscmservice@2.1.so|5808cb432903b7b45e0c2563286851ef89e06a98
 lib64/lib-imscamera.so|3a9c5c3cb03d4fb2351f8bb7a7807868c1dedf88
-lib64/lib-imsvideocodec.so|382cd42c9d4d180e96402713d17f5e58001e8eb0
+lib64/lib-imsvideocodec.so|56f02699e8ec3ccec1e14329d5f7e4eb11837a0c
 lib64/lib-imsvt.so|7dfc533fc3c439a608b219838281d6c5f605ee22
 lib64/lib-imsvtextutils.so|dc3340321ee2543bb35248d0f9dac4718116a073
 lib64/lib-imsvtutils.so|13480b644ed5290f7ddc2f7c304c0e912f416098
@@ -582,7 +582,7 @@ vendor/lib64/vendor.qti.imsrtpservice@1.0-service-Impl.so|f4eef520bbf98e6e1ac869
 vendor/lib64/vendor.qti.imsrtpservice@1.0.so|559a2dbf409d86746ed4303f2e0089256bb91a07
 
 # Sensors - from Tissot PKQ1.180917.001.V10.0.16.0.PDHMIXM
-vendor/bin/sensors.qti|5d5168447214cf90a602e6fb8956d52a54e3735b
+vendor/bin/sensors.qti|726b3597792d1c714a47549d4d27599672795000
 vendor/lib/hw/activity_recognition.msm8953.so|f9247646a5e2b28473753da06f832ae5f702f7c4
 vendor/lib/libsensor1.so|48727a05c1b91051d5ec53860124f1f1c0d8ca53
 vendor/lib/libsensor_reg.so|8ae3b9d1a54feb9f0af55a8fff50410f53660318
@@ -616,7 +616,7 @@ vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so|6481fad7709b890ca8b854bbc7f876c
 # Wi-Fi - from Tissot PKQ1.180917.001.V10.0.16.0.PDHMIXM
 vendor/bin/wcnss_service|f8ecd38a41b6b7f832380b489e0c9804c34174d8
 
-# Wi-Fi Display - from Tissot PKQ1.180917.001.V10.0.16.0.PDHMIXM
+# Wi-Fi Display - from Tissot PKQ1.180917.001.V10.0.17.0.PDHMIXM
 bin/wfdservice|edeb291221024401cbae69c2fa4e58733b7efc4c
 etc/init/wfdservice.rc|311bfdd1675e56499662f39455536b75b78477bb
 etc/wfdconfig.xml|60a210d323f3f65dd1424cfd517295c522824b7b
@@ -636,7 +636,7 @@ lib/libmmosal.so|89a3c4404de99e9ee740aeea1883c15470d61a74
 lib/libmmrtpdecoder.so|adb55936e63ff087a9e3458070515e1ab7dbe178
 lib/libmmrtpencoder.so|9a85d450a8633207f7a499962c5821d1a3fec2b8
 lib/libOmxMux.so|6aff8e6e81331f3d5d3a8d46d342e5b5efc237f3
-lib/libwfdavenhancements.so|9f7c2413da18cf45cd7cd48cda5c6f9c505a1081
+lib/libwfdavenhancements.so|2ea9a84e80948721e93c1bddd5fa8e6e728df87d
 lib/libwfdcodecv4l2.so|b3a3fb10c2d3a8709badb9b3f6c02d0b961136ab
 lib/libwfdcommonutils.so|4672af5a1537df38149b37671f75f9d53e51cfb5
 lib/libwfdconfigutils.so|7c966abaa02eb119d1090e3876fb1b5dac3993c7
