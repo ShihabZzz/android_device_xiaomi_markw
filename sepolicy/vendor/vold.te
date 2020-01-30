@@ -1,1 +1,5 @@
 allow vold cache_block_device:blk_file { getattr };
+
+dontaudit vold mm-qcamerad_exec:file { read getattr };
+dontaudit vold vendor_file:file { read getattr };
+dontaudit vold gx_fpd_exec:file { read getattr };
