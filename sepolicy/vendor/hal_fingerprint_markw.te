@@ -19,10 +19,10 @@ allow hal_fingerprint_markw servicemanager:binder { transfer call };
 
 allow hal_fingerprint_markw fingerprintd_data_file:dir create_dir_perms;
 allow hal_fingerprint_markw fingerprintd_data_file:file create_file_perms;
-allow hal_fingerprint_markw media_rw_data_file:dir { open read search };
+allow hal_fingerprint_markw media_rw_data_file:dir { open read write search add_name };
+allow hal_fingerprint_markw media_rw_data_file:file { create getattr append open };
 allow hal_fingerprint_markw mnt_user_file:dir search;
 allow hal_fingerprint_markw mnt_user_file:lnk_file read;
-allow hal_fingerprint_markw sdcardfs:dir search;
 allow hal_fingerprint_markw storage_file:dir search;
 allow hal_fingerprint_markw storage_file:lnk_file read;
 
@@ -36,7 +36,8 @@ allow hal_fingerprint_markw keystore:keystore_key { add_auth };
 
 allow hal_fingerprint_markw keystore_service:service_manager find;
 
-allow hal_fingerprint_markw sdcardfs:dir { write } ;
+allow hal_fingerprint_markw sdcardfs:dir { write add_name search create } ;
+allow hal_fingerprint_markw sdcardfs:file { create getattr append open };
 
 # For permissions checking
 binder_call(hal_fingerprint_markw, system_server);
