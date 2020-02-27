@@ -180,7 +180,7 @@ vendor/lib64/libssd.so|0e988e6ef7b1d356f4b92a26a61b96a840de1d20
 # DRM - Widevine - from Tissot PKQ1.180917.001.V10.0.17.0.PDHMIXM
 vendor/bin/hw/android.hardware.drm@1.1-service.widevine|cc91a2ab5b26bed9c1102c6cae5dd123519706bf
 vendor/etc/init/android.hardware.drm@1.1-service.widevine.rc|458dd241f5f8536eccb57f012b3eba0061736e8e
-vendor/lib/libwvhidl.so|363c4a6431fdbd5ae0c9add81cde97180fc74138
+vendor/lib/libwvhidl.so|d0c62a5c04fdbb2b7fcc2e077e43713b5b0e5049
 
 # FM Radio - from Tissot PKQ1.180917.001.V10.0.16.0.PDHMIXM
 vendor/bin/fm_qsoc_patches|77f31379d6bf68f2f0b3aa8936150b778c4e89ee
@@ -582,7 +582,7 @@ vendor/lib64/vendor.qti.imsrtpservice@1.0-service-Impl.so|f4eef520bbf98e6e1ac869
 vendor/lib64/vendor.qti.imsrtpservice@1.0.so|559a2dbf409d86746ed4303f2e0089256bb91a07
 
 # Sensors - from Tissot PKQ1.180917.001.V10.0.16.0.PDHMIXM
-vendor/bin/sensors.qti|726b3597792d1c714a47549d4d27599672795000
+vendor/bin/sensors.qti|3f6368e8d7484f5610fbf899dbe2a95e7cd6855e
 vendor/lib/hw/activity_recognition.msm8953.so|f9247646a5e2b28473753da06f832ae5f702f7c4
 vendor/lib/libsensor1.so|48727a05c1b91051d5ec53860124f1f1c0d8ca53
 vendor/lib/libsensor_reg.so|8ae3b9d1a54feb9f0af55a8fff50410f53660318
