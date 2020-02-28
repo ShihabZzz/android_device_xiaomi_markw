@@ -1,4 +1,2 @@
 allow platform_app system_app_data_file:dir getattr;
 dontaudit platform_app time_daemon:unix_stream_socket connectto;
-
-r_dir_file(platform_app, sysfs_kgsl)

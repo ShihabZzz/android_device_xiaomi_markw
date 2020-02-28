@@ -13,12 +13,5 @@ genfscon sysfs /devices/soc/qpnp-smbcharger-14/power_supply/battery/present     
 genfscon sysfs /devices/soc/qpnp-smbcharger-17/power_supply/battery/input_current_max   u:object_r:sysfs_batteryinfo:s0
 genfscon sysfs /devices/soc/qpnp-smbcharger-17/power_supply/battery/present             u:object_r:sysfs_batteryinfo:s0
 
-# SSR
-genfscon sysfs /devices/soc/soc:qcom,kgsl-hyp/subsys0/name   u:object_r:sysfs_ssr:s0
-genfscon sysfs /devices/soc/1de0000.qcom,venus/subsys1/name  u:object_r:sysfs_ssr:s0
-genfscon sysfs /devices/soc/c200000.qcom,lpass/subsys2/name  u:object_r:sysfs_ssr:s0
-genfscon sysfs /devices/soc/a21b000.qcom,pronto/subsys3/name u:object_r:sysfs_ssr:s0
-genfscon sysfs /devices/soc/4080000.qcom,mss/subsys4/name    u:object_r:sysfs_ssr:s0
-
 # Vibrator
 genfscon sysfs /devices/virtual/timed_output/vibrator/vtg_level  u:object_r:sysfs_vibrator:s0
