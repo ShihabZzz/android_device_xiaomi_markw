@@ -1,3 +1,2 @@
 allow platform_app system_app_data_file:dir getattr;
 allow platform_app sysfs_fps:file { getattr open read };
-dontaudit platform_app time_daemon:unix_stream_socket connectto;

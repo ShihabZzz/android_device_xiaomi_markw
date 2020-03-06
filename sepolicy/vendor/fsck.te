@@ -2,6 +2,4 @@ dontaudit fsck mm-qcamerad_exec:file { read getattr };
 dontaudit fsck vendor_file:file { read getattr };
 dontaudit fsck gx_fpd_exec:file { read getattr };
 
-dontaudit fsck fsck:capability { dac_override };
-dontaudit fsck mnt_vendor_file:dir { getattr };
 allow fsck tmpfs:blk_file { getattr };
