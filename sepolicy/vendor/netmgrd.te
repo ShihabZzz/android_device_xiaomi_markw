@@ -1,4 +1,2 @@
 set_prop(netmgrd, vendor_xlat_prop)
 allow netmgrd self:capability sys_admin;
-
-dontaudit netmgrd system_file:file { execute execute_no_trans read open getattr } ;
