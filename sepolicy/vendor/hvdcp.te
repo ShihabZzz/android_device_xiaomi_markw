@@ -1,10 +1,4 @@
 allow hvdcp hvdcp:capability { sys_admin };
-allow hvdcp sysfs_allow_hvdcp3:file { open read };
-allow hvdcp sysfs_batteryinfo:file { open read };
-allow hvdcp sysfs_dp:file { open read write };
-allow hvdcp sysfs_dp_dm:file { open read write };
-allow hvdcp sysfs_hvdcp:file { open read };
-allow hvdcp sysfs_input_current_limited:file { open read };
-allow hvdcp sysfs_max_pulse_allowed:file { open read };
-allow hvdcp sysfs_system_temp:file { open read };
-allow hvdcp sysfs_system_temp_level:file { open read };
+allow hvdcp sysfs_batteryinfo:dir r_dir_perms;
+allow hvdcp sysfs_batteryinfo:file r_file_perms;
+allow hvdcp sysfs_batteryinfo:file write;
