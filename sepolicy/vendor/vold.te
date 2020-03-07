@@ -1,5 +1,4 @@
 allow vold cache_block_device:blk_file { getattr };
-allow vold same_process_hal_file:file { execute getattr open read };
 
 dontaudit vold mm-qcamerad_exec:file { read getattr };
 dontaudit vold vendor_file:file { read getattr };
