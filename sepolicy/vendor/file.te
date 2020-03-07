@@ -15,15 +15,6 @@ type sysfs_keys_ft5346, fs_type, sysfs_type;
 # Led:torch_0/max_brightness
 type sysfs_torch, fs_type, sysfs_type;
 
-# Power
-type sysfs_allow_hvdcp3, fs_type, sysfs_type;
-type sysfs_charging_enabled, fs_type, sysfs_type;
-type sysfs_dp, fs_type, sysfs_type;
-type sysfs_dp_dm, fs_type, sysfs_type;
-type sysfs_hvdcp, fs_type, sysfs_type;
-type sysfs_input_current_limited, fs_type, sysfs_type;
-type sysfs_max_pulse_allowed, fs_type, sysfs_type;
-
 # Rild
 type rild_file, file_type, vendor_file_type;
 
@@ -35,10 +26,6 @@ type persist_sensors_file, file_type, vendor_persist_type;
 
 # TFTP Server
 type persist_tftp_file, file_type, vendor_persist_type;
-
-# Thermal
-type sysfs_system_temp, fs_type, sysfs_type;
-type sysfs_system_temp_level, fs_type, sysfs_type;
 
 # WLAN from QCOM
 type sysfs_wlan_qcom, fs_type, sysfs_type;

@@ -61,12 +61,3 @@
 /sys/devices/soc/a000000.qcom,wcnss-wlan/net/wlan0/address                                u:object_r:sysfs_wlan_address:s0
 /sys/devices/soc/a000000.qcom,wcnss-wlan/net/wlan0/type                                   u:object_r:sysfs_wlan:s0
 /sys/devices/soc/qpnp-flash-led-[0-9]+/leds/led:torch_[0-9]+/max_brightness               u:object_r:sysfs_torch:s0
-/sys/devices/soc/qpnp-smbcharger-14/power_supply/battery/allow_hvdcp3                     u:object_r:sysfs_hvdcp:s0
-/sys/devices/soc/qpnp-smbcharger-14/power_supply/battery/charging_enabled                 u:object_r:sysfs_charging_enabled:s0
-/sys/devices/soc/qpnp-smbcharger-14/power_supply/battery/dp_dm                            u:object_r:sysfs_dp:s0
-/sys/devices/soc/qpnp-smbcharger-14/power_supply/battery/input_current_limited            u:object_r:sysfs_input_current_limited:s0
-/sys/devices/soc/qpnp-smbcharger-14/power_supply/battery/max_pulse_allowed                u:object_r:sysfs_max_pulse_allowed:s0
-/sys/devices/soc/qpnp-smbcharger-14/power_supply/battery/system_temp_level                u:object_r:sysfs_system_temp_level:s0
-/sys/devices/soc/qpnp-smbcharger-17/power_supply/battery/allow_hvdcp3                     u:object_r:sysfs_allow_hvdcp3:s0
-/sys/devices/soc/qpnp-smbcharger-17/power_supply/battery/dp_dm                            u:object_r:sysfs_dp_dm:s0
-/sys/devices/soc/qpnp-smbcharger-17/power_supply/battery/system_temp_level                u:object_r:sysfs_system_temp:s0

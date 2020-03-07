@@ -18,3 +18,4 @@ allow init system_file:file mounton;
 allow init adsprpcd_file:filesystem { mount relabelfrom relabelto };
 
 allow init sysfs:file setattr;
+allow init sysfs_batteryinfo:file setattr;
