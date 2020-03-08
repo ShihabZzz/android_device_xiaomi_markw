@@ -16,6 +16,8 @@
 
 DEVICE_PATH := device/xiaomi/markw
 
+TARGET_SYSTEM_PROP := $(DEVICE_PATH)/system.prop
+
 TARGET_SPECIFIC_HEADER_PATH := $(DEVICE_PATH)/include
 
 # Architecture
