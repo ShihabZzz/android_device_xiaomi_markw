@@ -653,16 +653,19 @@ vendor/etc/init/android.hardware.drm@1.2-service.widevine.rc|75335443a33a06a03ee
 vendor/lib64/libwvhidl.so|4af61fdcf1186700ea7ee23c607fb9ce5fd0f0e8
 
 # Fingerprint
-bin/gx_fpd:vendor/bin/gx_fpd
-lib/libcom_fingerprints_service.so:vendor/lib/libcom_fingerprints_service.so
-lib/hw/fingerprint.default.so:vendor/lib/hw/fingerprint.fpc.so
-lib64/hw/fingerprint.default.so:vendor/lib64/hw/fingerprint.fpc.so
-lib64/hw/fingerprint.goodix.so:vendor/lib64/hw/fingerprint.goodix.so
-lib64/hw/gxfingerprint.default.so:vendor/lib64/hw/gxfingerprint.default.so
-lib64/libcom_fingerprints_service.so:vendor/lib64/libcom_fingerprints_service.so
-lib64/libfp_client.so:vendor/lib64/libfp_client.so
-lib64/libfpnav.so:vendor/lib64/libfpnav.so
-lib64/libfpservice.so:vendor/lib64/libfpservice.so
+vendor/bin/gx_fpd|b38f389fa5eb52438cf0e150e5b70db0c98ee4d5
+vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service.xiaomi_markw|c377ce99875da4787cbc5bf619a5d6d955f92642
+vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service.xiaomi_markw.rc|2dc33765ab5c713ceef904d9006739edc8516282
+vendor/lib64/hw/fingerprint.fpc.so|7b1801416801916f5b77686fef01859f11685674
+vendor/lib64/hw/fingerprint.goodix.so|c66aa3eafd9dd208fb81529b8d63d8a00e80c2d6
+vendor/lib64/hw/gxfingerprint.default.so|63e1a095a6688137573b0b2d3503019497e0bb4b
+vendor/lib64/libbindergx.so|eb676b92d13a7835aaab309d5c692151993e016f
+vendor/lib64/libcom_fingerprints_service.so|90e97e7caa82d85349b6a7147d7c060377ad69e2
+vendor/lib64/libfpnav.so|588301735456b31b09aa0779a7f46481056868dd
+vendor/lib64/libfpservice.so|7bfd1abd31551833079e6ffe3138fa9faf9e9040
+vendor/lib64/libfp_client.so|c74fac2826f1ef76c32f7bb532c21cfd7bc3c852
+vendor/lib/hw/fingerprint.fpc.so|fdf0b3b7348f6bf2178ead6ad7e16191183e7911
+vendor/lib/libcom_fingerprints_service.so|580b1fc694003651c05961c8b3f8dd4dff698ab9
 
 # FM Radio - from LA.UM.8.6.r1-02600-89xx.0
 vendor/bin/fm_qsoc_patches|b288ea0c03e651d6f47c6fe833606f22dd656367
