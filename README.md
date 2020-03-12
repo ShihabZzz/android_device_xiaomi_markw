@@ -24,7 +24,7 @@ Accelerometer | Yes (Bosch BMI160)
 Magnetometer | Yes (Yamaha YAS537)
 Network Technology | GSM / CDMA / HSPA / EVDO / LTE
 Alert types | Vibration, MP3, WAV ringtones
-Loudspeaker | Yes 
+Loudspeaker | Yes
 3.5mm jack | Yes
 NFC | No
 QC Support | No
@@ -37,5 +37,3 @@ USB | microUSB 2.0, USB On-The-Go
 Als/ps | Yes (Liteon LTR55X)
 LED | Yes (Awinic AW2013)
 Release Date | November 2016
-
-![Xiaomi Redmi 4 Prime](http://xiaominews.ru/wp-content/uploads/2017/05/maxresdefault-2.jpg "Xiaomi Redmi 4 Prime")
