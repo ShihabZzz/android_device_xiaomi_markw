@@ -10,13 +10,14 @@ LOCAL_C_INCLUDES += \
 	external/tinycompress/include \
 	system/media/audio_route/include
 
-LOCAL_SHARED_LIBRARIES := liblog libutils libcutils libtinyalsa libtinycompress
+LOCAL_CFLAGS := -Wno-unused-parameter
 LOCAL_HEADER_LIBRARIES := generated_kernel_headers
-LOCAL_SRC_FILES := audio_amplifier.c
+LOCAL_HEADER_LIBRARIES += libhardware_headers
 LOCAL_MODULE := audio_amplifier.msm8953
 LOCAL_MODULE_RELATIVE_PATH := hw
 LOCAL_MODULE_TAGS := optional
+LOCAL_SHARED_LIBRARIES := liblog libutils libcutils libtinyalsa libtinycompress
+LOCAL_SRC_FILES := audio_amplifier.c
 LOCAL_VENDOR_MODULE := true
-LOCAL_HEADER_LIBRARIES += libhardware_headers
 
 include $(BUILD_SHARED_LIBRARY)
