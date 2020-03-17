@@ -670,7 +670,7 @@ vendor/lib/hw/fingerprint.fpc.so|fdf0b3b7348f6bf2178ead6ad7e16191183e7911
 vendor/lib/libcom_fingerprints_service.so|580b1fc694003651c05961c8b3f8dd4dff698ab9
 
 # FM Radio - from LA.UM.8.6.r1-03400-89xx.0
-vendor/bin/fm_qsoc_patches|b288ea0c03e651d6f47c6fe833606f22dd656367
+vendor/bin/fm_qsoc_patches|1d20ce04a514c151da08e606faa595d2380de4d6
 vendor/bin/init.qti.fm.sh|0ac820dd85ebdf5fa73b5e971f6787ff35ceb65d
 vendor/etc/init/init.qti.fm.rc|89642bdcdd3709792cddcefba888fb0394bbaba8
 
