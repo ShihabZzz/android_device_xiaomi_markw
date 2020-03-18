@@ -2,6 +2,3 @@ allow system_server vendor_file:dir { read open };
 allow system_server sysfs_vibrator:file read;
 allow system_server sysfs_keys_atmel:file { open read getattr };
 allow system_server sysfs_keys_ft5346:file { open read getattr };
-
-#Smart charger
-allow system_server sysfs_battery_supply:file rw_file_perms;

@@ -94,10 +94,6 @@ on boot
     chmod 0660 /sys/module/bluetooth_power/parameters/power
     chmod 0660 /sys/module/radio_iris_transport/parameters/fmsmd_set
 
-    # Allow permission for smart charging
-    chown system system /sys/class/power_supply/battery/charging_enabled
-    chmod 0666 /sys/class/power_supply/battery/charging_enabled
-
     chmod 0660 /proc/gesture/onoff
     chown system system /proc/gesture/onoff
 
@@ -350,7 +346,7 @@ service vendor.msm_irqbal_lb /vendor/bin/msm_irqbalance -f /vendor/etc/msm_irqba
     user root
     group root
     disabled
-    
+
 on charger
     load_system_props
     start qcom-post-boot
