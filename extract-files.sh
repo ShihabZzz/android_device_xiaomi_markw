@@ -19,7 +19,6 @@
 set -e
 
 DEVICE=markw
-DEVICE_COMMON=msm8953-common
 VENDOR=xiaomi
 
 # Load extract_utils and do some sanity checks
@@ -57,21 +56,13 @@ if [ -z "$SRC" ]; then
 fi
 
 # Initialize the helper
-setup_vendor "$DEVICE_COMMON" "$VENDOR" "$LINEAGE_ROOT" true "$CLEAN_VENDOR"
+setup_vendor "$DEVICE" "$VENDOR" "$LINEAGE_ROOT" false "$CLEAN_VENDOR"
 
-extract "$MY_DIR"/proprietary-files-qc.txt "$SRC" "$SECTION"
+extract "$MY_DIR"/proprietary-files.txt "$SRC" "$SECTION"
 
-if [ -s "$MY_DIR"/proprietary-files.txt ]; then
-    # Reinitialize the helper for device
-    setup_vendor "$DEVICE" "$VENDOR" "$LINEAGE_ROOT" false "$CLEAN_VENDOR"
+DEVICE_BLOB_ROOT="$LINEAGE_ROOT"/vendor/"$VENDOR"/"$DEVICE"/proprietary
 
-    extract "$MY_DIR"/proprietary-files.txt "$SRC" "$SECTION"
-
-    DEVICE_BLOB_ROOT="$LINEAGE_ROOT"/vendor/"$VENDOR"/"$DEVICE"/proprietary
-
-    sed -i \
-        's/\/system\/etc\//\/vendor\/etc\//g' \
-        "$DEVICE_BLOB_ROOT"/vendor/lib/libmmcamera2_sensor_modules.so
-fi
+# Camera configs
+sed -i "s|/system/etc/camera|/vendor/etc/camera|g" "$DEVICE_BLOB_ROOT"/vendor/lib/libmmcamera2_sensor_modules.so
 
 "$MY_DIR"/setup-makefiles.sh
