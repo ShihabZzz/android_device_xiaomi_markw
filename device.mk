@@ -165,7 +165,6 @@ PRODUCT_PACKAGES += \
     libqdMetaData \
     libqdMetaData.system \
     libdisplayconfig \
-    libhwc2on1adapter \
     liboverlay \
     libgenlock \
     libtinyxml
