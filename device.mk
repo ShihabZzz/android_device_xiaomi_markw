@@ -104,9 +104,7 @@ PRODUCT_PACKAGES += \
     libaudio-resampler \
     libqcompostprocbundle \
     libqcomvisualizer \
-    libqcomvoiceprocessing \
-    libqcomvoiceprocessingdescriptors \
-    libwebrtc_audio_preprocessing
+    libqcomvoiceprocessing
 
 # Audio configuration
 PRODUCT_COPY_FILES += \
