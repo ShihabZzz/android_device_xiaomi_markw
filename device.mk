@@ -91,26 +91,23 @@ PRODUCT_PACKAGES += \
     com.dsi.ant.antradio_library \
     libantradio
 
-#Audio
+# Audio
 PRODUCT_PACKAGES += \
+    android.hardware.audio.effect@4.0-impl \
+    android.hardware.audio@2.0-service \
+    android.hardware.audio@4.0-impl \
+    android.hardware.soundtrigger@2.1-impl \
     audio.a2dp.default \
     audio.primary.msm8953 \
     audio.r_submix.default \
     audio.usb.default \
     audio_amplifier.msm8953 \
     libaacwrapper \
-    libqcompostprocbundle \
     libaudio-resampler \
+    libqcompostprocbundle \
+    libqcompostprocbundle \
     libqcomvisualizer \
-    libqcomvoiceprocessing \
-    libqcomvoiceprocessingdescriptors \
-    libwebrtc_audio_preprocessing
-
-PRODUCT_PACKAGES += \
-    android.hardware.audio@4.0-impl \
-    android.hardware.audio.effect@4.0-impl \
-    android.hardware.soundtrigger@2.1-impl \
-    android.hardware.audio@2.0-service
+    libqcomvoiceprocessing
 
 # Audio mixer
 PRODUCT_COPY_FILES += \
