@@ -2,13 +2,6 @@
 # system.prop for markw
 #
 
-# ADB
-PRODUCT_PROPERTY_OVERRIDES += \
-ro.debuggable=1 \
-persist.sys.usb.config=adb \
-ro.secure=0 \
-ro.adb.secure=0
-
 # Audio
 PRODUCT_PROPERTY_OVERRIDES += \
 af.fast_track_multiplier=2 \
