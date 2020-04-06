@@ -23,6 +23,13 @@ vendor/lib/rfsa/adsp/libscveBlobDescriptor_skel.so|3e9c52069ff07e50191d3b3afb33b
 vendor/lib/rfsa/adsp/libscveT2T_skel.so|91b9200dbb982abf0d6b440668252d892a616f66
 
 # Audio - from Tissot PKQ1.180917.001.V10.0.19.0.PDHMIXM
+vendor/lib64/libacdb-fts.so|1a298a90fe8007fe1a3b352ff7d19ae73734f3cc
+vendor/lib64/libacdbloader.so|2ecf30ba0171aab7fdc720446238d48048cf6b7e
+vendor/lib64/libacdbrtac.so|c44ff9b9aa63e34ca1b77a5f0bfb6a5e50585048
+vendor/lib64/libadiertac.so|aeaf6f057d26acf342609c714213e1c9b3409774
+vendor/lib64/libaudcal.so|96c43cbe0ac304ea128def709d7f3ea99db7f260
+vendor/lib64/libaudioalsa.so|4a27694b5a6842609a2f2572476b7af032ec7201
+vendor/lib64/libqtigef.so|79e811fd04172b0afda1229d182014be28a146b2
 vendor/lib/libacdb-fts.so|f140cc5c13855f411d9b944316828b42dd6b7d75
 vendor/lib/libacdbloader.so|52fb25441a742d744f6574d1065ae1b822769c48
 vendor/lib/libacdbrtac.so|8a469a26ed1ecff8e22ee141d98bde97513a6212
@@ -36,15 +43,6 @@ vendor/lib/libsurround_3mic_proc.so|832adfad9f3d414234f1b4cfd32b196fe4082bb9
 vendor/lib/soundfx/libqcbassboost.so|0a730813a7335208a5368f48de4790abda536c59
 vendor/lib/soundfx/libqcreverb.so|3cbf222a205e4ccbe812fc69d580abd2237e64d5
 vendor/lib/soundfx/libqcvirt.so|8f60a539fe18de5944d5f1dcd6d0ec5e56b336ea
-vendor/lib64/libacdb-fts.so|1a298a90fe8007fe1a3b352ff7d19ae73734f3cc
-vendor/lib64/libacdbloader.so|2ecf30ba0171aab7fdc720446238d48048cf6b7e
-vendor/lib64/libacdbrtac.so|c44ff9b9aa63e34ca1b77a5f0bfb6a5e50585048
-vendor/lib64/libadiertac.so|aeaf6f057d26acf342609c714213e1c9b3409774
-vendor/lib64/libaudcal.so|96c43cbe0ac304ea128def709d7f3ea99db7f260
-vendor/lib64/libaudioalsa.so|4a27694b5a6842609a2f2572476b7af032ec7201
-vendor/lib64/libqtigef.so|79e811fd04172b0afda1229d182014be28a146b2
-vendor/lib64/soundfx/libqcbassboost.so|0b92d65381d9722c579ccfda12f86c7e3fcaedd1
-vendor/lib64/soundfx/libqcvirt.so|815b3a7cd762cdb6f162dde12c866acb23cdd022
 
 # ANT+ (vendor) - from Tissot PKQ1.180917.001.V10.0.19.0.PDHMIXM
 vendor/lib64/com.qualcomm.qti.ant@1.0.so|29ecc1a9134dd2146f358e65c830059d3fa6c6d9
