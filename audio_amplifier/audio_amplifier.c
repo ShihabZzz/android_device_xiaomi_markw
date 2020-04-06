@@ -16,22 +16,20 @@
 
 #define LOG_TAG "audio_amplifier"
 
-#include <time.h>
-#include <system/audio.h>
-#include <platform.h>
-#include <dlfcn.h>
-#include <cutils/properties.h>
+#include <stdint.h>
+#include <stdlib.h>
+#include <sys/types.h>
+#include <sys/ioctl.h>
+#include <fcntl.h>
 #include <unistd.h>
 
-#include <stdlib.h>
-
-#include <fcntl.h>
 #include <cutils/log.h>
 #include <cutils/str_parms.h>
 
 #include <hardware/audio_amplifier.h>
 #include <hardware/hardware.h>
-#include <audio_hw.h>
+
+#include <msm8916/platform.h>
 
 #define DEVICE_PATH "/sys/audio_amplifier/enable"
 
