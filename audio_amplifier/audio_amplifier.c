@@ -23,7 +23,7 @@
 #include <fcntl.h>
 #include <unistd.h>
 
-#include <cutils/log.h>
+#include <log/log.h>
 #include <cutils/str_parms.h>
 
 #include <hardware/audio_amplifier.h>
