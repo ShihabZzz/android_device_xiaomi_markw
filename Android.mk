@@ -90,21 +90,7 @@ $(WCNSS_INI_SYMLINK): $(LOCAL_INSTALLED_MODULE)
 	      @rm -rf $@
 	      $(hide) ln -sf /vendor/etc/wifi/$(notdir $@) $@
 
-WCNSS_BIN_SYMLINK := $(TARGET_OUT_VENDOR)/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin
-$(WCNSS_BIN_SYMLINK): $(LOCAL_INSTALLED_MODULE)
-	      @echo "WCNSS bin link: $@"
-	      @mkdir -p $(dir $@)
-	      @rm -rf $@
-	      $(hide) ln -sf /mnt/vendor/persist/$(notdir $@) $@
-
-WCNSS_DAT_SYMLINK := $(TARGET_OUT_VENDOR)/firmware/wlan/prima/WCNSS_wlan_dictionary.dat
-$(WCNSS_DAT_SYMLINK): $(LOCAL_INSTALLED_MODULE)
-	      @echo "WCNSS dat link: $@"
-	      @mkdir -p $(dir $@)
-	      @rm -rf $@
-	      $(hide) ln -sf /mnt/vendor/persist/$(notdir $@) $@
-
-ALL_DEFAULT_INSTALLED_MODULES += $(WCNSS_INI_SYMLINK) $(WCNSS_BIN_SYMLINK) $(WCNSS_DAT_SYMLINK)
+ALL_DEFAULT_INSTALLED_MODULES += $(WCNSS_INI_SYMLINK)
 
 GOODIX_IMAGES := \
 	      goodixfp.b00 goodixfp.b01 goodixfp.b02 goodixfp.b03 \
