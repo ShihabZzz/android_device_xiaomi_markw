@@ -611,8 +611,11 @@ vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc|2cfc563d7e157937
 vendor/lib/vendor.qti.hardware.tui_comm@1.0.so|ee831dc9bd07c33882390761742c7881e68689f9
 vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so|6481fad7709b890ca8b854bbc7f876ce63b9ea72
 
-# Wi-Fi - from Tissot PKQ1.180917.001.V10.0.19.0.PDHMIXM
+# Wi-Fi - from Tissot PKQ1.180917.001.V10.0.20.0.PDHMIXM
 vendor/bin/wcnss_service|f8ecd38a41b6b7f832380b489e0c9804c34174d8
+vendor/firmware/wlan/prima/WCNSS_cfg.dat|1672af1c3d4f04804f31d4b79a6e59ea4a8b1926
+vendor/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin|3905b511196bf92b1a8732aa79f49cd690cf3daa
+vendor/firmware/wlan/prima/WCNSS_wlan_dictionary.dat|4b86b035b00227f24d271bd2592ecba58824ecc7
 
 # Wi-Fi Display - from Tissot PKQ1.180917.001.V10.0.19.0.PDHMIXM
 bin/wfdservice|edeb291221024401cbae69c2fa4e58733b7efc4c
