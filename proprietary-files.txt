@@ -1071,6 +1071,9 @@ vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so|7343cf8a20fb8e72e17b014cda7b5ae
 
 # Wi-Fi - from Tissot PKQ1.180917.001.V10.0.18.0.PDHMIXM
 vendor/bin/wcnss_service|f8ecd38a41b6b7f832380b489e0c9804c34174d8
+vendor/firmware/wlan/prima/WCNSS_cfg.dat|1672af1c3d4f04804f31d4b79a6e59ea4a8b1926
+vendor/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin|3905b511196bf92b1a8732aa79f49cd690cf3daa
+vendor/firmware/wlan/prima/WCNSS_wlan_dictionary.dat|50acb5731240e68aedbe173fe3113b51208480fe
 
 # WiFi Display - from LA.UM.8.6.r1-04000-89xx.0
 bin/wfdservice|934817e5689fe6f8b54032902de58c203b8ec2e7
