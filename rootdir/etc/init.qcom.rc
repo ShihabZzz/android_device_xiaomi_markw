@@ -104,12 +104,9 @@ on boot
     chown system graphics /sys/class/graphics/fb0/measured_fps
     chmod 0666 /sys/class/graphics/fb0/measured_fps
 
+    # DT2W
     chmod 0660 /proc/gesture/onoff
     chown system system /proc/gesture/onoff
-
-    # Vibrator permissions
-    chown root system /sys/devices/virtual/timed_output/vibrator/vtg_level
-    chmod 0660 /sys/devices/virtual/timed_output/vibrator/vtg_level
 
     # This location is used by QCRIL to host UNIX domain
     # socket files used for internal IPC within QCRIL
@@ -136,12 +133,6 @@ on boot
     # Set the console loglevel to < KERN_INFO
     # Set the default message loglevel to KERN_INFO
     write /proc/sys/kernel/printk "6 6 1 7"
-
-    # Flashlight
-    chown root system /sys/class/leds/led:torch_0/max_brightness
-    chmod 0660 /sys/class/leds/led:torch_0/max_brightness
-    chown root system /sys/class/leds/led:torch_1/max_brightness
-    chmod 0660 /sys/class/leds/led:torch_1/max_brightness
 
     chown wifi wifi /sys/module/wlan/parameters/fwpath
 
