@@ -1,3 +1,5 @@
 dontaudit dpmd mm-qcamerad_exec:file { read getattr };
 dontaudit dpmd vendor_file:file { read getattr };
 dontaudit dpmd gx_fpd_exec:file { read getattr };
+
+allow dpmd ctl_stop_prop:property_service set;
