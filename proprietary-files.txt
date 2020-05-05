@@ -114,7 +114,6 @@ vendor/lib/libmmcamera_qtech_f3l8yam_eeprom.so
 vendor/lib/libmmcamera_qtech_f5670bq_eeprom.so
 vendor/lib/libmmcamera_s5k3l8_eeprom.so
 vendor/lib/libmmcamera_s5k3l8_mono.so
-vendor/lib/libmmcamera_s5k4h8.so
 vendor/lib/libmmcamera_s5k5e8_eeprom.so
 vendor/lib/libmmcamera_s5k5e8.so
 vendor/lib/libmmcamera_sunny_8865_eeprom.so
@@ -394,29 +393,6 @@ vendor/lib/libchromatix_s5k3l8_preview.so
 vendor/lib/libchromatix_s5k3l8_snapshot.so
 vendor/lib/libchromatix_s5k3l8_zsl_preview_ak7345.so
 vendor/lib/libchromatix_s5k3l8_zsl_video_ak7345.so
-vendor/lib/libchromatix_s5k4h8_common.so
-vendor/lib/libchromatix_s5k4h8_cpp_hfr_120.so
-vendor/lib/libchromatix_s5k4h8_cpp_hfr_60.so
-vendor/lib/libchromatix_s5k4h8_cpp_hfr_90.so
-vendor/lib/libchromatix_s5k4h8_cpp_liveshot.so
-vendor/lib/libchromatix_s5k4h8_cpp_preview.so
-vendor/lib/libchromatix_s5k4h8_cpp_snapshot.so
-vendor/lib/libchromatix_s5k4h8_cpp_video.so
-vendor/lib/libchromatix_s5k4h8_default_preview_dw9763.so
-vendor/lib/libchromatix_s5k4h8_default_video_dw9763.so
-vendor/lib/libchromatix_s5k4h8_default_video.so
-vendor/lib/libchromatix_s5k4h8_hfr_120_dw9763.so
-vendor/lib/libchromatix_s5k4h8_hfr_120.so
-vendor/lib/libchromatix_s5k4h8_hfr_60_dw9763.so
-vendor/lib/libchromatix_s5k4h8_hfr_60.so
-vendor/lib/libchromatix_s5k4h8_hfr_90_dw9763.so
-vendor/lib/libchromatix_s5k4h8_hfr_90.so
-vendor/lib/libchromatix_s5k4h8_liveshot.so
-vendor/lib/libchromatix_s5k4h8_postproc.so
-vendor/lib/libchromatix_s5k4h8_preview.so
-vendor/lib/libchromatix_s5k4h8_snapshot.so
-vendor/lib/libchromatix_s5k4h8_zsl_preview_dw9763.so
-vendor/lib/libchromatix_s5k4h8_zsl_video_dw9763.so
 vendor/lib/libchromatix_s5k5e8_a3_default_preview.so
 vendor/lib/libchromatix_s5k5e8_a3_default_video.so
 vendor/lib/libchromatix_s5k5e8_a3_hfr_120.so
@@ -478,7 +454,6 @@ etc/camera/qtech_s5k3l8_f3l8yam_chromatix.xml:vendor/etc/camera/qtech_s5k3l8_f3l
 etc/camera/s5k3l8_chromatix.xml:vendor/etc/camera/s5k3l8_chromatix.xml
 etc/camera/s5k3l8_f3l8yam_chromatix.xml:vendor/etc/camera/s5k3l8_f3l8yam_chromatix.xml
 etc/camera/s5k3l8_mono_chromatix.xml:vendor/etc/camera/s5k3l8_mono_chromatix.xml
-etc/camera/s5k4h8_chromatix.xml:vendor/etc/camera/s5k4h8_chromatix.xml
 etc/camera/s5k5e8_chromatix.xml:vendor/etc/camera/s5k5e8_chromatix.xml
 etc/camera/sunny_s5k3l8_f3l8yam_chromatix.xml:vendor/etc/camera/sunny_s5k3l8_f3l8yam_chromatix.xml
 
