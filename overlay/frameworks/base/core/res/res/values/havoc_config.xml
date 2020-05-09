@@ -47,4 +47,29 @@
      For example, a device with Back, Home and AppSwitch keys would set this
      config to 19. -->
     <integer name="config_deviceHardwareKeys">19</integer>
+
+  <!-- Control the behavior when the user long presses or double taps one of the below keys.
+        0 - Nothing
+        1 - Menu key
+        2 - Recents
+        3 - Assistant
+        4 - Voice search
+        5 - Camera
+        6 - Last app
+        7 - Split screen
+        8 - Flashlight
+        9 - Clear notifications
+        10 - Volume panel
+        11 - Screen off
+        12 - Notifications
+        13 - Power menu
+        14 - Screenshot
+        15 - QS panel
+        16 - Ringer modes
+        17 - Kill app
+     This needs to match the constants in
+     services/core/java/com/android/server/policy/PhoneWindowManager.java -->
+    <integer name="config_doubleTapOnHomeKeyBehavior">11</integer>
+    <integer name="config_longPressOnAppSwitchKeyBehavior">7</integer>
+    <integer name="config_doubleTapOnAppSwitchKeyBehavior">0</integer>
 </resources>
