@@ -1052,8 +1052,8 @@ vendor/firmware/venus.b03|518cab0c0128257b9dc578e9379a5eaef31dae06
 vendor/firmware/venus.b04|c1756e0567d10a1173f481cd367ff4637b2dd77f
 vendor/firmware/venus.mdt|8a6c2730a0470c7576e4cae9ed6dd35689e8f0a7
 
-# Wi-Fi - from Tissot PKQ1.180917.001.V10.0.18.0.PDHMIXM
-vendor/bin/wcnss_service|f8ecd38a41b6b7f832380b489e0c9804c34174d8
+# Wi-Fi - from LA.UM.8.6.r1-04000-89xx.0
+vendor/bin/wcnss_service|33075b37b566f946c96a4b0880240335a829d876
 vendor/firmware/wlan/prima/WCNSS_cfg.dat|1672af1c3d4f04804f31d4b79a6e59ea4a8b1926
 vendor/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin|3905b511196bf92b1a8732aa79f49cd690cf3daa
 vendor/firmware/wlan/prima/WCNSS_wlan_dictionary.dat|50acb5731240e68aedbe173fe3113b51208480fe
