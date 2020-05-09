@@ -557,7 +557,7 @@
         32 - Camera
      For example, a device with Back, Home and AppSwitch keys would set this
      config to 19. -->
-    <integer name="config_deviceHardwareKeys">7</integer>
+    <integer name="config_deviceHardwareKeys">19</integer>
 
     <!-- Whether to cleanup fingerprints upon connection to the daemon and when user switches -->
     <bool name="config_cleanupUnusedFingerprints">false</bool>
