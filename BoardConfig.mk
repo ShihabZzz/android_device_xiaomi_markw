@@ -149,7 +149,7 @@ BOARD_ROOT_EXTRA_SYMLINKS := \
 TARGET_COPY_OUT_VENDOR := vendor
 TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
 
-#FM
+# FM
 BOARD_HAVE_QCOM_FM := true
 
 # GPS
@@ -164,6 +164,9 @@ DEVICE_MATRIX_FILE   := $(DEVICE_PATH)/compatibility_matrix.xml
 # Init
 TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_markw
 TARGET_RECOVERY_DEVICE_MODULES := libinit_markw
+
+# keylayout
+PRODUCT_COPY_FILES := $(filter-out frameworks/base/data/keyboards/Generic.kl:system/usr/keylayout/Generic.kl , $(PRODUCT_COPY_FILES))
 
 # Media
 TARGET_USES_MEDIA_EXTENSIONS := true
