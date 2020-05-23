@@ -1044,6 +1044,14 @@ vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc|a58dd39dac6b0987
 vendor/lib/vendor.qti.hardware.tui_comm@1.0.so|19932d88afdf0351d7bfb6dee19a171d85bc1fde
 vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so|7343cf8a20fb8e72e17b014cda7b5ae85841354a
 
+# Venus firmware - from Daisy V11.0.4.0.QDLMIXM
+vendor/firmware/venus.b00|d367f92f4abf69d688689b7f823e40b20469d54e
+vendor/firmware/venus.b01|824274caf051b6626a8bd27423e67bb52a2d05c9
+vendor/firmware/venus.b02|afaec74e9516cd200ab946e7089e1577c985f0c2
+vendor/firmware/venus.b03|518cab0c0128257b9dc578e9379a5eaef31dae06
+vendor/firmware/venus.b04|c1756e0567d10a1173f481cd367ff4637b2dd77f
+vendor/firmware/venus.mdt|8a6c2730a0470c7576e4cae9ed6dd35689e8f0a7
+
 # Wi-Fi - from Tissot PKQ1.180917.001.V10.0.18.0.PDHMIXM
 vendor/bin/wcnss_service|f8ecd38a41b6b7f832380b489e0c9804c34174d8
 vendor/firmware/wlan/prima/WCNSS_cfg.dat|1672af1c3d4f04804f31d4b79a6e59ea4a8b1926
