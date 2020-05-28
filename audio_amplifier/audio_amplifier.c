@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2017 Nikolay Karev
+ * Copyright (C) 2020 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -198,8 +198,8 @@ amplifier_module_t HAL_MODULE_INFO_SYM = {
         .module_api_version = AMPLIFIER_MODULE_API_VERSION_0_1,
         .hal_api_version = HARDWARE_HAL_API_VERSION,
         .id = AMPLIFIER_HARDWARE_MODULE_ID,
-        .name = "Markw audio amplifier HAL",
-        .author = "Nikolay Karev",
+        .name = "MARKW audio amplifier HAL",
+        .author = "The LineageOS Project",
         .methods = &hal_module_methods,
     },
 };
