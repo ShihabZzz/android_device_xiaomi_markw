@@ -53,3 +53,4 @@
 /sys/board_properties/virtualkeys.atmel-maxtouch                                          u:object_r:sysfs_keys_atmel:s0
 /sys/board_properties/virtualkeys.ft5346                                                  u:object_r:sysfs_keys_ft5346:s0
 /sys/devices/soc/a000000.qcom,wcnss-wlan/net(/.*)?                                        u:object_r:sysfs_wlan_qcom:s0
+/sys/devices/soc/qpnp-smbcharger-14/power_supply/battery/charging_enabled                 u:object_r:sysfs_smart_charging:s0
