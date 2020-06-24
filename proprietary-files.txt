@@ -47,6 +47,11 @@ vendor/lib/soundfx/libqcbassboost.so|223896ecb679384ba4e66d0b6905ca24ae1dda4d
 vendor/lib/soundfx/libqcreverb.so|62be9233cf5e259370a821ef6dc0cb0304b9416c
 vendor/lib/soundfx/libqcvirt.so|b6c332827ad84fdde9b7e57ca073928a23bbd807
 
+# Audiosphere - from LA.UM.8.6.r1-04400-89xx.0
+etc/permissions/audiosphere.xml|3c6d8f14bd99e52a424282fd5d0a5b9b06485dea
+framework/audiosphere.jar|c1679f5aca56f0cb24745b3f7d219acd04833bed
+vendor/lib/soundfx/libasphere.so|4d0ccf1c282bb70619d20bf7d79021dc3815a579
+
 # Audio ACDB
 etc/acdbdata/MTP/MTP_Bluetooth_cal.acdb:vendor/etc/acdbdata/MTP/MTP_Bluetooth_cal.acdb
 etc/acdbdata/MTP/MTP_General_cal.acdb:vendor/etc/acdbdata/MTP/MTP_General_cal.acdb
