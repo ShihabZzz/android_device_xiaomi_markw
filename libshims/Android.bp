@@ -34,13 +34,3 @@ cc_library_shared {
     },
 
 }
-
-// imsvideocodec_shim
-
-cc_library_shared {
-
-    name: "imsvideocodec_shim",
-
-    srcs: ["ims/imsvideocodec.cpp"],
-
-}

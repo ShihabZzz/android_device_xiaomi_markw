@@ -205,7 +205,6 @@ VENDOR_SECURITY_PATCH := 2020-01-01
 
 # Shims
 TARGET_LD_SHIM_LIBS += \
-/system/lib64/lib-imsvt.so|imsvideocodec_shim.so \
 /vendor/bin/mm-qcamera-daemon|libshims_qcamera-daemon.so
 
 # SELinux
