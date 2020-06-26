@@ -1,0 +1,1 @@
+dontaudit isolated_app app_data_file:file { setattr } ;

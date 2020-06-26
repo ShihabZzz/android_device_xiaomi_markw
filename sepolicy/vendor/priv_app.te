@@ -1,7 +1,7 @@
 allow priv_app sepolicy_file:file { open getattr read };
 allow priv_app cgroup:dir { read open };
 allow priv_app cache_private_backup_file:dir getattr;
-allow priv_app configfs:dir { read open };
+allow priv_app configfs:dir { read open search };
 allow priv_app vendor_firmware_file:dir getattr;
 allow priv_app firmware_file:dir getattr;
 allow priv_app proc_version:file { open getattr };
@@ -17,11 +17,18 @@ allow priv_app device:dir open;
 allow priv_app proc:file { getattr };
 allow priv_app sysfs_android_usb:file open;
 allow priv_app hal_memtrack_default:binder call;
-
-allow priv_app cnd_vendor_prop:file { read } ;
-allow priv_app ctl_LKCore_prop:file { read } ;
+allow priv_app cnd_vendor_prop:file { open read getattr } ;
+allow priv_app ctl_LKCore_prop:file { open read getattr } ;
 
 allow priv_app sysfs_wlan_qcom:file { open read getattr };
+
+allow priv_app asec_apk_file:dir { getattr } ;
+allow priv_app init_exec:lnk_file { getattr } ;
+allow priv_app mnt_media_rw_file:dir { getattr } ;
+allow priv_app mnt_product_file:dir { getattr } ;
+allow priv_app mnt_vendor_file:lnk_file { getattr } ;
+
+allow priv_app apex_mnt_dir:dir { open read getattr } ;
 
 get_prop(priv_app, camera_prop)
 get_prop(priv_app, boottime_prop)
