@@ -27,10 +27,6 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
-
-# Remove recovery cache from persist
-rm -rf /mnt/vendor/persist/cache/recovery
-
 # Set shared touchpanel nodes ownership (these are proc_symlinks to the real sysfs nodes)
 chown -LR system.system /proc/gesture/onoff
 
