@@ -239,6 +239,9 @@
         <item>478.5</item>
     </array>
 
+    <!-- Whether the display blanks itself when going from a doze to a non-doze state -->
+    <bool name="config_displayBlanksAfterDoze">true</bool>
+
     <!-- Minimum screen brightness setting allowed by the power manager.
          The user is forbidden from setting the brightness below this level. -->
     <integer name="config_screenBrightnessSettingMinimum">1</integer>
