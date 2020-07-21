@@ -31,46 +31,43 @@ namespace implementation {
 #define IR_PATH "/sys/class/leds/infrared/transmit"
 
 static hidl_vec<ConsumerIrFreqRange> rangeVec{
-    {.min = 30000, .max = 30000},
-    {.min = 33000, .max = 33000},
-    {.min = 36000, .max = 36000},
-    {.min = 38000, .max = 38000},
-    {.min = 40000, .max = 40000},
-    {.min = 56000, .max = 56000},
+    {.min = 30000, .max = 30000}, {.min = 33000, .max = 33000},
+    {.min = 36000, .max = 36000}, {.min = 38000, .max = 38000},
+    {.min = 40000, .max = 40000}, {.min = 56000, .max = 56000},
 };
 
 // Methods from ::android::hardware::ir::V1_0::IConsumerIr follow.
-Return<bool> ConsumerIr::transmit(int32_t carrierFreq, const hidl_vec<int32_t>& pattern) {
-    size_t len = pattern.size()*4;
-    int fd = -1;
-    int rc;
-    char buffer[4100];
+Return<bool> ConsumerIr::transmit(int32_t carrierFreq,
+                                  const hidl_vec<int32_t> &pattern) {
+  size_t len = pattern.size() * 4;
+  int fd = -1;
+  int rc;
+  char buffer[4100];
 
-    memset(buffer,0,4100);
-    memcpy(buffer, &carrierFreq, 4);
-    memcpy(buffer+4, pattern.data(), len);
+  memset(buffer, 0, 4100);
+  memcpy(buffer, &carrierFreq, 4);
+  memcpy(buffer + 4, pattern.data(), len);
 
-    fd = open(IR_PATH, O_RDWR);
-    if (fd < 0)
-    {
-        LOG(ERROR) << "failed to open " << IR_PATH << ", error: " << fd;
-        return fd;
-    }
+  fd = open(IR_PATH, O_RDWR);
+  if (fd < 0) {
+    LOG(ERROR) << "failed to open " << IR_PATH << ", error: " << fd;
+    return fd;
+  }
 
-    rc = write(fd, buffer, len+4);
-    close(fd);
-    if (rc == -1)
-        return rc;
-    return 0;
+  rc = write(fd, buffer, len + 4);
+  close(fd);
+  if (rc == -1)
+    return rc;
+  return 0;
 }
 
 Return<void> ConsumerIr::getCarrierFreqs(getCarrierFreqs_cb _hidl_cb) {
-    _hidl_cb(true, rangeVec);
-    return Void();
+  _hidl_cb(true, rangeVec);
+  return Void();
 }
 
-}  // namespace implementation
-}  // namespace V1_0
-}  // namespace ir
-}  // namespace hardware
-}  // namespace android
+} // namespace implementation
+} // namespace V1_0
+} // namespace ir
+} // namespace hardware
+} // namespace android

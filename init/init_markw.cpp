@@ -29,14 +29,13 @@
 #include <stdlib.h>
 #include <sys/sysinfo.h>
 
-#include "vendor_init.h"
-#include "property_service.h"
 #include "log/log.h"
+#include "property_service.h"
+#include "vendor_init.h"
 
 using android::init::property_set;
 
-void vendor_load_properties()
-{
+void vendor_load_properties() {
   property_set("dalvik.vm.heapstartsize", "8m");
   property_set("dalvik.vm.heapgrowthlimit", "256m");
   property_set("dalvik.vm.heapsize", "512m");
