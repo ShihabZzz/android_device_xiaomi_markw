@@ -31,50 +31,51 @@ namespace V2_0 {
 namespace implementation {
 
 struct Light : public ILight {
-    Light(std::pair<std::ofstream, uint32_t>&& lcd_backlight,
-          uint32_t old_led_driver,
-          std::ofstream&& red_led, std::ofstream&& green_led, std::ofstream&& blue_led,
-          std::ofstream&& red_blink, std::ofstream&& green_blink, std::ofstream&& blue_blink,
-          std::ofstream&& red_breath, std::ofstream&& green_breath, std::ofstream&& blue_breath);
+  Light(std::pair<std::ofstream, uint32_t> &&lcd_backlight,
+        uint32_t old_led_driver, std::ofstream &&red_led,
+        std::ofstream &&green_led, std::ofstream &&blue_led,
+        std::ofstream &&red_blink, std::ofstream &&green_blink,
+        std::ofstream &&blue_blink, std::ofstream &&red_breath,
+        std::ofstream &&green_breath, std::ofstream &&blue_breath);
 
-    // Methods from ::android::hardware::light::V2_0::ILight follow.
-    Return<Status> setLight(Type type, const LightState& state) override;
-    Return<void> getSupportedTypes(getSupportedTypes_cb _hidl_cb) override;
+  // Methods from ::android::hardware::light::V2_0::ILight follow.
+  Return<Status> setLight(Type type, const LightState &state) override;
+  Return<void> getSupportedTypes(getSupportedTypes_cb _hidl_cb) override;
 
-  private:
-    void setAttentionLight(const LightState& state);
-    void setBatteryLight(const LightState& state);
-    void setButtonsBacklight(const LightState& state);
-    void setLcdBacklight(const LightState& state);
-    void setNotificationLight(const LightState& state);
-    void setSpeakerBatteryLightLocked();
-    void setSpeakerLightLocked(const LightState& state);
+private:
+  void setAttentionLight(const LightState &state);
+  void setBatteryLight(const LightState &state);
+  void setButtonsBacklight(const LightState &state);
+  void setLcdBacklight(const LightState &state);
+  void setNotificationLight(const LightState &state);
+  void setSpeakerBatteryLightLocked();
+  void setSpeakerLightLocked(const LightState &state);
 
-    std::pair<std::ofstream, uint32_t> mLcdBacklight;
+  std::pair<std::ofstream, uint32_t> mLcdBacklight;
 
-    uint32_t mOldLedDriver;
-    std::ofstream mRedLed;
-    std::ofstream mGreenLed;
-    std::ofstream mBlueLed;
-    std::ofstream mRedBlink;
-    std::ofstream mGreenBlink;
-    std::ofstream mBlueBlink;
-    std::ofstream mRedBreath;
-    std::ofstream mGreenBreath;
-    std::ofstream mBlueBreath;
+  uint32_t mOldLedDriver;
+  std::ofstream mRedLed;
+  std::ofstream mGreenLed;
+  std::ofstream mBlueLed;
+  std::ofstream mRedBlink;
+  std::ofstream mGreenBlink;
+  std::ofstream mBlueBlink;
+  std::ofstream mRedBreath;
+  std::ofstream mGreenBreath;
+  std::ofstream mBlueBreath;
 
-    LightState mAttentionState;
-    LightState mBatteryState;
-    LightState mNotificationState;
+  LightState mAttentionState;
+  LightState mBatteryState;
+  LightState mNotificationState;
 
-    std::unordered_map<Type, std::function<void(const LightState&)>> mLights;
-    std::mutex mLock;
+  std::unordered_map<Type, std::function<void(const LightState &)>> mLights;
+  std::mutex mLock;
 };
 
-}  // namespace implementation
-}  // namespace V2_0
-}  // namespace light
-}  // namespace hardware
-}  // namespace android
+} // namespace implementation
+} // namespace V2_0
+} // namespace light
+} // namespace hardware
+} // namespace android
 
-#endif  // ANDROID_HARDWARE_LIGHT_V2_0_LIGHT_H
+#endif // ANDROID_HARDWARE_LIGHT_V2_0_LIGHT_H

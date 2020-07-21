@@ -30,19 +30,19 @@ using android::hardware::ir::V1_0::IConsumerIr;
 using android::hardware::ir::V1_0::implementation::ConsumerIr;
 
 int main() {
-    android::sp<IConsumerIr> service = new ConsumerIr();
+  android::sp<IConsumerIr> service = new ConsumerIr();
 
-    configureRpcThreadpool(1, true /*callerWillJoin*/);
+  configureRpcThreadpool(1, true /*callerWillJoin*/);
 
-    android::status_t status = service->registerAsService();
-    if (status != android::OK) {
-        LOG(ERROR) << "Cannot register ConsumerIr HAL service";
-        return 1;
-    }
-
-    LOG(INFO) << "ConsumerIr HAL Ready.";
-    joinRpcThreadpool();
-    // Under normal cases, execution will not reach this line.
-    LOG(ERROR) << "ConsumerIr HAL failed to join thread pool.";
+  android::status_t status = service->registerAsService();
+  if (status != android::OK) {
+    LOG(ERROR) << "Cannot register ConsumerIr HAL service";
     return 1;
+  }
+
+  LOG(INFO) << "ConsumerIr HAL Ready.";
+  joinRpcThreadpool();
+  // Under normal cases, execution will not reach this line.
+  LOG(ERROR) << "ConsumerIr HAL failed to join thread pool.";
+  return 1;
 }
