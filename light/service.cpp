@@ -17,6 +17,7 @@
 #define LOG_TAG "android.hardware.light@2.0-service.xiaomi_markw"
 
 #include <android-base/logging.h>
+#include <hidl/HidlLazyUtils.h>
 #include <hidl/HidlTransportSupport.h>
 #include <utils/Errors.h>
 
@@ -31,6 +32,7 @@ using android::hardware::configureRpcThreadpool;
 using android::hardware::joinRpcThreadpool;
 
 // Generated HIDL files
+using android::hardware::LazyServiceRegistrar;
 using android::hardware::light::V2_0::ILight;
 using android::hardware::light::V2_0::implementation::Light;
 
@@ -163,7 +165,9 @@ int main() {
 
   configureRpcThreadpool(1, true);
 
-  android::status_t status = service->registerAsService();
+  android::status_t status;
+  auto serviceRegistrar = std::make_shared<LazyServiceRegistrar>();
+  status = serviceRegistrar->registerService(service);
 
   if (status != android::OK) {
     LOG(ERROR) << "Cannot register Light HAL service";
