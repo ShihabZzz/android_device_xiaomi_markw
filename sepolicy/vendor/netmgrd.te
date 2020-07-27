@@ -1,2 +1,3 @@
 set_prop(netmgrd, vendor_xlat_prop)
 allow netmgrd self:capability sys_admin;
+dontaudit netmgrd system_file:file execute;
