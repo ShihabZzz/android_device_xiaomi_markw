@@ -88,9 +88,8 @@ for CAMERA_LIB in libmmcamera2_cpp_module.so libmmcamera2_dcrf.so libmmcamera2_i
     sed -i "s|/data/misc/camera/|/data/vendor/qcam/|g" "$DEVICE_BLOB_ROOT"/vendor/lib/$CAMERA_LIB
 done
 
-sed -i \
-         "s|persist.camera.debug.logfile|persist.vendor.camera.dbglog|g" \
-         "DEVICE_BLOB_ROOT"/vendor/lib/libmmcamera_dbg.so
+# Camera debug log file
+sed -i "s|persist.camera.debug.logfile|persist.vendor.camera.dbglog|g" "$DEVICE_BLOB_ROOT"/vendor/lib/libmmcamera_dbg.so
 
 # Wcnss_service - libqmiservices_shim
 patchelf --add-needed "libqmiservices_shim.so" "${DEVICE_BLOB_ROOT}"/vendor/bin/wcnss_service
