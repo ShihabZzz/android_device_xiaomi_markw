@@ -80,9 +80,8 @@ DEVICE_BLOB_ROOT="${HAVOC_ROOT}"/vendor/"${VENDOR}"/"${DEVICE}"/proprietary
 # Camera configs
 sed -i "s|/system/etc/camera|/vendor/etc/camera|g" "${DEVICE_BLOB_ROOT}"/vendor/lib/libmmcamera2_sensor_modules.so
 
-sed -i \
-     "s|/data/misc/camera/cam_socket|/data/vendor/qcam/cam_socket|g" \
-     "$DEVICE_BLOB_ROOT"vendor/bin/mm-qcamera-daemon
+# Camera socket
+sed -i "s|/data/misc/camera/cam_socket|/data/vendor/qcam/cam_socket|g" "$DEVICE_BLOB_ROOT"/vendor/bin/mm-qcamera-daemon
 
 # Wcnss_service - libqmiservices_shim
 patchelf --add-needed "libqmiservices_shim.so" "${DEVICE_BLOB_ROOT}"/vendor/bin/wcnss_service
