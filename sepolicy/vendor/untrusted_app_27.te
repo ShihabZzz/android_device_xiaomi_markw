@@ -1,6 +1,10 @@
-allow untrusted_app_27 mnt_media_rw_file:dir { getattr } ;
-allow untrusted_app_27 mnt_product_file:dir { getattr } ;
-allow untrusted_app_27 proc_qtaguid_stat:file { open read getattr } ;
-allow untrusted_app_27 proc_zoneinfo:file { open read getattr } ;
-allow untrusted_app_27 rootfs:dir { open read } ;
-allow untrusted_app_27 sysfs_switch:dir { search } ;
+dontaudit untrusted_app_27 mnt_media_rw_file:dir { getattr } ;
+dontaudit untrusted_app_27 mnt_product_file:dir { getattr } ;
+dontaudit untrusted_app_27 proc_qtaguid_stat:file { open read getattr } ;
+dontaudit untrusted_app_27 proc_zoneinfo:file { open read getattr } ;
+dontaudit untrusted_app_27 rootfs:dir { open read } ;
+dontaudit untrusted_app_27 sysfs_switch:dir { search } ;
+dontaudit untrusted_app_27 mm-qcamerad_exec:file { read getattr };
+dontaudit untrusted_app_27 proc_vmstat:file { open };
+dontaudit untrusted_app_27 proc:file { open read };
+dontaudit untrusted_app_27 mnt_vendor_file:dir { getattr } ;
