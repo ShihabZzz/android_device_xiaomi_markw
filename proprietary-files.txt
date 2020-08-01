@@ -567,10 +567,6 @@ vendor/lib64/vendor.qti.hardware.data.latency@1.0.so|ae979b52234d7e965631394f6e1
 vendor/lib64/vendor.qti.hardware.data.qmi@1.0.so|35ad6e08d00e8b1695964fa7d6ddbc521eda8628
 vendor/lib64/vendor.qti.latency@2.0.so|20a3037a1aea98f5f490b14c8f5620d2d3a0cf57
 
-# Display calibration
-etc/qdcm_calib_data_nt35596_1080p_video_EBBG.xml:vendor/etc/qdcm_calib_data_nt35596_1080p_video_EBBG.xml
-etc/qdcm_calib_data_r63350_1080p_video_Tianma.xml:vendor/etc/qdcm_calib_data_r63350_1080p_video_Tianma.xml
-
 # DPM - from LA.UM.8.6.r1-04400-89xx.0
 product/bin/dpmd|90cdd79b564456cef2a0c011afab3896463df5e4
 product/etc/dpm/dpm.conf|aecddecfcd8891180155934545ec17b8d9c3c403
