@@ -1,0 +1,2 @@
+allow hal_wifi_hostapd_default sysfs_wlan_qcom:dir search;
+allow hal_wifi_hostapd_default sysfs_wlan_qcom:lnk_file { read getattr };
