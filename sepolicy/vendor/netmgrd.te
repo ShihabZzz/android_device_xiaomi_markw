@@ -1,3 +1,5 @@
 set_prop(netmgrd, vendor_xlat_prop)
 allow netmgrd self:capability sys_admin;
-dontaudit netmgrd system_file:file execute;
+
+typeattribute netmgrd vendor_executes_system_violators;
+allow netmgrd system_file:file { execute execute_no_trans getattr open read };
