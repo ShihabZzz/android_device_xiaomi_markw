@@ -609,8 +609,8 @@ vendor/lib64/libwvhidl.so|4af61fdcf1186700ea7ee23c607fb9ce5fd0f0e8
 
 # Fingerprint
 vendor/bin/gx_fpd|b38f389fa5eb52438cf0e150e5b70db0c98ee4d5
-vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service.xiaomi_markw|c377ce99875da4787cbc5bf619a5d6d955f92642
-vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service.xiaomi_markw.rc|69c71a71ad2866d83bd047a2442073ce0faee1f7
+vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service.xiaomi_markw|430088711e0bee01582586bc1c0f26f1bafba2e9
+vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service.xiaomi_markw.rc|f8da618c677541da21a141f835e1efc8a41dd3c8
 vendor/lib64/hw/fingerprint.fpc.so|7b1801416801916f5b77686fef01859f11685674
 vendor/lib64/hw/fingerprint.goodix.so|c66aa3eafd9dd208fb81529b8d63d8a00e80c2d6
 vendor/lib64/hw/gxfingerprint.default.so|63e1a095a6688137573b0b2d3503019497e0bb4b
