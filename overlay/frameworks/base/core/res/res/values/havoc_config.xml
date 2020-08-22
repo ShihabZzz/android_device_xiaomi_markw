@@ -75,4 +75,7 @@
 
     <!-- Wired/BT headset focus mode -->
     <bool name="config_deviceRingtoneFocusMode">true</bool>
+
+    <!-- Aspect ratio of screen -->
+    <item name="config_screenAspectRatio" format="float" type="dimen">1.7</item>
 </resources>
