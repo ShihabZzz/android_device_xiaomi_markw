@@ -24,6 +24,8 @@
 /(vendor|system/vendor)/bin/hw/android\.hardware\.ir@1\.0-service\.xiaomi_markw                         u:object_r:hal_ir_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service\.xiaomi_markw                      u:object_r:hal_light_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.lineage\.livedisplay@2\.0-service\.xiaomi_markw                  u:object_r:hal_lineage_livedisplay_qti_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.perf@2\.1-service                                 u:object_r:hal_perf_default_exec:s0
+/vendor/lib(64)?/vendor\.qti\.hardware\.perf@2\.1\.so                                                   u:object_r:same_process_hal_file:s0
 
 # Poweroff alarm
 /(mnt/vendor)/persist/alarm(/.*)?                            u:object_r:persist_alarm_file:s0
