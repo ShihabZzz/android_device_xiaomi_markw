@@ -90,4 +90,8 @@ done
 
 # Camera debug log file
 sed -i "s|persist.camera.debug.logfile|persist.vendor.camera.dbglog|g" "${DEVICE_BLOB_ROOT}"/vendor/lib/libmmcamera_dbg.so
+
+# Goodix blob
+patchelf --remove-needed "libandroid_runtime.so" "${DEVICE_BLOB_ROOT}"/vendor/lib64/hw/fingerprint.goodix.so
+
 "${MY_DIR}/setup-makefiles.sh"
